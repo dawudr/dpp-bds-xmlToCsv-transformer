@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ScalaCompilerConfiguration">
-    <profile name="SBT 1" modules="bds-scala-xslt-xdif,dpp-bds-xmlToCsv-transformer" />
+    <profile name="SBT 1" modules="bds-scala-xslt-xdif,dpp-bds-xmlToCsv-transformer,dpp-bds-xmltocsv-transformer" />
   </component>
 </project>

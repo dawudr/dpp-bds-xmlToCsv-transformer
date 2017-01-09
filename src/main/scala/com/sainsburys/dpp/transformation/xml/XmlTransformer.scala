@@ -1,44 +1,108 @@
-package com.sainsburys.dpp.xmltransformer
+package com.sainsburys.dpp.transformation.xml
 
-import java.io.{ByteArrayOutputStream, FileOutputStream}
+import java.io.{ByteArrayOutputStream, File, FileOutputStream}
+import java.util.Date
 import javax.xml.transform.stream.{StreamResult, StreamSource}
 import javax.xml.transform.{Result, Source, Transformer, TransformerFactory}
 
+import com.sainsburys.dpp.transformation.Loggable
+import com.sainsburys.dpp.transformation.directoryreader.DirectoryReader
 
-object Xmltransformer extends Loggable {
+/**
+  * XSLT Transformation engine.
+  * Utilises custom XSL stylesheet rules for an XML format to output CSV.
+  *
+  * @author Dawud Rahman (dawud.rahman@sainsburys.co.uk)
+  * @version 1.0
+  * @since 06/01/2017
+  */
+class Xmltransformer(private val xmlPath: String,
+                     private val xslSource: String,
+                     private val csvPath: String) extends Loggable {
 
-  def main(args: Array[String]): Unit = {
+  logger.info("XSLT transformer started...")
 
-    logger.info("XML2CSV transformer started...")
+  /*
+  Transform using Directory Path
+   */
+  def transformPath() = {
+    logger.info("XSLT transforming source path: {}", xmlPath)
+    val directoryReader = new DirectoryReader(xmlPath)
+    val directoryFiles = directoryReader.getListOfFiles()
+    if(csvPath !=null) {
+      directoryReader.createOutputDirectory(csvPath)
+    }
 
-    val pipelineXsl = "src/main/resources/xsl/r10/r10_pipeline.xsl"
-    val pipelineXml = "src/main/resources/xml/r10/R10xml.xml"
-
-    // Console output
-    val outputStream = new ByteArrayOutputStream()
-    // File output
-    val fileOutputStream = new FileOutputStream("transactions.csv")
-
-    val xmlSource: Source = new StreamSource(pipelineXml)
-    val result: Result = new StreamResult(fileOutputStream)
-    val xslSource: Source = new StreamSource(pipelineXsl)
-
-    val transformer = buildTransformer(xslSource)
-    transformer.transform(xmlSource, result)
-    println(outputStream.toString)
-
-    logger.info("XML2CSV transformer finished the task successfully.")
-    System.exit(0)
-
+    val tStart = new Date().getTime
+    directoryFiles.foreach( {
+      file => {
+        if(csvPath != null) {
+          val csvFileName = csvPath + File.separator + file.getName.substring(0, file.getName.indexOf(".xml")) + ".csv"
+          transformFile(file.getPath, csvFileName)
+        } else {
+          logger.debug("XSLT output to console: {}", transformFile(file.getPath, null));
+        }
+      }
+    })
+    logger.info("TOTAL XML files processed: {} Time taken: {} ms", directoryFiles.length, new Date().getTime - tStart)
   }
 
+
+  /*
+  Transform XML to CSV file if target file path is specified otherwise return as string
+   */
+  def transformFile(xmlFile: String, csvFile: String) :String = {
+    logger.info("XSLT transforming source XML file: {} started", xmlFile)
+    if(csvFile != null) {
+      // File output
+      val fileOutputStream = new FileOutputStream(csvFile)
+      val result: Result = new StreamResult(fileOutputStream)
+      transformer(xmlFile, xslSource , result)
+      logger.info("XSLT written output to target file: {}", csvFile)
+      csvFile
+    } else {
+      // Console output
+      val outputStream = new ByteArrayOutputStream()
+      val result: Result = new StreamResult(outputStream)
+      transformer(xmlFile ,xslSource , result)
+      outputStream.toString
+    }
+  }
+
+  /*
+  Run transform XSLT
+   */
+  def transformer(xmlFile: String, xslFile: String, result: Result) = {
+    logger.info("XSLT transforming xml source: {}", xmlFile + " with xsl: "  + xslFile )
+    val tStart = new Date().getTime;
+    val xmlSource: Source = new StreamSource(xmlFile)
+    val xslSource: Source = new StreamSource(xslFile)
+    val transformer = buildTransformer(xslSource)
+    transformer.transform(xmlSource, result)
+
+    logger.info("XSLT transform successful. Time taken: {}ms", new Date().getTime - tStart)
+  }
+
+  /*
+  Return transformer instance
+   */
   def buildTransformer(xslSource: Source): Transformer = {
     val transformerFactory = TransformerFactory.newInstance()
     transformerFactory.newTransformer(xslSource)
   }
-
-
 }
+
+
+object Xmltransformer {
+  def apply(xmlSourceFileName: String, xslSourceFileName: String, csvTargetFileName: String = null): Xmltransformer = {
+    if(csvTargetFileName == null) {
+      new Xmltransformer(xmlSourceFileName, xslSourceFileName, null)
+    } else {
+      new Xmltransformer(xmlSourceFileName, xslSourceFileName, csvTargetFileName)
+    }
+  }
+}
+
 
 object XmlData {
   val posLog =

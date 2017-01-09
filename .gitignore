@@ -4,6 +4,8 @@
 # sbt specific
 dist/*
 target/
+testSamples/
+output/
 lib_managed/
 src_managed/
 project/boot/
