@@ -1,0 +1,3397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.Retalix.com/Extensions" xmlns:arts="http://www.nrf-arts.org/IXRetail/namespace/" targetNamespace="http://www.Retalix.com/Extensions" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.34">
+	<!-- ============================== -->
+  <!-- Version 1.34 -->
+	<!-- Pavel Belinsky   29-06-2016  Alignment all data for Sainsbury's  R12 -->
+  <!--			Version 1.33 10-09-2014
+		Updated  by Michael G.
+		Defect : 
+		Change: remove OperatorTypeCodeExtension since it is not in use any more.
+					Change @type under PumpTest to 'form=qualified' 
+	-->
+	<!-- ============================== -->
+	<!-- ============================== -->
+	<!--			Version 1.32 04-09-2014
+		Updated  by Michael G.
+		Defect : 
+		Change: Add "ConvenienceCashier" to OperatorTypeCodeExtension 
+	-->
+	<!-- ============================== -->
+	<!--			Version 1.31 02-09-2014
+		Updated  by Michael G.
+		Defect : 
+		Change: Add "ScaleCheck" to ReceiptKindTypeCodeEnumeration
+	-->
+	<!-- ============================== -->
+	<!--			Version 1.30 07-08-2014
+		Updated  by Rony L.
+		Defect : 189060
+		Change: Added TillBusinessDate,  FinancialDate to TransactionDomainSpecific
+		ExtendedDataType chaned the key to be optional
+	-->
+	<!-- ============================== -->
+	<!--			Version 1.29 23-07-2014
+		Updated  by Michael G
+		Defect : 183743
+		Change: Change the following attributes to form=unqualified: SeriesId, OfferId, RewardValue, Identifier, StartDate, ExpiryDate
+	-->
+	<!-- ============================== -->
+	<!--			Version 1.28 23-07-2014
+		Updated  by Michael G
+		Defect : 183743
+		Change: Change RefusalReason from type="arts:RefusalReasonTypeCodes" to string
+	-->
+	<!-- ============================== -->
+	<!--			Version 1.27 20-07-2014
+		Updated  by Michael G
+		Defect : 183743
+		Change: Added "X:Age18Policy2" and "X:AlcoholRestrictionLate" to RefusalReasonTypeCodesExtension
+					Added "GiftCard" and "X:AlcoholRestriction Late" to ReceiptKindTypeCodeEnumeration
+	-->
+	<!-- ============================== -->
+	<!--			Version 1.26 1-07-2014
+		Updated  by Michael G
+		Defect : 178997
+		Change: Added SlipKitchen1 and SlipKitchen2 to ReceiptKindTypeCodeEnumeration
+					Added DateTimeCommonData (added by Core)
+					Added <xs:attribute name="CancelReason" type="xs:string"/> to LineItemDomainSpecific (added by Core)
+	-->
+	<!-- ============================== -->
+	<!--			Version 1.25 29-06-2014
+		Updated  by Michael G
+		Defect :6216
+		Change: added   ExtendedData under Authorization element
+	  	    <xs:element name="TaxAuthority"  minOccurs="0"/>
+			<xs:element name="TaxRate" minOccurs="0"/>
+			<xs:element name="DependenceRateId" minOccurs="0"/>
+			Added FuelingPointTotals to ForeCourtTypeCode Enum
+	-->
+	<!-- ============================== -->
+	<!--			Version 1.24 24-06-2014
+		Updated  by Rony L.
+		Defect :176859
+		Change: added   ExtendedData under Authorization element
+	  	      <xs:element name="ExtendedData" minOccurs="0">
+	  	
+	  	Defect :176862: 
+	  	 Change: added   VoidReasonCodeFlag  attribute under CustomerOrderTransaction
+	  	 	<xs:attribute name="VoidReasonCodeFlag" type="xs:string"/>
+	  	 	<CustomerOrderTransaction r10Ex:VoidedFlag="true" r10Ex:VoidReasonCodeFlag="AutoVoid"
+	  		 TransactionStatus="Voided">
+	-->
+	<!-- ============================== -->
+	<!--			Version 1.23 23-06-2014
+		Updated  by Rony L.
+		Defect : 175950
+		1 - Change: added   r10Ex:Imposition  to ItemTaxType
+		<Tax r10Ex:Imposition="C">  
+	
+	 	2 - Change: added   TaxDefinitions element  
+	  	  <xs:element name="TaxDefinitions" type="TaxDefinitionsType" minOccurs="0"/>
+	  	
+	  	3 - Change  from unqualified to qualified
+	  	  <xs:attribute name="Type" type="ForeCourtTypeCode" form="qualified"/>
+	  	
+	  	4 -  Change: added  GroupTag to KitMemberBase
+	  	  <Member r10Ex:GroupID="4001" r10Ex:GroupTag="Ingredients">
+	  	 
+	         5 -  Change: added   IsToken to  TenderAuthorizationDomainSpecific
+	  	  <xs:element name="IsToken" type="xs:boolean" minOccurs="0">
+	  	  
+	  	 6 - Change: added to   Sale Item - GroupIndicator Extension for Tax (exist in version 10.5)
+	  	  <GroupIndicator Indicator="Indication" Group="TaxGroup" Symbol="A" Priority="2" xmlns="http://www.Retalix.com/Extensions" />
+	  	-->
+	<!-- ============================== -->
+	<!--			Version 1.22 16-06-2014
+				Created by Michael G.
+				Defect :
+					Change  "RedeemedCouponType"
+			<xs:attribute name="Identifier" type="guid" use="optional" form="unqualified"/>-->
+	<!-- ============================== -->
+	<!--			Version 1.21 10-06-2014
+				Created by Michael G.
+				Defect :
+					Added  to "ReceiptKindTypeCodeEnumeration"
+			<xs:enumeration value="HomeShoppingProblematicItems"/>-->
+	<!-- ============================== -->
+	<!--			Version 1.20 9-06-2014
+				Created by Michael G.
+				Defect :
+					Added  to "WorkstationIDTypeCodeExtension"
+			<xs:enumeration value="X:QSRPOS"/>-->
+	<!-- ============================== -->
+	<!--			Version 1.19 9-06-2014
+				Created by Michael G.
+				Defect  169401:
+					Added  to "IssueCouponType"
+				<xs:attribute name="SeriesId" type="xs:string"/>
+				<xs:attribute name="OfferId" type="xs:string"/>
+				<xs:attribute name="RewardValue" type="xs:decimal"/
+
+				Defect  5896:
+					Added to EntryMethod under CustomerCommonData form="qualified"-->
+	<!-- ============================== -->
+	<!--			Version 1.18 14-05-2014
+				Created by Michael G.
+				Defect  5660:
+					Added  to "SubTypeTypeCodeEnumeration"
+						"EmbeddedAmount"-->
+	<!-- ============================== -->
+	<!--			Version 1.17 27-04-2014
+				Created by Michael G.
+				Defect  142315:
+					Added  to "WorkstationIDTypeCode"
+						"X:KeyboardPOS"-->
+	<xs:import namespace="http://www.nrf-arts.org/IXRetail/namespace/" schemaLocation="POSLogV6.0.1C.xsd"/>
+	<xs:complexType name="DescriptionCommonData">
+		<xs:complexContent>
+			<xs:extension base="arts:DescriptionCommonData">
+				<xs:attribute name="Culture" type="CultureTypeCode" form="qualified"/>
+				<xs:anyAttribute namespace="##local" processContents="lax" ></xs:anyAttribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:simpleType name="CultureTypeCode">
+		<xs:union memberTypes="CultureTypeCodeEnumeration CultureTypeCodeEnumeration"/>
+	</xs:simpleType>
+	<xs:simpleType name="CultureTypeCodeEnumeration">
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="af-ZA"/>
+			<xs:enumeration value="am-ET"/>
+			<xs:enumeration value="ar-AE"/>
+			<xs:enumeration value="ar-BH"/>
+			<xs:enumeration value="ar-DZ"/>
+			<xs:enumeration value="ar-EG"/>
+			<xs:enumeration value="ar-IQ"/>
+			<xs:enumeration value="ar-JO"/>
+			<xs:enumeration value="ar-KW"/>
+			<xs:enumeration value="ar-LB"/>
+			<xs:enumeration value="ar-LY"/>
+			<xs:enumeration value="ar-MA"/>
+			<xs:enumeration value="arn-CL"/>
+			<xs:enumeration value="ar-OM"/>
+			<xs:enumeration value="ar-QA"/>
+			<xs:enumeration value="ar-SA"/>
+			<xs:enumeration value="ar-SY"/>
+			<xs:enumeration value="ar-TN"/>
+			<xs:enumeration value="ar-YE"/>
+			<xs:enumeration value="as-IN"/>
+			<xs:enumeration value="az-Cyrl-AZ"/>
+			<xs:enumeration value="az-Latn-AZ"/>
+			<xs:enumeration value="ba-RU"/>
+			<xs:enumeration value="be-BY"/>
+			<xs:enumeration value="bg-BG"/>
+			<xs:enumeration value="bn-BD"/>
+			<xs:enumeration value="bn-IN"/>
+			<xs:enumeration value="bo-CN"/>
+			<xs:enumeration value="br-FR"/>
+			<xs:enumeration value="bs-Cyrl-BA"/>
+			<xs:enumeration value="bs-Latn-BA"/>
+			<xs:enumeration value="ca-ES"/>
+			<xs:enumeration value="co-FR"/>
+			<xs:enumeration value="cs-CZ"/>
+			<xs:enumeration value="cy-GB"/>
+			<xs:enumeration value="da-DK"/>
+			<xs:enumeration value="de-AT"/>
+			<xs:enumeration value="de-CH"/>
+			<xs:enumeration value="de-DE"/>
+			<xs:enumeration value="de-LI"/>
+			<xs:enumeration value="de-LU"/>
+			<xs:enumeration value="dsb-DE"/>
+			<xs:enumeration value="dv-MV"/>
+			<xs:enumeration value="el-GR"/>
+			<xs:enumeration value="en-029"/>
+			<xs:enumeration value="en-AU"/>
+			<xs:enumeration value="en-BZ"/>
+			<xs:enumeration value="en-CA"/>
+			<xs:enumeration value="en-GB"/>
+			<xs:enumeration value="en-IE"/>
+			<xs:enumeration value="en-IN"/>
+			<xs:enumeration value="en-JM"/>
+			<xs:enumeration value="en-MY"/>
+			<xs:enumeration value="en-NZ"/>
+			<xs:enumeration value="en-PH"/>
+			<xs:enumeration value="en-SG"/>
+			<xs:enumeration value="en-TT"/>
+			<xs:enumeration value="en-US"/>
+			<xs:enumeration value="en-ZA"/>
+			<xs:enumeration value="en-ZW"/>
+			<xs:enumeration value="es-AR"/>
+			<xs:enumeration value="es-BO"/>
+			<xs:enumeration value="es-CL"/>
+			<xs:enumeration value="es-CO"/>
+			<xs:enumeration value="es-CR"/>
+			<xs:enumeration value="es-DO"/>
+			<xs:enumeration value="es-EC"/>
+			<xs:enumeration value="es-ES"/>
+			<xs:enumeration value="es-GT"/>
+			<xs:enumeration value="es-HN"/>
+			<xs:enumeration value="es-MX"/>
+			<xs:enumeration value="es-NI"/>
+			<xs:enumeration value="es-PA"/>
+			<xs:enumeration value="es-PE"/>
+			<xs:enumeration value="es-PR"/>
+			<xs:enumeration value="es-PY"/>
+			<xs:enumeration value="es-SV"/>
+			<xs:enumeration value="es-US"/>
+			<xs:enumeration value="es-UY"/>
+			<xs:enumeration value="es-VE"/>
+			<xs:enumeration value="et-EE"/>
+			<xs:enumeration value="eu-ES"/>
+			<xs:enumeration value="fa-IR"/>
+			<xs:enumeration value="fi-FI"/>
+			<xs:enumeration value="fil-PH"/>
+			<xs:enumeration value="fo-FO"/>
+			<xs:enumeration value="fr-BE"/>
+			<xs:enumeration value="fr-CA"/>
+			<xs:enumeration value="fr-CH"/>
+			<xs:enumeration value="fr-FR"/>
+			<xs:enumeration value="fr-LU"/>
+			<xs:enumeration value="fr-MC"/>
+			<xs:enumeration value="fy-NL"/>
+			<xs:enumeration value="ga-IE"/>
+			<xs:enumeration value="gd-GB"/>
+			<xs:enumeration value="gl-ES"/>
+			<xs:enumeration value="gsw-FR"/>
+			<xs:enumeration value="gu-IN"/>
+			<xs:enumeration value="ha-Latn-NG"/>
+			<xs:enumeration value="he-IL"/>
+			<xs:enumeration value="hi-IN"/>
+			<xs:enumeration value="hr-BA"/>
+			<xs:enumeration value="hr-HR"/>
+			<xs:enumeration value="hsb-DE"/>
+			<xs:enumeration value="hu-HU"/>
+			<xs:enumeration value="hy-AM"/>
+			<xs:enumeration value="id-ID"/>
+			<xs:enumeration value="ig-NG"/>
+			<xs:enumeration value="ii-CN"/>
+			<xs:enumeration value="is-IS"/>
+			<xs:enumeration value="it-CH"/>
+			<xs:enumeration value="it-IT"/>
+			<xs:enumeration value="iu-Cans-CA"/>
+			<xs:enumeration value="iu-Latn-CA"/>
+			<xs:enumeration value="ja-JP"/>
+			<xs:enumeration value="ka-GE"/>
+			<xs:enumeration value="kk-KZ"/>
+			<xs:enumeration value="kl-GL"/>
+			<xs:enumeration value="km-KH"/>
+			<xs:enumeration value="kn-IN"/>
+			<xs:enumeration value="kok-IN"/>
+			<xs:enumeration value="ko-KR"/>
+			<xs:enumeration value="ky-KG"/>
+			<xs:enumeration value="lb-LU"/>
+			<xs:enumeration value="lo-LA"/>
+			<xs:enumeration value="lt-LT"/>
+			<xs:enumeration value="lv-LV"/>
+			<xs:enumeration value="mi-NZ"/>
+			<xs:enumeration value="mk-MK"/>
+			<xs:enumeration value="ml-IN"/>
+			<xs:enumeration value="mn-MN"/>
+			<xs:enumeration value="mn-Mong-CN"/>
+			<xs:enumeration value="moh-CA"/>
+			<xs:enumeration value="mr-IN"/>
+			<xs:enumeration value="ms-BN"/>
+			<xs:enumeration value="ms-MY"/>
+			<xs:enumeration value="mt-MT"/>
+			<xs:enumeration value="nb-NO"/>
+			<xs:enumeration value="ne-NP"/>
+			<xs:enumeration value="nl-BE"/>
+			<xs:enumeration value="nl-NL"/>
+			<xs:enumeration value="nn-NO"/>
+			<xs:enumeration value="nso-ZA"/>
+			<xs:enumeration value="oc-FR"/>
+			<xs:enumeration value="or-IN"/>
+			<xs:enumeration value="pa-IN"/>
+			<xs:enumeration value="pl-PL"/>
+			<xs:enumeration value="prs-AF"/>
+			<xs:enumeration value="ps-AF"/>
+			<xs:enumeration value="pt-BR"/>
+			<xs:enumeration value="pt-PT"/>
+			<xs:enumeration value="qut-GT"/>
+			<xs:enumeration value="quz-BO"/>
+			<xs:enumeration value="quz-EC"/>
+			<xs:enumeration value="quz-PE"/>
+			<xs:enumeration value="rm-CH"/>
+			<xs:enumeration value="ro-RO"/>
+			<xs:enumeration value="ru-RU"/>
+			<xs:enumeration value="rw-RW"/>
+			<xs:enumeration value="sah-RU"/>
+			<xs:enumeration value="sa-IN"/>
+			<xs:enumeration value="se-FI"/>
+			<xs:enumeration value="se-NO"/>
+			<xs:enumeration value="se-SE"/>
+			<xs:enumeration value="si-LK"/>
+			<xs:enumeration value="sk-SK"/>
+			<xs:enumeration value="sl-SI"/>
+			<xs:enumeration value="sma-NO"/>
+			<xs:enumeration value="sma-SE"/>
+			<xs:enumeration value="smj-NO"/>
+			<xs:enumeration value="smj-SE"/>
+			<xs:enumeration value="smn-FI"/>
+			<xs:enumeration value="sms-FI"/>
+			<xs:enumeration value="sq-AL"/>
+			<xs:enumeration value="sr-Cyrl-BA"/>
+			<xs:enumeration value="sr-Cyrl-CS"/>
+			<xs:enumeration value="sr-Cyrl-ME"/>
+			<xs:enumeration value="sr-Cyrl-RS"/>
+			<xs:enumeration value="sr-Latn-BA"/>
+			<xs:enumeration value="sr-Latn-CS"/>
+			<xs:enumeration value="sr-Latn-ME"/>
+			<xs:enumeration value="sr-Latn-RS"/>
+			<xs:enumeration value="sv-FI"/>
+			<xs:enumeration value="sv-SE"/>
+			<xs:enumeration value="sw-KE"/>
+			<xs:enumeration value="syr-SY"/>
+			<xs:enumeration value="ta-IN"/>
+			<xs:enumeration value="te-IN"/>
+			<xs:enumeration value="tg-Cyrl-TJ"/>
+			<xs:enumeration value="th-TH"/>
+			<xs:enumeration value="tk-TM"/>
+			<xs:enumeration value="tn-ZA"/>
+			<xs:enumeration value="tr-TR"/>
+			<xs:enumeration value="tt-RU"/>
+			<xs:enumeration value="tzm-Latn-DZ"/>
+			<xs:enumeration value="ug-CN"/>
+			<xs:enumeration value="uk-UA"/>
+			<xs:enumeration value="ur-PK"/>
+			<xs:enumeration value="uz-Cyrl-UZ"/>
+			<xs:enumeration value="uz-Latn-UZ"/>
+			<xs:enumeration value="vi-VN"/>
+			<xs:enumeration value="wo-SN"/>
+			<xs:enumeration value="xh-ZA"/>
+			<xs:enumeration value="yo-NG"/>
+			<xs:enumeration value="zh-CN"/>
+			<xs:enumeration value="zh-HK"/>
+			<xs:enumeration value="zh-MO"/>
+			<xs:enumeration value="zh-SG"/>
+			<xs:enumeration value="zh-TW"/>
+			<xs:enumeration value="zu-ZA"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- 
+		ReceiptImage Extension
+		<ReceiptImage r10Ex:ReceiptKind="MainReceipt" r10Ex:ReceiptFormat="RDR">
+	-->
+	<xs:complexType name="ReceiptImageType">
+		<xs:complexContent>
+			<xs:extension base="arts:ReceiptImageType">
+				<xs:attribute name="ReceiptKind" type="ReceiptKindTypeCode" form="qualified"/>
+				<xs:attribute name="ReceiptFormat" type="ReceiptFormatTypeCode" form="qualified"/>
+				<xs:attribute name="ReceiptNotPrinted" type="BooleanEnumeration" form="qualified"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="PointsCommonDataType">
+		<xs:complexContent>
+			<xs:extension base="PointsCommonData">
+				<xs:attribute name="IsNegative" type="BooleanEnumeration"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:simpleType name="ReceiptKindTypeCode">
+		<xs:union memberTypes="ReceiptKindTypeCodeEnumeration ReceiptKindTypeCodeEnumeration"/>
+	</xs:simpleType>
+	<xs:simpleType name="ReceiptKindTypeCodeEnumeration">
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="MainReceipt"/>
+			<xs:enumeration value="MainSlip"/>
+			<xs:enumeration value="EFT"/>
+			<xs:enumeration value="QualityItemReturnReceipt"/>
+			<xs:enumeration value="EFTSlip"/>
+			<xs:enumeration value="Coupon"/>
+			<xs:enumeration value="Supplementary"/>
+			<xs:enumeration value="Other"/>
+			<xs:enumeration value="CustomerSaveback"/>
+			<xs:enumeration value="ETopUpSlip"/>
+			<xs:enumeration value="GiftCardRedemptionBalanceSlip"/>
+			<xs:enumeration value="QualityItemReceipt"/>
+			<xs:enumeration value="GiftCard"/>
+			<xs:enumeration value="NonJsGiftCardSlip"/>
+			<xs:enumeration value="HomeShoppingProblematicItems"/>
+			<xs:enumeration value="SlipKitchen1"/>
+			<xs:enumeration value="SlipKitchen2"/>
+			<xs:enumeration value="ScaleCheck"/>
+			<xs:enumeration value="GiftReceipt"/>
+			<xs:enumeration value="ContactlessSlip"/>
+			<xs:enumeration value="VatReceiptReprint"/>
+			<xs:enumeration value="VatReceipt"/>
+			<xs:enumeration value="PAPTest"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ReceiptFormatTypeCode">
+		<xs:union memberTypes="ReceiptFormatTypeCodeEnumeration ReceiptFormatTypeCodeEnumeration"/>
+	</xs:simpleType>
+	<xs:simpleType name="ReceiptFormatTypeCodeEnumeration">
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="RDR"/>
+			<xs:enumeration value="PlainText"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="TransactionDomainSpecific">
+		<xs:complexContent>
+			<xs:extension base="arts:TransactionDomainSpecific">
+				<xs:sequence>
+					<xs:element name="TransactionMeasures" type="CashierProductivityType" minOccurs="0"/>
+					<xs:element name="ReconciliationDate" type="xs:date" minOccurs="0"/>
+					<xs:element name="TillBusinessDate" type="xs:date" minOccurs="0"/>
+					<xs:element name="FinancialDate" type="xs:date" minOccurs="0"/>
+					<xs:element name="RetailerId" type="xs:unsignedByte" minOccurs="0"/>
+					<xs:element name="SellingRestrictionNotification" minOccurs="0">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="ApproverID">
+									<xs:complexType>
+										<xs:simpleContent>
+											<xs:extension base="xs:string">
+												<xs:attribute name="OperatorType" type="xs:string" use="required"/>
+												<xs:attribute name="OperatorName" type="xs:string" use="required"/>
+											</xs:extension>
+										</xs:simpleContent>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="AlertID">
+									<xs:complexType>
+										<xs:simpleContent>
+											<xs:extension base="xs:string">
+												<xs:attribute name="Type" type="xs:string" use="required"/>
+											</xs:extension>
+										</xs:simpleContent>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="Items">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="ItemID" maxOccurs="unbounded">
+												<xs:complexType>
+													<xs:simpleContent>
+														<xs:extension base="xs:string">
+															<xs:attribute name="Description" type="xs:string" use="required"/>
+															<xs:attribute name="Activate" type="YesNoType" use="required"/>
+														</xs:extension>
+													</xs:simpleContent>
+												</xs:complexType>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="SequenceNumber" type="xs:int"/>
+								<xs:element name="EndDateTime" type="xs:dateTime"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="SettlementDate" type="xs:dateTime" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Date/time when the Safe/Till Settlement is done </xs:documentation>
+							<xs:appinfo source="MergeInstructions">
+								<extensionRef mergeMethod="choice" xmlns="">/schema/complexType[@name='TransactionDomainSpecific']/complexContent/extension/sequence</extensionRef>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="RootTransactionId" type="xs:string" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:simpleType name="YesNoType">
+		<xs:annotation>
+			<xs:documentation>
+        The yes-no type is used for boolean-like attributes. We cannot use W3C
+        XML Schema booleans due to their restrictions on expression of boolean
+        values.
+      </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="yes"/>
+			<xs:enumeration value="no"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- 
+		Retail Transaction  Extension
+		1 - ReturnType 
+		2 - Transaction Type
+		<RetailTransaction  TransactionStatus="Returned"    r10Ex:ReturnType="ReturnAll" r10Ex:TransactionType="WIC">
+	-->
+	<xs:complexType name="RetailTransactionDomainSpecific">
+		<xs:complexContent>
+			<xs:extension base="arts:RetailTransactionDomainSpecific">
+				<xs:sequence>
+					<xs:element name="TeamMember" type="TeamMemberType" minOccurs="0"/>
+					<xs:element name="TaxDefinitions" type="TaxDefinitionsType" minOccurs="0"/>
+					<xs:element name="PromotionsSummary" type="PromotionsSummaryType" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="RefundablePromotions" type="RefundablePromotionsType" minOccurs="0"/>
+					<xs:element name="Rescan" type="RescanDataType" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="TransactionMeasures" type="CashierProductivityType" minOccurs="0"/>
+					<xs:element name="RecalculationData" type="RecalculationDataType" minOccurs="0"/>
+					<xs:element name="GroceryOnlineOrderProblems" type="GroceryOnlineOrderProblemsType" minOccurs="0"/>
+				</xs:sequence>
+				<xs:attribute name="ReturnType" type="xs:string" form="qualified"/>
+				<xs:attribute name="TransactionType" type="TransactionTypeCode" form="qualified"/>
+				<xs:attribute name="ResumedFlag" type="xs:boolean" form="qualified"/>
+				<xs:attribute name="ReturnedFlag" type="xs:boolean" form="qualified"/>
+				<xs:attribute name="CanceledFlag" type="xs:boolean" form="qualified"/>
+				<xs:attribute name="VoidedFlag" type="xs:boolean" form="qualified"/>
+				<xs:attribute name="SuspendedFlag" type="xs:boolean" form="qualified"/>
+				<xs:attribute name="VoidReasonCodeFlag" type="xs:string" form="qualified"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TeamMemberType">
+		<xs:sequence>
+			<xs:element name="CustomerID" type="xs:unsignedLong"/>
+			<xs:element name="Segment" type="xs:unsignedInt"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="ReturnTypeCode">
+		<xs:annotation>
+			<xs:documentation>
+        Return Type extension in Retail Transaction [RetailTransaction
+        TransactionStatus="Returned" ReturnType="ReturnAll"]
+      </xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="ReturnTypeCodeEnumeration ReturnTypeCodeEnumeration"/>
+	</xs:simpleType>
+	<xs:simpleType name="ReturnTypeCodeEnumeration">
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="NoneReceiptReturn"/>
+			<xs:enumeration value="GiftReceiptReturn"/>
+			<xs:enumeration value="BottleDepositReturn"/>
+			<xs:enumeration value="ReturnAll"/>
+			<xs:enumeration value="ReceiptReturn"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TransactionTypeCode">
+		<xs:union memberTypes="TransactionTypeCodeEnumeration TransactionTypeCodeEnumeration"/>
+	</xs:simpleType>
+	<xs:simpleType name="TransactionTypeCodeEnumeration">
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="Selfscan"/>
+			<xs:enumeration value="HomeShopping"/>
+			<xs:enumeration value="WIC"/>
+			<xs:enumeration value="DriveOff"/>
+			<xs:enumeration value="Unpaid"/>
+			<xs:enumeration value="VatReceipt"/>
+			<xs:enumeration value="PumpTest"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--Transaction Type extensions :  -->
+	<xs:simpleType name="TransactionStatusTypeCode">
+		<xs:union memberTypes="TransactionStatusTypeCodeExtension arts:TransactionStatusTypeCode"/>
+	</xs:simpleType>
+	<xs:simpleType name="TransactionStatusTypeCodeExtension">
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="x:SelfScanRescan"/>
+			<xs:enumeration value="x:AutomaticallyVoided"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- OperatorType extensions -->
+	<!--xs:simpleType name="OperatorTypeCode">
+		<xs:union memberTypes="OperatorTypeCodeExtension arts:OperatorTypeCode"/>
+	</xs:simpleType>
+	<xs:simpleType name="OperatorTypeCodeExtension">
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="X:Administrator"/>
+			<xs:enumeration value="X:SCOAttendant"/>
+			<xs:enumeration value="X:ConvenienceCashier"/>
+		</xs:restriction>
+	</xs:simpleType-->
+	<!-- WorkstationID TypeCode extensions -->
+	<xs:simpleType name="WorkstationIDTypeCode">
+		<xs:union memberTypes="WorkstationIDTypeCodeExtension arts:WorkstationIDTypeCode"/>
+	</xs:simpleType>
+	<xs:simpleType name="WorkstationIDTypeCodeExtension">
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="X:FuelPOS"/>
+			<xs:enumeration value="X:Forecourt"/>
+			<xs:enumeration value="X:SelfCheckOut"/>
+			<xs:enumeration value="X:KeyboardPOS"/>
+			<xs:enumeration value="X:QSRPOS"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- 
+	Tax Extension:
+	<Tax r10Ex:Sign="A">
+	-->
+	<xs:complexType name="TaxBase">
+		<xs:complexContent>
+			<xs:extension base="arts:TaxBase">
+				<xs:attribute name="Sign" type="SignTypeCode" form="qualified"/>
+				<xs:attribute name="Type" type="xs:string" form="qualified"/>
+				<xs:attribute name="CalculationMethod" type="xs:string" form="qualified"/>
+				<xs:attribute name="CouponReducesTaxationAmount" type="xs:boolean" form="qualified"/>
+				<xs:attribute name="OrignalPercent" type="xs:decimal" form="qualified"/>
+				<xs:attribute name="TaxRoundingMethod" type="xs:string" form="qualified"/>
+				<xs:attribute name="Imposition" type="xs:string" form="qualified"/>
+				<xs:attribute name="Reversed" type="BooleanEnumeration" form="qualified">
+					<xs:annotation>
+						<xs:appinfo source="MergeInstructions">
+							<extensionRef xmlns="">/schema/complexType[@name='TaxDomainSpecific']/complexContent/extension</extensionRef>
+						</xs:appinfo>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:simpleType name="SignTypeCode">
+		<xs:union memberTypes="SignTypeCodeEnumeration SignTypeCodeEnumeration"/>
+	</xs:simpleType>
+	<xs:simpleType name="SignTypeCodeEnumeration">
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="A"/>
+			<xs:enumeration value="B"/>
+			<xs:enumeration value="C"/>
+			<xs:enumeration value="E"/>
+			<xs:enumeration value="G"/>
+			<xs:enumeration value="P"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- 
+		Scan Data Sub Type Extension
+		<ScanData  TypeCode="Barcode" r10Ex:SubType="EmbeddedPrice">0210877001530</ScanData>
+	-->
+	<xs:complexType name="ScanDataBase">
+		<xs:complexContent>
+			<xs:extension base="arts:ScanDataBase">
+				<xs:attribute name="SubType" type="SubTypeTypeCode" form="qualified"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:simpleType name="SubTypeTypeCode">
+		<xs:union memberTypes="SubTypeTypeCodeEnumeration SubTypeTypeCodeEnumeration"/>
+	</xs:simpleType>
+	<xs:simpleType name="SubTypeTypeCodeEnumeration">
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="EmbeddedPrice"/>
+			<xs:enumeration value="AmountEmbedded"/>
+			<xs:enumeration value="EmbeddedAmount"/>
+			<xs:enumeration value="OverrideAmountEmbedded"/>
+			<xs:enumeration value="SelfScanEndOfTrip"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- 	<UnitID Name="Sainsbury Main Shop" r10Ex:SubStore="1234">3145</UnitID> -->
+	<xs:complexType name="BusinessUnitCommonData">
+		<xs:complexContent>
+			<xs:extension base="arts:BusinessUnitCommonData">
+				<xs:attribute name="SubStore" type="xs:string" form="qualified"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- 	<MerchandiseHierarchy ID="Merchandise" r10Ex:HierarchyPath="1_149@2_2232@3_1442@4_5423">4_5423</MerchandiseHierarchy> -->
+	<xs:complexType name="MerchandiseHierarchyCommonData">
+		<xs:complexContent>
+			<xs:extension base="arts:MerchandiseHierarchyCommonData">
+				<xs:attribute name="HierarchyPath" type="xs:string" form="qualified"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- <xs:element name="LineItem" type="LineItemDomainSpecific"/> -->
+	<xs:complexType name="LineItemDomainSpecific">
+		<xs:complexContent>
+			<xs:extension base="arts:LineItemDomainSpecific">
+				<xs:sequence>
+					<xs:element name="TotalKey" type="TotalKeyType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Total Key Element</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="TeamMember" type="TeamMemberType" minOccurs="0"/>
+					<xs:element name="Coupon" type="CouponLogType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Coupon Element</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="CouponLink" type="arts:SequenceNumberType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Link to the Coupon LineItem</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Bakery" type="xs:string" minOccurs="0"/>
+				</xs:sequence>
+				<xs:attribute name="CancelReason" type="xs:string" form="qualified"/>
+				<xs:attribute name="SkipBagging" type="xs:boolean"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TotalKeyType">
+		<xs:sequence>
+			<xs:element name="Total" type="arts:TransactionTotalBase" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="Type" type="xs:string"/>
+	</xs:complexType>
+	<!-- <xs:element name="Sale" type="ItemDomainSpecific"/> -->
+	<!-- <xs:element name="Return" type="ItemDomainSpecific"/> -->
+	<!-- <xs:element name="FuleSale" type="ItemDomainSpecific"/> -->
+	<xs:complexType name="ItemDomainSpecific">
+		<xs:complexContent>
+			<xs:extension base="arts:ItemDomainSpecific">
+				<xs:sequence>
+					<xs:choice minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="Mobile" type="arts:TenderMobileBase" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Mobile properties</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="OriginalQuantity" type="arts:QuantityCommonData" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+                Represent the original quantity in case of Void item
+              </xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ControllerSequenceNumber" type="xs:unsignedLong" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+                FUEL - The unique Controller Ticket
+                Number
+              </xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="StartFuelingTime" type="xs:dateTime" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation> Start Fuling Time</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="EndFuelingTime" type="xs:dateTime" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>End Fuling time</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="FlowRate" type="xs:decimal" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Flow Rate</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="GiftReceiptQuantity" type="xs:int" minOccurs="0"/>
+						<xs:element name="IsNonMerchandise" type="BooleanEnumeration" minOccurs="0"/>
+						<xs:element name="ConsumableGroup" type="ConsumableGroupType" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>ConsumableGroup Element</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="GroupIndicator" type="GroupIndicatorType" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Tax Group Indicator</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="TareQuantity" type="arts:QuantityCommonData" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+                The Tare weight for the link item for information and
+                for return
+              </xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="UnitLines" type="UnitLinesType" minOccurs="0"/>
+						<xs:element name="QualityRefund" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Quality Refund</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="RefundId" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Refund Id</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ReturnDetails" type="ReturnDetailsType" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Return Details</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="PromotionDeferredRewards" type="PromotionDeferredRewardsType" minOccurs="0" maxOccurs="unbounded"/>
+						<xs:element name="PromotionTenderRewards" type="PromotionTenderRewardsType" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:choice>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="UnitLinesType">
+		<xs:sequence>
+			<xs:element name="ActualUnitPrice" type="ActualUnitPriceType" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ActualUnitPriceType">
+		<xs:simpleContent>
+			<xs:extension base="xs:decimal">
+				<xs:attribute name="Quantity" type="xs:decimal" use="required"/>
+				<xs:attribute name="Lines" type="xs:string" use="optional"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="ReturnDetailsType">
+		<xs:sequence>
+			<xs:element name="Comments" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="FirstPurchase" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="PackagingAvailable" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="BestBeforeDate" type="xs:dateTime" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="PurchaseDate" type="xs:dateTime" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="SupplierCode" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="PackagingCode" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ConsumableGroupType">
+		<xs:sequence>
+			<xs:element name="Type" type="xs:string"/>
+			<xs:element name="ID" type="xs:string"/>
+			<xs:element name="ProviderId" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- 
+		Sale Item - GroupIndicator Extension
+		<GroupIndicator Indicator="Indication" Group="TaxGroup" Symbol="A" Priority="2" xmlns="http://www.Retalix.com/Extensions" />
+	-->
+	<xs:complexType name="GroupIndicatorType">
+		<xs:annotation>
+			<xs:documentation>
+        Holds information about the indicator that is displayed next to the
+        item in the POS
+      </xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="Indicator" type="xs:string">
+			<xs:annotation>
+				<xs:documentation>The name of the indicator</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="Group" type="xs:string">
+			<xs:annotation>
+				<xs:documentation>The name of the indicator's groups</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="Symbol" type="xs:string">
+			<xs:annotation>
+				<xs:documentation>
+          The symobol of the indicator that is displayed in the POS next to
+          the item.
+        </xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="Priority" type="xs:int">
+			<xs:annotation>
+				<xs:documentation>
+          The priority of the indicator over other indicators.Higher number
+          means highers priority.
+        </xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<!-- <xs:element ReturnPolicyId"/> -->
+	<xs:complexType name="ReturnPolicyType">
+		<xs:complexContent>
+			<xs:extension base="arts:ReturnPolicyType">
+				<xs:sequence>
+					<xs:element name="ReturnPolicyId" type="xs:string" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Return Policy Id under ReturnPolicy</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- <xs:element name="Customer" type="CustomerCommonData"/> -->
+	<xs:simpleType name="BooleanEnumeration">
+		<xs:union memberTypes="xs:boolean CSharpBooleanToString"/>
+	</xs:simpleType>
+	<xs:simpleType name="CSharpBooleanToString">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="True"/>
+			<xs:enumeration value="False"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="CustomerCommonData">
+		<xs:complexContent>
+			<xs:extension base="arts:CustomerCommonData">
+				<xs:sequence>
+					<xs:choice minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="AreUpdateAssetsFailed" type="BooleanEnumeration" minOccurs="0" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>
+                Customer AreUpdateAssetsFailed  valuesTrue/ false
+              </xs:documentation>
+								<xs:appinfo source="MergeInstructions">
+									<extensionRef mergeMethod="choice" xmlns="">/schema/complexType[@name='CustomerCommonData']/sequence</extensionRef>
+								</xs:appinfo>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="CustomerExternalId" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+                Customer External ID ,received from the Loyalty
+                system
+              </xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="AccountNumber" type="xs:string" minOccurs="0"/>
+						<xs:element name="IssueNumber" type="xs:int" minOccurs="0"/>
+						<xs:element name="Segment" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Loyalty Segment ID</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="SequenceNumber" type="arts:SequenceNumberType" minOccurs="0"/>
+						<xs:element name="EndDateTime" type="DateTimeCommonData" minOccurs="0"/>
+						<xs:element name="ScanData" type="ScanDataBase" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+                The scan data from the MSR, RFID or
+                Barcode
+              </xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ColleagueDiscount" type="ColleagueDiscountType" minOccurs="0"/>
+						<xs:element name="CustomerVoided" type="CustomerVoidedType" minOccurs="0"/>
+						<xs:element name="Vehicle" type="VehicleType" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation> Vehicle for Drive Off Transaction</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="CustomerOrderNumber" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Customer order number</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:choice>
+				</xs:sequence>
+				<xs:attribute name="EntryMethod" type="arts:EntryMethodEnumeration" form="qualified"/>
+				<xs:attribute name="VoidFlag" type="BooleanEnumeration" form="qualified"/>
+				<xs:attribute name="IsAuthenticatedOffline" type="BooleanEnumeration" form="qualified"/>
+				<xs:attribute name="RetroactiveProcessActivate" type="xs:string" form="qualified">
+					<xs:annotation>
+						<xs:appinfo source="MergeInstructions">
+							<extensionRef xmlns="">/schema/complexType[@name='CustomerCommonData']</extensionRef>
+						</xs:appinfo>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!--  <Kit r10Ex:ID="101" r10Ex:Description="Ingredient_Hamburger"> -->
+	<xs:complexType name="KitBase">
+		<xs:complexContent>
+			<xs:extension base="arts:KitBase">
+				<xs:attribute name="ID" type="xs:string"/>
+				<xs:attribute name="Description" type="xs:string"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- <Member r10Ex:GroupID="4001" r10Ex:GroupTag="Ingredients"> -->
+	<xs:complexType name="KitMemberBase">
+		<xs:complexContent>
+			<xs:extension base="arts:KitMemberBase">
+				<xs:attribute name="IsKit" type="xs:string"/>
+				<xs:attribute name="GroupID" type="xs:string" form="qualified">
+					<xs:annotation>
+						<xs:documentation>Link between the member to the Group</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="GroupTag" type="xs:string" form="qualified">
+					<xs:annotation>
+						<xs:documentation>
+              Group tag for display, available values can be: Can be
+              ingredient or message
+            </xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:simpleType name="KitAction">
+		<xs:union memberTypes="KitActionEnumeration arts:KitActionEnumeration"/>
+	</xs:simpleType>
+	<xs:simpleType name="KitActionEnumeration">
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="Exclude"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Customer Voided -->
+	<xs:complexType name="CustomerVoidedType">
+		<xs:sequence>
+			<xs:element name="CustomerID" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Customer ID </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CustomerExternalId" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+            Customer External ID ,received from the Loyalty
+            system
+          </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AccountNumber" type="xs:string" minOccurs="0"/>
+			<xs:element name="CustomerOrderNumber" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Customer order number</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Segment" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Loyalty Segment ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IssueNumber" type="xs:int" minOccurs="0"/>
+			<xs:element name="ScanData" type="ScanDataBase" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The scan data from the MSR, RFID or Barcode</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SequenceNumber" type="arts:SequenceNumberType" minOccurs="0"/>
+			<xs:element name="EndDateTime" type="xs:dateTime" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="EntryMethod" type="arts:EntryMethodEnumeration"/>
+		<xs:attribute name="VoidFlag" type="xs:boolean"/>
+	</xs:complexType>
+	<xs:complexType name="ColleagueDiscountType">
+		<xs:sequence>
+			<xs:element name="AccountNumber" type="xs:string" minOccurs="0"/>
+			<xs:element name="ExpiryDate" type="xs:string" minOccurs="0"/>
+			<xs:element name="IssueNumber" type="xs:int" minOccurs="0"/>
+			<xs:element name="EntryMethod" type="arts:EntryMethodEnumeration" minOccurs="0"/>
+			<xs:element name="CardType" type="xs:string" minOccurs="0"/>
+			<xs:element name="QualifyingSpend" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="Rate" type="xs:string" minOccurs="0"/>
+			<xs:element name="AdjustmentValue" type="AmountCommonDataWithNegativeValue" minOccurs="0"/>
+			<xs:element name="ScanData" type="ScanDataBase" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The scan data from the MSR, RFID or Barcode</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SequenceNumber" type="arts:SequenceNumberType" minOccurs="0"/>
+			<xs:element name="BeginDateTime" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="EndDateTime" type="xs:dateTime" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="EntryMethod" type="arts:EntryMethodEnumeration"/>
+		<xs:attribute name="VoidFlag" type="xs:boolean"/>
+	</xs:complexType>
+	<xs:complexType name="AmountCommonDataWithNegativeValue">
+		<xs:simpleContent>
+			<xs:extension base="arts:BalanceCommonData">
+				<xs:attribute name="Currency" type="arts:CurrencyTypeCode" use="optional" default="USD" form="unqualified"/>
+				<xs:attribute name="ForeignAmount" type="arts:DecimalCommonData" use="optional" form="unqualified"/>
+				<xs:attribute name="Denomination" type="xs:string" use="optional" form="unqualified"/>
+				<xs:attribute name="TypeCode" type="xs:string" use="optional" form="qualified"/>
+			</xs:extension>
+			<!--<xs:anyAttribute namespace="##other" processContents="lax"/>-->
+		</xs:simpleContent>
+	</xs:complexType>
+	<!-- Cashier Productivity Elements -->
+	<xs:complexType name="CashierProductivityType">
+		<xs:sequence>
+			<xs:element name="ItemRingTime" type="CashierProductivityValuesType" minOccurs="0"/>
+			<xs:element name="SecureTime" type="CashierProductivityValuesType" minOccurs="0"/>
+			<xs:element name="IdleTime" type="CashierProductivityValuesType" minOccurs="0"/>
+			<xs:element name="TenderTime" type="CashierProductivityValuesType" minOccurs="0"/>
+			<xs:element name="OtherTime" type="CashierProductivityValuesType" minOccurs="0"/>
+			<xs:element name="SignOnTime" type="CashierProductivityValuesType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CashierProductivityValuesType">
+		<xs:sequence>
+			<xs:element name="Current" type="xs:int"/>
+			<xs:element name="BusinessDayDateTotal" type="xs:int"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--  Return Recalclation elemebt -->
+	<xs:complexType name="RecalculationDataType">
+		<xs:sequence>
+			<xs:element name="PromotionAdjustments" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Promotion" minOccurs="1" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="Id" type="xs:string"/>
+									<xs:element name="Name" type="xs:string"/>
+									<xs:element name="OriginalDiscount" type="xs:decimal"/>
+									<xs:element name="TotalPaidForBasket" type="xs:decimal"/>
+									<xs:element name="TotalRefunded" type="xs:decimal"/>
+									<xs:element name="TotalReclaimed" type="xs:decimal"/>
+									<xs:element name="ReclaimedInCurrentTransaction" type="xs:decimal"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="CustomerDebt" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Reclaimed" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+						<xs:element name="NotReclaimed" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="PointsAdjustment" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="OriginalEarned" type="xs:decimal"/>
+						<xs:element name="TotalReclaimed" type="xs:decimal"/>
+						<xs:element name="ReclaimedInCurrentTransaction" type="xs:decimal"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!--  Promotion section -->
+	<xs:element name="LineItemRewardPromotion" type="LineItemRewardPromotionType"/>
+	<xs:complexType name="PromotionsSummaryType">
+		<xs:sequence>
+			<xs:element name="PromotionSummary" type="PromotionSummaryType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RetailPriceModifierBase">
+		<xs:complexContent>
+			<xs:extension base="arts:RetailPriceModifierBase">
+				<xs:sequence>
+					<xs:element name="LineItemRewardPromotion" type="LineItemRewardPromotionType" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>LineItemRewardPromotion</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="LineItemRewardPromotionType">
+		<xs:sequence>
+			<xs:element name="TriggerQuantity" type="arts:QuantityCommonData">
+				<xs:annotation>
+					<xs:documentation>
+            The line item quantity which contrinuted to the promotion
+            triggering. Example: Buy 2 get x%, sale quantity is 3, therefore trigger
+            quantity is 2.
+          </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ApportionmentAmount" type="ApportionmentAmountType" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>
+            The apportionment amount allocated to a line item by a
+            promotion. Derived by the promotion's apportionment definition, setup by the
+            business users according to retailer/supplier reconciliation
+            agreements.
+          </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="RewardSplitAmount" type="arts:AmountCommonData" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+            Part of the promotion reward that was attributed to the sale
+            line, that represents the reward portion allocated for this Sale line. Used
+            to determine refund value. This is not the same as ApportionmentAmount, in
+            the sense that Apportionment Amount is driven by Retailer\Supplier
+            aggreements and does not neccessarily represent the net price as understood
+            by the customers.
+          </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="UnitLines" type="RewardedUnitLinesType" minOccurs="0"/>
+			<xs:element name="TenderID" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+            When promotion reward is a tender, this is the tender ID set
+            up in the promotion.
+          </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="RewardLevel" type="xs:integer" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+            In case of the promotion got more than one reward .for example
+            buy more get more,the reward is increment in each level
+          </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RewardedUnitLinesType">
+		<xs:sequence>
+			<xs:element name="RewardSplitUnitAmount" type="UnitLineAmountType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Used to determine unit line refund value.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="UnitLineAmountType">
+		<xs:simpleContent>
+			<xs:extension base="xs:decimal">
+				<xs:attribute name="SequenceNumber" type="xs:string" use="required"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="ApportionmentAmountType">
+		<xs:complexContent>
+			<xs:extension base="arts:AmountCommonData">
+				<xs:attribute name="Participator" type="xs:string"/>
+				<xs:attribute name="ParticipatorId" type="xs:string"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="PromotionSummaryType">
+		<xs:sequence>
+			<xs:element name="SequenceNumber" type="arts:SequenceNumberType" minOccurs="0"/>
+			<xs:element name="PromotionID" type="xs:string"/>
+			<xs:element name="RedemptionQuantity" type="arts:QuantityCommonData" minOccurs="0"/>
+			<xs:element name="TotalRewardAmount" type="arts:AmountCommonData" minOccurs="0"/>
+			<xs:element name="TriggerType" type="xs:string" minOccurs="0"/>
+			<xs:element name="LoyaltyAccount" type="LoyaltyAccountCommonDataType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="RedeemedCoupons" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="RedeemedCoupon" type="RedeemedCouponType" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="IssuedCoupons" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="IssuesCoupon" type="IssueCouponType" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="TenderId" type="xs:string" minOccurs="0"/>
+			<xs:element name="MarkdownApportionment" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ApportionmentAmount" type="arts:AmountCommonData"/>
+						<xs:element name="Hierarchy" type="arts:MerchandiseHierarchyCommonData"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Message" type="xs:string" minOccurs="0"/>
+			<xs:element name="RewardType" type="xs:string" minOccurs="0"/>
+			<xs:element name="PromotionDescription" type="arts:DescriptionCommonData" minOccurs="0"/>
+			<xs:element name="QualifyingSpent" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="IsCustomerRegistrationRequired" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="TriggerTiming" type="PromotionTriggerTiming" minOccurs="0"/>
+			<xs:element name="IsPriceReductionPromotion" type="BooleanEnumeration" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="PromotionTriggerTiming">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Line"/>
+			<xs:enumeration value="UponTotal"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="PromotionRewards">
+		<xs:sequence>
+			<xs:element name="Type" type="xs:string"/>
+			<xs:element name="Value" type="xs:decimal"/>
+			<xs:element name="PromotionID" type="xs:string"/>
+			<xs:element name="Description" type="arts:DescriptionCommonData"/>
+			<xs:element name="LineItemRewardPromotion" type="LineItemRewardPromotionType" minOccurs="0"/>
+			<xs:element name="SequenceNumber" type="arts:SequenceNumberType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PromotionDeferredRewardsType">
+		<xs:complexContent>
+			<xs:extension base="PromotionRewards">
+				<xs:sequence>
+					<xs:element name="DeferredID" type="xs:string"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="PromotionTenderRewardsType">
+		<xs:complexContent>
+			<xs:extension base="PromotionRewards"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="RedeemedCouponType">
+		<xs:sequence>
+			<xs:element name="Quantity" type="arts:QuantityCommonData"/>
+			<xs:element name="ScanCode" type="arts:ScanDataBase"/>
+		</xs:sequence>
+		<xs:attribute name="SeriesId" type="xs:string"/>
+		<xs:attribute name="OfferId" type="xs:string"/>
+		<xs:attribute name="CouponType" type="xs:string"/>
+		<xs:attribute name="Identifier" type="guid" use="optional" form="unqualified"/>
+	</xs:complexType>
+	<xs:simpleType name="guid">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="RefundablePromotionsType">
+		<xs:sequence>
+			<xs:element name="RefundablePromotion" type="RefundablePromotionType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="RefundPromotions" type="xs:base64Binary" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RefundablePromotionType">
+		<xs:sequence>
+			<xs:element name="PromotionId" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Promotion external id</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Promotion" type="xs:base64Binary" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Promotion data compressed</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="IssueCouponType">
+		<xs:complexContent>
+			<xs:extension base="TenderCouponBaseType">
+				<xs:attribute name="CustomerId" type="xs:string"/>
+				<xs:attribute name="Identifier" type="guid" use="optional" form="unqualified"/>
+				<xs:attribute name="SeriesId" type="xs:string" form="unqualified"/>
+				<xs:attribute name="OfferId" type="xs:string" form="unqualified"/>
+				<xs:attribute name="RewardValue" type="xs:decimal" form="unqualified"/>
+				<xs:attribute name="StartDate" type="xs:date" form="unqualified"/>
+				<xs:attribute name="ExpiryDate" type="xs:date" form="unqualified"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TenderCouponBaseType">
+		<xs:sequence>
+			<xs:element name="Name" type="xs:string" form="qualified" minOccurs="0"/>
+			<xs:element name="Description" type="xs:string" form="qualified" minOccurs="0"/>
+			<xs:element name="Quantity" type="arts:QuantityCommonData" form="qualified" minOccurs="0"/>
+			<xs:element name="PrimaryLabel" type="xs:string" form="qualified" minOccurs="0"/>
+			<xs:element name="SecondaryLabel" type="xs:string" form="qualified" minOccurs="0"/>
+			<xs:element name="ManufacturerID" type="xs:string" form="qualified" minOccurs="0"/>
+			<xs:element name="FamilyCode" type="xs:string" form="qualified" minOccurs="0"/>
+			<xs:element name="ExpirationDate" type="xs:date" form="qualified" minOccurs="0"/>
+			<xs:element name="PromotionCode" type="xs:string" form="qualified" minOccurs="0"/>
+			<xs:element name="ScanCode" type="xs:string" form="qualified" minOccurs="0"/>
+			<xs:element name="DispositionCode" type="xs:string" form="qualified" minOccurs="0"/>
+			<xs:element name="RewardValue" type="arts:DecimalCommonData" form="qualified" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+            Reward value allows one to record the amount given for this
+            coupon vs a fixed amount (facevalue)
+          </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<!--<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>-->
+		</xs:sequence>
+		<xs:attribute name="CouponType" type="arts:POSLogCouponType" form="unqualified">
+			<xs:annotation>
+				<xs:documentation>
+          A code denoting what kind of Coupon is being used to tender the
+          transaction
+        </xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="UnusedFlag" type="xs:boolean" form="unqualified">
+			<xs:annotation>
+				<xs:documentation>
+          Indicates this coupon wasn't used in this transaction.  It allows
+          the customer to submit a bunch of coupons and have the unused ones returned to
+          them.
+        </xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<!--  Coupon section -->
+	<xs:complexType name="CouponLogType">
+		<xs:all>
+			<xs:element name="SequenceNumber" type="arts:SequenceNumberType" minOccurs="0"/>
+			<xs:element name="CouponID" type="xs:string" minOccurs="0"/>
+			<xs:element name="ScanData" type="xs:string" minOccurs="0"/>
+			<xs:element name="SeriesID" type="xs:string" minOccurs="0"/>
+			<xs:element name="OfferId" type="xs:string" minOccurs="0"/>
+			<xs:element name="Amount" type="arts:AmountCommonData" minOccurs="0"/>
+			<xs:element name="Quantity" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="PromotionID" type="xs:string" minOccurs="0"/>
+			<xs:element name="Threshold" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="RewardType" type="xs:string" minOccurs="0"/>
+			<xs:element name="Fallback" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="ExtendedValidation" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="ValidationLevel" type="xs:int" minOccurs="0"/>
+			<xs:element name="Offline" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="GroupId" type="xs:string" minOccurs="0"/>
+			<xs:element name="Reason" type="xs:string" minOccurs="0"/>
+			<xs:element name="EndDateTime" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="OperatorBypassApproval" type="arts:ApprovalBase" minOccurs="0"/>
+			<xs:element name="CouponFullBarcode" type="xs:string" minOccurs="0"/>
+			<xs:element name="CouponLink" type="arts:SequenceNumberType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Link to the Coupon LineItem</xs:documentation>
+					<xs:appinfo source="MergeInstructions">
+						<extensionRef mergeMethod="choice" xmlns="">/schema/complexType[@name='LineItemDomainSpecific']/complexContent/extension/sequence</extensionRef>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:element>
+		</xs:all>
+		<xs:attribute name="EntryMethod" type="arts:EntryMethodTypeCode" use="optional" default="Scanned" form="unqualified"/>
+		<xs:attribute name="RefusalReason" type="xs:string" use="optional" form="unqualified"/>
+		<!--<xs:anyAttribute namespace="##other" processContents="lax"/>-->
+	</xs:complexType>
+	<!-- Operator Bypass Approval  -->
+	<xs:complexType name="ApprovalBase">
+		<xs:complexContent>
+			<xs:extension base="arts:ApprovalBase">
+				<xs:sequence>
+					<xs:element name="BusinessRuleManager" type="BusinessRuleManagerType" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>BRM - Business Rule Manager type</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="PolicyRuleManager" type="PolicyRuleManagerType" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Policy Rule Manager</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ReturnPolicy" type="ReturnPolicyApprovalType" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Return Policy</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ItemID" type="arts:ItemIDCommonData" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>ItemId</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="SCOData" type="SCODataType" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>SCOData Type</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+				<xs:attribute name="VoidFlag" type="BooleanEnumeration"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!--  BRM -->
+	<xs:complexType name="BusinessRuleManagerType">
+		<xs:sequence>
+			<xs:element name="BusinessRule" type="BusinessRuleType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="BusinessRuleType">
+		<xs:sequence>
+			<xs:element name="BusinessAction" type="BusinessActionType"/>
+		</xs:sequence>
+		<xs:attribute name="RuleType" type="xs:string" use="optional" form="unqualified">
+			<xs:annotation>
+				<xs:documentation>Type of Action linked to the rule</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="RuleName" type="xs:string" use="optional" form="unqualified"/>
+	</xs:complexType>
+	<xs:complexType name="BusinessActionType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="MessageName" type="xs:string" use="optional" form="unqualified"/>
+				<xs:attribute name="InputType" type="xs:string" use="optional" form="unqualified"/>
+				<xs:attribute name="ActionType" type="xs:string" use="optional" form="unqualified"/>
+				<xs:attribute name="InputValue" type="xs:string" use="optional" form="unqualified"/>
+				<xs:attribute name="IsApproved" type="xs:string" use="optional" form="unqualified"/>
+				<xs:attribute name="ItemLink" type="arts:SequenceNumberType" use="optional" form="unqualified"/>
+				<xs:attribute name="ReasonGroup" type="xs:string" use="optional"/>
+				<xs:attribute name="ReasonName" type="xs:string" use="optional"/>
+				<xs:attribute name="ReasonCode" type="xs:string" use="optional"/>
+				<xs:attribute name="RequiresAttendant" type="xs:boolean" use="optional"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="SCODataType">
+		<xs:sequence>
+			<xs:element name="ItemId" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Item Id</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ItemSku" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The SKU ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ExpectedWeight" type="arts:QuantityCommonData" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Expected Weight</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ActualWeight" type="arts:QuantityCommonData" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Actual Weight</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="InterventionTime" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The time when the Intervention occurred</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ApprovalTime" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The time when the Intervention approved</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="Type" type="xs:string" use="optional" form="unqualified"/>
+	</xs:complexType>
+	<!--  Policy Rule Manager -->
+	<xs:complexType name="PolicyRuleManagerType">
+		<xs:sequence>
+			<xs:element name="Policy" type="PolicyType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PolicyType">
+		<xs:sequence>
+			<xs:element name="PolicyRule" type="PolicyRuleType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="PolicyID" type="xs:string" use="optional" form="unqualified"/>
+	</xs:complexType>
+	<xs:complexType name="PolicyRuleType">
+		<xs:sequence>
+			<xs:element name="BusinessAction" type="BusinessActionType"/>
+			<xs:element name="ApproverID" type="arts:OperatorCommonData" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="RuleType" type="xs:string" use="optional" form="unqualified"/>
+		<xs:attribute name="EntryMethod" type="arts:EntryMethodTypeCode" use="optional" form="unqualified"/>
+	</xs:complexType>
+	<!--ReturnPolicy -->
+	<xs:complexType name="ReturnPolicyApprovalType">
+		<xs:sequence>
+			<xs:element name="Rule" type="Rule">
+				<xs:annotation>
+					<xs:documentation>
+            The return rule that was triggered in the containing return
+            policy for the current return.
+          </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="ID" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>
+          The ID of the return policy that was enforced for the current
+          return.
+        </xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="Rule">
+		<xs:sequence>
+			<xs:element name="Action" type="Action">
+				<xs:annotation>
+					<xs:documentation>
+            The action that resulted from enforcement of the containing
+            return rule.
+          </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="RuleName" type="xs:string" use="required" form="unqualified">
+			<xs:annotation>
+				<xs:documentation>
+          The name and unique ID of the return rule that was applicable for
+          the current return.
+        </xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="Action">
+		<xs:attribute name="MessageName" type="xs:string" use="optional">
+			<xs:annotation>
+				<xs:documentation>
+          The name and unique ID of the message configured for the action
+          that was applied to the current return.
+        </xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="ActionType" type="ActionType" use="required">
+			<xs:annotation>
+				<xs:documentation>
+          The type of the action that was applied to the current
+          return.
+        </xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="IsApproved" type="IsApprovedType" use="optional">
+			<xs:annotation>
+				<xs:documentation>
+          True if the operator approved a prompt from the action, false if
+          the operator rejected it. Not relevant for actions that do not prompt for
+          approval.
+        </xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:simpleType name="ActionType">
+		<xs:union memberTypes="ActionTypeEnumeration xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="ActionTypeEnumeration">
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="Allow"/>
+			<xs:enumeration value="AllowWithManagerApproval"/>
+			<xs:enumeration value="Prohibit"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="IsApprovedType">
+		<xs:union memberTypes="IsApprovedTypeEnumeration xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="IsApprovedTypeEnumeration">
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="Yes"/>
+			<xs:enumeration value="No"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--  Tender Section -->
+	<!-- "TenderAuthorizationDomainSpecific" inheritance from "TenderAuthorizationBase" -->
+	<xs:complexType name="TenderAuthorizationDomainSpecific">
+		<xs:complexContent>
+			<xs:extension base="arts:TenderAuthorizationDomainSpecific">
+				<xs:sequence>
+					<xs:element name="ProviderID" type="xs:string" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>
+                Provider ID, received from the
+                provider
+              </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ProviderData" type="xs:string" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>
+                Holds extra details ,received from the
+                provider
+              </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="CardId" type="xs:string" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>
+                External Card ID ,received from the
+                provider
+              </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="CardType" type="xs:string" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>
+                Card type ,received from the
+                provider
+              </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="PrioritizedGroupAmounts" type="PrioritizedGroupAmountsType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>
+                Card type ,received from the
+                provider
+              </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="AuthorizationType" type="xs:string" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>AuthorizationType Offline, Online</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ExtendedData" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Contains general additional information</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="Data" type="ExtendedDataType" minOccurs="0" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="VoiceAuthorization" type="VoiceAuthorizationType" minOccurs="0"/>
+					<xs:element name="TotalWaitTime" type="xs:long" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Wait Time in millisecond</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="NetworkTime" type="xs:long" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Network Time in millisecond</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="TenderReferenceId" type="xs:string" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Network Time in millisecond</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="AuthorizationResponseCode" type="xs:string" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Response code</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="IsToken" type="xs:boolean" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Is Token</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+				<xs:attribute name="Status" type="xs:string"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- <EMVDebugType "/> -->
+	<xs:complexType name="EMVDebugType">
+		<xs:complexContent>
+			<xs:extension base="arts:EMVDebugType">
+				<xs:sequence>
+					<xs:choice minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="PanSequenceNumber" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Pan Sequence Number </xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ApplicationLabel" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>SSL extension for EMV Debug</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="EffectiveDate" type="xs:dateTime" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>SSL extension for EMV Debug </xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="IssuerActionCodeOnline" type="xs:string"/>
+						<xs:element name="IssuerActionCodeDenial" type="xs:string"/>
+						<xs:element name="ReasonOnline" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>SSL extension for EMV Debug</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:choice>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="VoiceAuthorization" type="VoiceAuthorizationType"/>
+	<xs:complexType name="VoiceAuthorizationType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="Approved" type="xs:boolean"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<!-- "TenderCreditDebitDomainSpecific" base from "TenderCreditDebitBase" -->
+	<xs:complexType name="TenderCreditDebitDomainSpecific">
+		<xs:complexContent>
+			<xs:extension base="arts:TenderCreditDebitDomainSpecific">
+				<xs:sequence>
+					<xs:element name="MaskedAccountId" type="xs:string" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>MaskedAccountId</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="MaskedPAN" type="xs:string" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>PAN masked by the provider</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- <TenderBase "/> -->
+	<xs:complexType name="TenderDomainSpecific">
+		<xs:complexContent>
+			<xs:extension base="arts:TenderDomainSpecific">
+				<xs:sequence>
+					<xs:element name="WICCheck" type="WICCheckType" minOccurs="0"/>
+					<xs:element name="WICCVVCheck" type="WICCheckType" minOccurs="0"/>
+					<xs:element name="CashbackTenderID" type="xs:string" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>
+                R10 default cash tender to be used for
+                cashback
+              </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="TenderDescription" type="xs:string" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>R10 Tender description</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="IsAutoReconcile" type="BooleanEnumeration" minOccurs="0"/>
+					<xs:element name="PromotionId" type="xs:string" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Promotion Id</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="VoucherId" type="xs:string" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Voucher Id</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="IsRewardTender" type="BooleanEnumeration" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>IsRewardTender</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!--  AccountsReceivable  TenderAccountInfoBase -->
+	<xs:complexType name="TenderAccountInfoBase">
+		<xs:complexContent>
+			<xs:extension base="arts:TenderAccountInfoBase">
+				<xs:sequence>
+					<xs:element name="ExpiryDate" type="xs:string" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>R10 Tender description</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="MaskedPAN" type="MaskedPANType">
+		<xs:annotation>
+			<xs:documentation>PAN masked by the provider</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:simpleType name="MaskedPANType">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:complexType name="TenderGiftCardBase">
+		<xs:complexContent>
+			<xs:extension base="arts:TenderGiftCardBase">
+				<xs:attribute name="EntryMethod" type="arts:EntryMethodTypeCode" form="qualified"/>
+				<xs:attribute name="ServiceType" type="ServiceTypeCode"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:simpleType name="ServiceTypeCode">
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="Activation"/>
+			<xs:enumeration value="TopUp"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="WICCheckType">
+		<xs:annotation>
+			<xs:documentation>
+        Type used to describe parameters that were entered for govenrment
+        program (WIC etc) tender.
+      </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="FirstDayToUse" type="xs:date" minOccurs="0"/>
+			<xs:element name="LastDayToUse" type="xs:date" minOccurs="0"/>
+			<xs:element name="AmountNotToExceed" type="xs:decimal" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="WICCheck" type="WICCheckType"/>
+	<xs:element name="WICCVVCheck" type="WICCheckType"/>
+	<!--  FleetInfoBase   -->
+	<xs:complexType name="FleetInfoBase">
+		<xs:complexContent>
+			<xs:extension base="arts:FleetInfoBase">
+				<xs:sequence>
+					<xs:element name="ItemDetails" type="ItemDetailsType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>ItemDetails inside Fleet Info</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ItemType">
+		<xs:sequence>
+			<xs:element name="ProductCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="Value" type="arts:AmountCommonData" minOccurs="0"/>
+			<xs:element name="Quantity" type="arts:QuantityCommonData" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ItemDetailsType">
+		<xs:sequence>
+			<xs:element name="Item" type="ItemType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>list of the items</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PrioritizedGroupAmountsType">
+		<xs:annotation>
+			<xs:documentation>
+        Represents an eligible prioritized group amount for a certain tender,
+        for example, "Rx" group which represents prescribed products by a professional
+        health physician, means that the eligible products for the tender are only certain
+        medicines.Moreover, these product have higher priority then the "Non-Rx" products
+        which represent a non prescribed medicines. Therefore, the prioritized products
+        (prescribed medicines) should be paid first.
+      </xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="Amount">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="arts:AmountCommonData">
+							<xs:attribute name="Group" type="xs:string" use="required"/>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="Type" type="xs:string" use="optional">
+			<xs:annotation>
+				<xs:documentation>
+          Represents the type of group amounts, for example
+          'FlexibleSpendingAccount'(FSA)
+        </xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="ExtendedDataType">
+		<xs:annotation>
+			<xs:documentation>Data element formatted as key/value pair</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="Key" type="xs:string" use="optional"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<!-- Control Transactions -->
+ 
+  <xs:complexType name="ControlTransactionDomainSpecific">
+		<xs:complexContent>
+			<xs:extension base="arts:ControlTransactionDomainSpecific">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="IdmAuthorizationType">
+		<xs:sequence>
+			<xs:element name="Activity" type="xs:string"/>
+			<xs:element name="Status" type="xs:string"/>
+			<xs:element name="ErrorCode" type="xs:string"/>
+			<!--<xs:any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>-->
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="OperatorLockedByServerType">
+		<xs:sequence>
+			<xs:element name="SequenceNumber" type="xs:int"/>
+			<xs:element name="DateTime" type="xs:dateTime"/>
+			<xs:element name="Operator" type="arts:OperatorCommonData"/>
+			<xs:element name="ReasonCode">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="arts:ReasonCodeCommonData">
+							<xs:attribute name="RetryCount" type="xs:int"/>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<!--<xs:any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>-->
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="POSLogCPOSSession">
+		<xs:complexContent>
+			<xs:extension base="arts:POSLogCPOSSession">
+				<xs:sequence>
+					<xs:element name="NonResettableGrandTotal" type="arts:AmountCommonData" minOccurs="0"/>
+					<xs:element name="PreviousNonResettableGrandTotal" type="arts:AmountCommonData" minOccurs="0"/>
+					<xs:element name="AccountsReceivable" type="AccountsReceivableType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>AccountsReceivable</xs:documentation>
+							<xs:appinfo source="MergeInstructions">
+								<extensionRef mergeMethod="choice" xmlns="">/schema/complexType[@name='POSLogCPOSSession']/sequence</extensionRef>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="PersonalAccounts" type="xs:string" minOccurs="0"/>
+					<xs:element name="SignedOffOperatorID" minOccurs="0" maxOccurs="unbounded">
+						<xs:complexType>
+							<xs:simpleContent>
+								<xs:extension base="xs:string">
+									<xs:attribute name="OperatorName" type="xs:string"/>
+									<xs:attribute name="WorkerID" type="xs:string"/>
+									<xs:attribute name="OperatorType" type="xs:string"/>
+								</xs:extension>
+							</xs:simpleContent>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="TransactionStatus" minOccurs="0">
+						<xs:complexType>
+							<xs:simpleContent>
+								<xs:extension base="xs:string">
+									<xs:attribute name="Status" type="xs:string"/>
+								</xs:extension>
+							</xs:simpleContent>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+				<xs:attribute name="OperatorSignOff" type="xs:string" use="optional">
+					<xs:annotation>
+						<xs:appinfo source="MergeInstructions">
+							<extensionRef xmlns="">/schema/complexType[@name='POSLogCPOSSession']</extensionRef>
+						</xs:appinfo>
+					</xs:annotation>
+				</xs:attribute>
+				<xs:attribute name="ForceFlag" type="BooleanEnumeration" use="optional" form="qualified">
+					<xs:annotation>
+						<xs:appinfo source="MergeInstructions">
+							<extensionRef xmlns="">/schema/complexType[@name='POSLogCPOSSession']</extensionRef>
+						</xs:appinfo>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="AccountsReceivableType">
+		<xs:sequence>
+			<xs:element name="Account" type="ReceivableType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ReceivableType">
+		<xs:sequence>
+			<xs:element name="AccountID" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="AccountName" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="ProviderID" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="Amount" type="arts:AmountCommonData" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--  Cash Office  -->
+	<xs:complexType name="POSLogTotalsBase">
+		<xs:complexContent>
+			<xs:extension base="arts:POSLogTotalsBase">
+				<xs:sequence>
+					<xs:element name="TenderDescription" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TenderControlTransactionBase">
+		<xs:complexContent>
+			<xs:extension base="arts:TenderControlTransactionBase">
+				<xs:sequence>
+					<xs:element name="BankReceipt" type="BankReceiptType" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="SafeTransfer" type="SafeTransferType" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="TenderDeclaration" type="TenderDeclarationType" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="OverShort" type="OverShortType" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="BlindPickup" type="BlindPickupType" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="Account" type="DeclaredAccountType" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="DeclaredAccountType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="ExternalId" type="xs:string"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="BankReceiptType">
+		<xs:sequence>
+			<xs:element name="Bank" type="xs:string" minOccurs="0"/>
+			<xs:element name="Account" type="xs:string" minOccurs="0"/>
+			<xs:element name="Description" type="xs:string" minOccurs="0"/>
+			<xs:element name="Amount" type="arts:AmountCommonData" minOccurs="0"/>
+			<xs:element name="ReceiptDetail" type="ReceiptDetailType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SafeTransferType">
+		<xs:sequence>
+			<xs:element name="Totals" type="arts:POSLogTotalsBase" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="Safe" type="AccountType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TenderDeclarationType">
+		<xs:sequence>
+			<xs:element name="Totals" type="arts:POSLogTotalsBase" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="Account" type="AccountType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="POSLogTotalsBaseType">
+		<xs:sequence>
+			<xs:element name="Amount" type="AmountType"/>
+			<xs:element name="Count" type="xs:integer" form="qualified" minOccurs="0"/>
+			<xs:element name="Reason" type="xs:string" form="qualified" minOccurs="0"/>
+			<xs:element name="TenderID" type="xs:string" form="qualified" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="TenderType" type="arts:TenderTypeCode" use="optional" form="unqualified"/>
+	</xs:complexType>
+	<xs:complexType name="AmountType">
+		<xs:simpleContent>
+			<xs:extension base="xs:decimal">
+				<xs:attribute name="Currency" type="xs:string"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="OverShortType">
+		<xs:sequence>
+			<xs:element name="Over" type="POSLogTotalsBaseType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="Short" type="POSLogTotalsBaseType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="BlindPickupType">
+		<xs:sequence>
+			<xs:element name="DropAmount" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="TenderId" type="xs:string" minOccurs="0"/>
+			<xs:element name="EnvelopeId" type="xs:int" minOccurs="0"/>
+			<xs:element name="DropNumber" type="xs:int" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ReceiptDetailType">
+		<xs:sequence>
+			<xs:element name="Totals" type="arts:POSLogTotalsBase" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--<xs:complexType name="POSLogTotalsBase">
+    <xs:sequence>
+      <xs:element name="Amount" type="AmountCommonData" form="qualified"/>
+      <xs:element name="Count" type="xs:integer" form="qualified" minOccurs="0"/>
+      <xs:element name="Reason" form="qualified" minOccurs="0">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="arts:ReasonCodeCommonData"/>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ForeignCurrency" type="TenderForeignCurrencyBase" form="qualified" minOccurs="0"/>
+      <xs:element name="TenderID" type="xs:string" form="qualified" minOccurs="0"/>
+      -->
+	<!-- RTC <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/> -->
+	<!--
+      <xs:element name="TenderDescription" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="TenderType" type="arts:TenderTypeCode" use="optional" form="unqualified"/>
+    <xs:attribute name="SubTenderType" type="xs:string" use="optional" form="unqualified"/>
+    <xs:attribute name="Denomination" type="xs:string" use="optional" form="unqualified"/>
+    -->
+	<!--<xs:anyAttribute namespace="##other" processContents="lax"/>-->
+	<!--
+  </xs:complexType>-->
+	<xs:complexType name="TenderForeignCurrencyBase">
+		<xs:annotation>
+			<xs:documentation>
+        provides details about the foreign currency exchange rates,
+        etc.
+      </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="DateTime" type="DateTimeCommonData" form="qualified" minOccurs="0"/>
+				<xs:element name="CurrencyCode" type="arts:CurrencyTypeCode" form="qualified" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>
+              To be depreciated - data now contained in
+              MonetaryAmountCommonData
+            </xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="OriginalFaceAmount" form="qualified">
+					<xs:annotation>
+						<xs:documentation>
+              the original amount in the foreign currency the being
+              converted to local currency. For example, converting Yen to Dollars, this
+              amount would be the amount of Yen
+            </xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="arts:MonetaryAmountCommonData"/>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ExchangeRate" type="arts:DecimalCommonData" form="qualified" minOccurs="0"/>
+				<xs:element name="ServiceCharge" form="qualified" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>
+              The amount charged to make the conversion from the foreign
+              currency to the local currency
+            </xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="arts:MonetaryAmountCommonData"/>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SettleTenderPickupBase">
+		<xs:complexContent>
+			<xs:extension base="arts:SettleTenderPickupBase">
+				<xs:sequence>
+					<xs:element name="Account" type="AccountType" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="AccountType" mixed="true">
+		<xs:sequence>
+			<xs:element name="Source" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="Destination" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="Description" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="SettlementDate" type="xs:dateTime">
+		<xs:annotation>
+			<xs:documentation>Date/time when the Safe/Till Settlement is done </xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<!-- LoyaltyAccountCommonData not extend ARTS  This is Temporary solution-->
+	<xs:complexType name="LoyaltyAccountCommonDataType">
+		<xs:sequence>
+			<xs:element name="CustomerID" type="xs:string" minOccurs="0"/>
+			<xs:element name="LoyaltyCard" type="LoyaltyCardType" minOccurs="0"/>
+			<xs:element name="LoyaltyProgram" type="LoyaltyAccountType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="LoyaltyCardType">
+		<xs:sequence>
+			<xs:element name="PrimaryAccountNumber" type="xs:string"/>
+			<xs:element name="IssueSequence" type="xs:integer" minOccurs="0"/>
+		</xs:sequence>
+		<!--<xs:anyAttribute namespace="##other" processContents="lax"/>-->
+	</xs:complexType>
+	<xs:complexType name="LoyaltyAccountType">
+		<xs:annotation>
+			<xs:documentation>
+        A type of CUSTOMER ACCOUNT established purely for the purposes of
+        tracking a customer's activity over a period of time and based on the volume of NET
+        sales to provide an award to the customer in the form of a gift or special
+        discount.
+      </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="LoyaltyProgramID" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>
+            (Membership ID) A artificial, unique identifier for a loyalty
+            program
+          </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LoyaltyAccountID" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+            Organizational Affiliation (AARP) - Frequent Flyer
+            Account
+          </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="EffectiveDate" type="xs:date" minOccurs="0"/>
+			<xs:element name="ExpirationDate" type="xs:date" minOccurs="0"/>
+			<xs:element name="CumulativeNetSalesAmount" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="Points" type="PointsCommonDataType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PointsCommonData">
+		<xs:simpleContent>
+			<xs:extension base="xs:decimal">
+				<xs:attribute name="Type" type="PointsTypeCode" default="Credited" form="unqualified"/>
+			</xs:extension>
+			<!--<xs:anyAttribute namespace="##other" processContents="lax"/>-->
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="PointsTypeCode">
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="Credited"/>
+			<xs:enumeration value="Debited"/>
+			<xs:enumeration value="Balance"/>
+			<xs:enumeration value="Assigned"/>
+			<xs:enumeration value="PointsEarned"/>
+			<xs:enumeration value="Redeemed"/>
+			<xs:enumeration value="TotalRedeemed"/>
+			<xs:enumeration value="Reversal"/>
+			<xs:enumeration value="PointsAdjustment"/>
+			<xs:enumeration value="X:OpenBalance"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--  Refusal Reason extensions -->
+	<xs:simpleType name="RefusalReasonTypeCodes">
+		<xs:union memberTypes="RefusalReasonTypeCodesExtension arts:RefusalReasonTypeCodes"/>
+	</xs:simpleType>
+	<xs:simpleType name="RefusalReasonTypeCodesExtension">
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="X:CouponNotExists"/>
+			<xs:enumeration value="X:Household"/>
+			<xs:enumeration value="X:Age18Policy2"/>
+			<xs:enumeration value="X:AlcoholRestrictionLate"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--  Fuel  Section -->
+	<!--  Pump Test Extension  -->
+	<xs:complexType name="PumpTestType">
+		<xs:complexContent>
+			<xs:extension base="arts:PumpTestType">
+				<xs:sequence>
+					<xs:element name="MerchandiseHierarchy" type="arts:MerchandiseHierarchyCommonData" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="POSIdentity" type="RetailTransactionPOSIdentity" minOccurs="0"/>
+					<xs:element name="ItemID" type="arts:ItemIDCommonData" minOccurs="0"/>
+					<xs:element name="RegularSalesUnitPrice" type="arts:UnitPriceCommonData" minOccurs="0"/>
+					<xs:element name="SequenceNumber" type="arts:SequenceNumberType" minOccurs="0"/>
+					<xs:element name="ActualSalesUnitPrice" type="arts:UnitPriceCommonData" minOccurs="0"/>
+					<xs:element name="ControllerSequenceNumber" type="xs:string" minOccurs="0"/>
+					<xs:element name="TankID" type="xs:string" minOccurs="0"/>
+					<xs:element name="CardId" type="xs:string" minOccurs="0"/>
+					<xs:element name="ItemDescription" type="xs:string" minOccurs="0"/>
+				</xs:sequence>
+				<xs:attribute name="Type" type="xs:string" form="qualified"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="RetailTransactionPOSIdentity">
+		<xs:sequence>
+			<xs:element name="POSItemID" type="POSItemID" form="qualified"/>
+			<xs:element name="Qualifier" type="POSQualifier" form="qualified" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="POSIDType" type="POSIDType" form="unqualified"/>
+	</xs:complexType>
+	<xs:simpleType name="POSIDType">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="POSItemID">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="POSQualifier">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:complexType name="ForeCourtTransactionBase">
+		<xs:complexContent>
+			<xs:extension base="arts:ForeCourtTransactionBase">
+				<xs:sequence>
+					<xs:choice minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="NumberOfTanks" type="xs:int" minOccurs="0" maxOccurs="unbounded"/>
+						<xs:element name="TankReading" type="TankReadingType" minOccurs="0" maxOccurs="unbounded"/>
+						<xs:element name="TanksDeliveries" type="TanksDeliveriesType" minOccurs="0" maxOccurs="unbounded"/>
+						<xs:element name="FuelingPointTotals" type="FuelingPointTotalsType" minOccurs="0" maxOccurs="unbounded"/>
+						<xs:element name="TotalDeliveries" type="xs:int" minOccurs="0"/>
+					</xs:choice>
+				</xs:sequence>
+				<xs:attribute name="Type" type="xs:string" form="qualified"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:simpleType name="ForeCourtTypeCode">
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="PumpTest"/>
+			<xs:enumeration value="Calibration"/>
+			<xs:enumeration value="TankReading"/>
+			<xs:enumeration value="PumpTotals"/>
+			<xs:enumeration value="TanksDeliveries"/>
+			<xs:enumeration value="FuelingPointTotals"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Tank Reading -->
+	<xs:complexType name="TankReadingType">
+		<xs:sequence>
+			<xs:element name="POSIdentity" type="arts:RetailTransactionPOSIdentity" minOccurs="0"/>
+			<xs:element name="ItemID" type="arts:ItemIDCommonData" minOccurs="0"/>
+			<xs:element name="TankID" type="TankIDType" minOccurs="0"/>
+			<xs:element name="TankStatus" type="xs:string" minOccurs="0"/>
+			<xs:element name="ReadingDateTime" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="TankGaugeReadDateTime" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="FuelLevel" type="arts:QuantityCommonData" minOccurs="0"/>
+			<xs:element name="WaterLevel" type="arts:QuantityCommonData" minOccurs="0"/>
+			<xs:element name="FuelVolume" type="arts:QuantityCommonData" minOccurs="0"/>
+			<xs:element name="WaterVolume" type="arts:QuantityCommonData" minOccurs="0"/>
+			<xs:element name="TcVolume" type="arts:QuantityCommonData" minOccurs="0"/>
+			<xs:element name="Temperature" type="arts:QuantityCommonData" minOccurs="0"/>
+			<xs:element name="Ullage" type="arts:QuantityCommonData" minOccurs="0"/>
+			<xs:element name="FuelWeight" type="arts:QuantityCommonData" minOccurs="0"/>
+			<!-- Kg/Inch -->
+			<xs:element name="Density" type="xs:decimal" minOccurs="0"/>
+			<!-- xs:boolean 1 yes 0 no-->
+			<xs:element name="DeliveryInProgressFlag" type="xs:boolean" minOccurs="0"/>
+			<!-- xs:boolean 1 yes 0 no-->
+			<xs:element name="IsOnlineFlag" type="xs:boolean" minOccurs="0"/>
+			<!-- xs:integer -->
+			<xs:element name="FuelActiveReadNumber" type="xs:int" minOccurs="0"/>
+			<!-- xs:integer -->
+			<xs:element name="FuelShiftNumber" type="xs:int" minOccurs="0"/>
+			<xs:element name="WaterPercentage" type="arts:QuantityCommonData" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- TanksDeliveries -->
+	<xs:complexType name="TanksDeliveriesType">
+		<xs:sequence>
+			<xs:element name="POSIdentity" type="arts:RetailTransactionPOSIdentity" minOccurs="0"/>
+			<xs:element name="ItemID" type="arts:ItemIDCommonData" minOccurs="0"/>
+			<xs:element name="TankID" type="TankIDType" minOccurs="0"/>
+			<xs:element name="TankStatus" type="xs:string" minOccurs="0"/>
+			<xs:element name="FuelActiveReadNumber" type="xs:int" minOccurs="0"/>
+			<xs:element name="FuelShiftNumber" type="xs:int" minOccurs="0"/>
+			<xs:element name="FuelWeight" type="arts:QuantityCommonData" minOccurs="0"/>
+			<!-- Kg/Inch -->
+			<xs:element name="Density" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="Starting" type="TanksStatusType" minOccurs="0"/>
+			<xs:element name="Ending" type="TanksStatusType" minOccurs="0"/>
+			<xs:element name="DeliveryRef" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TanksStatusType">
+		<xs:sequence>
+			<xs:element name="DateTime" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="FuelLevel" type="arts:QuantityCommonData" minOccurs="0"/>
+			<xs:element name="WaterLevel" type="arts:QuantityCommonData" minOccurs="0"/>
+			<xs:element name="FuelVolume" type="arts:QuantityCommonData" minOccurs="0"/>
+			<xs:element name="WaterVolume" type="arts:QuantityCommonData" minOccurs="0"/>
+			<xs:element name="TcVolume" type="arts:QuantityCommonData" minOccurs="0"/>
+			<xs:element name="Temperature" type="arts:QuantityCommonData" minOccurs="0"/>
+			<xs:element name="FuelWeight" type="arts:QuantityCommonData" minOccurs="0"/>
+			<!-- Kg/Inch -->
+			<xs:element name="Density" type="xs:decimal" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--   Pump Total Report -->
+	<xs:complexType name="FuelingPointTotalsType">
+		<xs:sequence>
+			<xs:element name="POSIdentity" type="arts:RetailTransactionPOSIdentity" minOccurs="0"/>
+			<xs:element name="ItemID" type="arts:ItemIDCommonData" minOccurs="0"/>
+			<xs:element name="FuelingPointID" type="xs:string" minOccurs="0"/>
+			<xs:element name="NozzleID" type="xs:string" minOccurs="0"/>
+			<xs:element name="TankID" type="TankIDType" minOccurs="0"/>
+			<xs:element name="MeterVolume" type="arts:QuantityCommonData" minOccurs="0"/>
+			<xs:element name="DateTime" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="PumpStatus" type="xs:string" minOccurs="0"/>
+			<xs:element name="NozzleStatus" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TankIDType">
+		<xs:annotation>
+			<xs:documentation>
+        identifier of tank which stored the fuel grade delivered - to enable
+        sales by storage location (tank) Note if the ItemType=Blend; there are two or more
+        TankID elements with BlendRatio, e.g. by default BlendRatio=100
+      </xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="BlendRatio" type="arts:DecimalCommonData" use="optional" form="unqualified">
+					<xs:annotation>
+						<xs:documentation>
+              Percentage of this fuel sale coming from this tank; 40
+              would say 40 % of the fuel pumped in this blended sale came from this
+              tank
+            </xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<!--  Vehicle for drive off under customer  -->
+	<xs:complexType name="VehicleType">
+		<xs:sequence>
+			<xs:element name="LicensePlateID" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The license plate Id of the vehicle</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Model" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The model of the vehicle</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Color" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The color of the vehicle</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AdditionalInfo" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Free text to decribe the vehicle</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!--  Tax Definitions -->
+	<xs:complexType name="TaxDefinitionsType">
+		<xs:sequence>
+			<xs:element name="TaxAuthority" type="TaxAuthorityType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="TaxRate" type="TaxRateType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TaxAuthorityType">
+		<xs:annotation>
+			<xs:documentation>Type for TaxAuthorityType item</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="AuthorityId" type="xs:string"/>
+			<xs:element name="Descriptions" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Description" type="DescriptionCommonData" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="Action" type="TaxAuthorityActionTypeCodes" default="Replace">
+			<xs:annotation>
+				<xs:documentation>
+          The action to perform on the provided items (Add, Update,
+          AddOrUpdate, Replace)
+        </xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:simpleType name="TaxAuthorityActionTypeCodes">
+		<xs:restriction base="ActionTypeCodes">
+			<xs:enumeration value="Add">
+				<xs:annotation>
+					<xs:documentation>
+            Add is obsolete and supported, need to use Replace instead
+          </xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Update">
+				<xs:annotation>
+					<xs:documentation>
+            Update is obsolete and supported, need to use Replace instead
+          </xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="AddUpdate">
+				<xs:annotation>
+					<xs:documentation>
+            AddUpdate is obsolete and supported, need to use AddOrUpdate
+            instead
+          </xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="AddOrUpdate"/>
+			<xs:enumeration value="Replace">
+				<xs:annotation>
+					<xs:documentation> Default is Replace </xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ActionTypeCodes">
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="AddUpdate">
+				<xs:annotation>
+					<xs:documentation>
+            AddUpdate is obsolete and supported, need to use AddOrUpdate
+            instead
+          </xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="AddOrUpdate">
+				<xs:annotation>
+					<xs:documentation>
+            Add new entity if not exist or Update existing (Upsert
+            statement). For entities that can be replaced partially, and support Replace
+            action, this is the same as PartialUpdate.
+          </xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Update">
+				<xs:annotation>
+					<xs:documentation>
+            Update the entity if exists, fail if the entity do not
+            exists.
+          </xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Delete">
+				<xs:annotation>
+					<xs:documentation>
+            Delete an existing entity by criteria. Ignored is entity do
+            not exists.
+          </xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="DeleteAll">
+				<xs:annotation>
+					<xs:documentation>
+            Remove all entities that fits a specified criteria.
+          </xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Lookup">
+				<xs:annotation>
+					<xs:documentation>
+            Search for an entity based on criteria. Behavior when fail to
+            find the entity, depends on specific service implementation.
+          </xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Add">
+				<xs:annotation>
+					<xs:documentation>
+            Add a new entity, fails if it already exists by unique id.
+          </xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="PartialUpdate">
+				<xs:annotation>
+					<xs:documentation>
+            Obsolete. Same as Update, only allow specifying only part of
+            the data to update, though leaving other data part the same. In new
+            interfaces, this is the same as Update.
+          </xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Replace">
+				<xs:annotation>
+					<xs:documentation>
+            Delete entity if exists and add it anew. For entities that
+            can be cannot be replaced partially, this is the same as AddOrUpdate.
+          </xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Inherit">
+				<xs:annotation>
+					<xs:documentation>
+            Indicates that the action is the same as in the parent
+            element. Example: If Product-Action is Replace, the
+            Product-Hierarchies-Action is Replace as well. Note that in some cases the
+            inheritance is not symetric. I.e. in the previous example
+            Product-Hierarchies-Hierarchy-Action do not support replace, so it will
+            logically be AddOrUpdate. This is not evident in the schema today.
+          </xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ReplaceExisting">
+				<xs:annotation>
+					<xs:documentation>
+            Delete entity and add it anew. If the entity do not exist, it
+            will fail.
+          </xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="TaxRateType">
+		<xs:annotation>
+			<xs:documentation>Type for TaxRateType item</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="RateId" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The unique id of the tax rate</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Type" type="TaxType" minOccurs="0"/>
+			<xs:element name="AuthorityId" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+            The id of the tax authority this rate belongs
+            to
+          </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Descriptions" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+            The different descriptions (per culture) of the tax
+            rate
+          </xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Description" type="DescriptionCommonData" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="IsIncluded" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+            Determines whether the tax rate is included in the item's
+            price or not
+          </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:choice minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+            The calculation method of the tax rate (percentage or
+            fixed)
+          </xs:documentation>
+				</xs:annotation>
+				<xs:element name="TaxCalculatedMethodPercent" type="TaxCalculatedMethodPercentType"/>
+				<xs:element name="TaxCalculatedMethodFixed" type="TaxCalculatedMethodFixedValueType"/>
+				<xs:element name="TaxCalculatedMultiMethodTiered" type="TaxCalculatedMethodMultiTieredType"/>
+				<xs:element name="TaxCalculatedMethodTopTiered" type="TaxCalculatedMethodTopTieredType"/>
+			</xs:choice>
+			<xs:element name="Conditions" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+            The different conditions of the tax rate. All these condition
+            must be met in order for the rate to be active.
+          </xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:choice minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="TaxProductSelectCondition" type="TaxProductSelectConditionType">
+							<xs:annotation>
+								<xs:documentation>
+                  Condition of product group (products in the group
+                  will have the tax rate calculated for them)
+                </xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="TaxProductCategoryCondition" type="TaxProductCategoryConditionType">
+							<xs:annotation>
+								<xs:documentation>
+                  Condition of product category (products in the
+                  category or in the shild categories will have the tax rate
+                  calculated for them)
+                </xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="TaxDateCondition" type="TaxDateConditionType">
+							<xs:annotation>
+								<xs:documentation>
+                  Date condition - determines between which dates
+                  the rate is relevant
+                </xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="TaxableMinimumAmountCondition" type="MinimumTaxableAmountConditionType">
+							<xs:annotation>
+								<xs:documentation>
+                  Minimum amount condition - will be met only of the
+                  transaction's net amount is bigger than the minimum
+                  amount
+                </xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="EatInCondition" type="EatInConditionType">
+							<xs:annotation>
+								<xs:documentation>
+                  This condition will be met only when the
+                  transaction is in "EatIn" mode
+                </xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="TaxZoneCondition" type="TaxZoneConditionType">
+							<xs:annotation>
+								<xs:documentation>
+                  This condition will be met only when the
+                  transaction is in "EatIn" mode
+                </xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:choice>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="TaxIndicator" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The indicator (symbol) of the tax rate</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DependenceRates" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+            Collection of dependency rates (used for compound
+            taxes).
+          </xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="DependenceRateId" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="RoundingType" type="TaxRoundingEnumerationType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The rounding type of this tax rate</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CouponReducesTaxationAmount" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+            Defines if to reduce manufacture coupon amount from taxtion
+            amount in tax calculation.
+          </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TieredLevelType">
+		<xs:annotation>
+			<xs:documentation>
+        Represent the tax levels , notice that value as for now refers to
+        percentage
+      </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="FromValue" type="xs:decimal"/>
+			<xs:element name="ToValue" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="Value" type="xs:decimal"/>
+			<xs:element name="TaxIndicator" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The indicator (symbol) of the tax rate</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ImpositionId" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+            The imposition id of the tax calculation
+            method
+          </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<!--<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>-->
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="TaxType">
+		<xs:union memberTypes="TaxEnumerationType xs:NMTOKEN"/>
+	</xs:simpleType>
+	<xs:simpleType name="TaxEnumerationType">
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="Tax"/>
+			<xs:enumeration value="ItemFee"/>
+			<xs:enumeration value="TransactionFee"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="TaxCalculatedMethodPercentType">
+		<xs:annotation>
+			<xs:documentation>Type of TaxCalculatedMethodPercent Item</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="TaxCalculatedMethodBaseType">
+				<xs:sequence>
+					<xs:element name="Value" type="xs:decimal"/>
+					<xs:element name="ImpositionId" type="xs:string" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>
+                The imposition id of the tax calculation
+                method
+              </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TaxCalculatedMethodMultiTieredType">
+		<xs:annotation>
+			<xs:documentation>Type of TaxCalculatedMethodMultiTiered Item</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="TaxCalculatedMethodBaseType">
+				<xs:sequence>
+					<xs:element name="TieredLevel" type="TieredLevelType" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TaxCalculatedMethodTopTieredType">
+		<xs:annotation>
+			<xs:documentation>
+        Top Tiered tax calculation. The top matching tier defines the rate
+        that will be activated. e.g. Tier1 [0-10] with rate 1%, Tier2 [10-20] with rate 2%,
+        and you have taxable amount of 15$, the rate 2% will be applied on the whole 15$.
+      </xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="TaxCalculatedMethodBaseType">
+				<xs:sequence>
+					<xs:element name="TieredLevel" type="TieredLevelType" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TaxCalculatedMethodFixedValueType">
+		<xs:annotation>
+			<xs:documentation>Type of TaxCalculatedMethodFixedValue Item</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="TaxCalculatedMethodBaseType">
+				<xs:sequence>
+					<xs:element name="Value" type="xs:decimal"/>
+					<xs:element name="ImpositionId" type="xs:string" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>
+                The imposition id of the tax calculation
+                method
+              </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TaxProductSelectConditionType">
+		<xs:annotation>
+			<xs:documentation>Type of TaxProductSelectCondition Item</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="TaxConditionBaseType">
+				<xs:sequence>
+					<xs:element name="ProductGroupId" type="xs:string"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TaxProductCategoryConditionType">
+		<xs:annotation>
+			<xs:documentation>Type of TaxProductSelectCondition Item</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="TaxConditionBaseType">
+				<xs:sequence>
+					<xs:element name="CategoryId" type="xs:string" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="CategoryLabel" type="xs:string" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="MinimumTaxableAmountConditionType">
+		<xs:annotation>
+			<xs:documentation>Type of MinimumTaxableAmountConditionType Item</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="TaxConditionBaseType">
+				<xs:sequence>
+					<xs:element name="Value" type="xs:decimal"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TaxZoneConditionType">
+		<xs:annotation>
+			<xs:documentation>Type of TaxLocationCondition Item</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="TaxConditionBaseType">
+				<xs:sequence>
+					<xs:element name="TaxZoneId" type="EntityIdString"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="EatInConditionType">
+		<xs:annotation>
+			<xs:documentation>
+        Type of EatInCondition item. This condition will be relevant only when
+        EatIn is applied on the transaction
+      </xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="TaxConditionBaseType"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TaxCalculatedMethodBaseType">
+		<xs:annotation>
+			<xs:documentation>Base type for TaxCalculatedMethodBaseType item</xs:documentation>
+		</xs:annotation>
+	</xs:complexType>
+	<xs:complexType name="TaxConditionBaseType">
+		<xs:annotation>
+			<xs:documentation>Base type for TaxConditionType item</xs:documentation>
+		</xs:annotation>
+	</xs:complexType>
+	<xs:complexType name="TaxDateConditionType">
+		<xs:annotation>
+			<xs:documentation>
+        Type of TaxDateCondition Item. Determines between which dates the rate
+        is relevant
+      </xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="TaxConditionBaseType">
+				<xs:sequence>
+					<xs:element name="StartDateTime" type="xs:dateTime" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>
+                Define the start date of the rate. For tax range
+                condition this value is mandatory.
+              </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="EndDateTime" type="xs:dateTime" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:documentation>
+                Define the expiration date of the tax rate. This value
+                is optional. If not set, the Tax Rate will never
+                expire.
+              </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:simpleType name="TaxRoundingEnumerationType">
+		<xs:annotation>
+			<xs:documentation>Types of rounding for the tax amount</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Standard">
+				<xs:annotation>
+					<xs:documentation>
+            Arithmetical rounding - meaning that if it's less than 0.5 it
+            will be rounded to 0, and equal or larger than 0.5 will be rounded to
+            1
+          </xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Up">
+				<xs:annotation>
+					<xs:documentation>Always round up</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Down">
+				<xs:annotation>
+					<xs:documentation>Always round down</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EntityIdString">
+		<xs:restriction base="xs:normalizedString">
+			<xs:pattern value="[^\s]+.*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--  Offset for the Time Zone -->
+	<!--   <BeginDateTime r10Ex:Offset="-2.00">2014-05-20T12:36:26.393</BeginDateTime> -->
+	<xs:complexType name="DateTimeCommonData">
+		<xs:complexContent>
+			<xs:extension base="arts:DateTimeCommonData">
+				<xs:attribute name="Offset" type="xs:string" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="LoyaltyRewardBase">
+		<xs:complexContent>
+			<xs:extension base="arts:LoyaltyRewardBase">
+				<xs:sequence>
+					<xs:element name="LoyaltyAccountID" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="RescanDataType" mixed="true">
+		<xs:sequence>
+			<xs:element name="SequenceNumber" type="arts:SequenceNumberType"/>
+			<xs:element name="Reason" type="xs:string"/>
+			<xs:element name="SucceededLines" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>
+            Items that were rescanned, and exist in the Original Ticket
+            (Customer scanned)
+          </xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ItemLink" type="arts:SequenceNumberType" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ScannedButNotExist" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>
+            Items that exist in the Original Ticket, but were not
+            rescanned
+          </xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ItemLink" type="arts:SequenceNumberType" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="MissingOriginalTicket" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>
+            Items that were rescanned, and do not exist in the Original
+            Ticket (Customer scanned)
+          </xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ItemLink" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="Mode" type="xs:string" use="required"/>
+		<xs:attribute name="Failure" type="xs:boolean" use="required"/>
+		<xs:attribute name="Success" type="xs:boolean" use="required"/>
+	</xs:complexType>
+	<xs:simpleType name="EntryMethodTypeCode">
+		<xs:union memberTypes="EntryMethodTypeCodeExtension arts:EntryMethodTypeCode"/>
+	</xs:simpleType>
+	<xs:simpleType name="EntryMethodTypeCodeExtension">
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="X:WavedSmartCard"/>
+			<xs:enumeration value="X:WavedMSR"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="RetailPriceModifierDomainSpecific">
+		<xs:complexContent>
+			<xs:extension base="arts:RetailPriceModifierDomainSpecific">
+				<xs:attribute name="PostPriceOverride" type="BooleanEnumeration" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="NWMLType">
+		<xs:sequence>
+			<xs:element name="NWMLFile" type="NWMLFileType" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="NWMLFileType">
+		<xs:sequence>
+			<xs:element name="Version" type="xs:string"/>
+			<xs:element name="ObjectName" type="xs:string"/>
+			<xs:element name="CrcData" type="xs:int"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="POSLogCReceiptRePrint">
+		<xs:complexContent>
+			<xs:extension base="arts:POSLogCReceiptRePrint">
+				<xs:attribute name="TransactionType" type="TransactionTypeCode">
+					<xs:annotation>
+						<xs:appinfo source="MergeInstructions">
+							<extensionRef xmlns="">/schema/complexType[@name='RetailTransactionDomainSpecific']/complexContent/extension</extensionRef>
+						</xs:appinfo>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="AmountCommonData">
+		<xs:simpleContent>
+			<xs:extension base="arts:AmountCommonData">
+				<xs:attribute name="TypeCode" use="optional"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="TaxDomainSpecific">
+		<xs:complexContent>
+			<xs:extension base="arts:TaxDomainSpecific">
+				<xs:sequence>
+					<xs:element name="DependenceTaxRuleID" type="xs:string" minOccurs="0"/>
+					<xs:element name="TaxPerUnits" type="TaxPerUnitsType" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo source="MergeInstructions">
+								<extensionRef mergeMethod="choice" xmlns="">/schema/complexType[@name='TaxDomainSpecific']/complexContent/extension/sequence</extensionRef>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TaxPerUnitsType">
+		<xs:sequence>
+			<xs:element name="TaxPerUnit" type="TaxPerUnitType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TaxPerUnitType">
+		<xs:sequence>
+			<xs:element name="TaxableAmount" type="arts:AmountCommonData"/>
+			<xs:element name="TaxAmount" type="arts:AmountCommonData"/>
+		</xs:sequence>
+		<xs:attribute name="SequenceNumber" type="xs:string"/>
+	</xs:complexType>
+	<xs:complexType name="LineItemChoiceDomainSpecific">
+		<xs:complexContent>
+			<xs:extension base="arts:LineItemChoiceDomainSpecific">
+				<xs:sequence>
+					<xs:element name="Coupon" type="CouponLogType" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo source="MergeInstructions">
+								<extensionRef mergeMethod="choice" xmlns="">/schema/complexType[@name='LineItemDomainSpecific']/complexContent/extension/sequence</extensionRef>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SettleBase">
+		<xs:complexContent>
+			<xs:extension base="arts:SettleBase">
+				<xs:sequence>
+					<xs:element name="OverShort" type="OverShortType">
+						<xs:annotation>
+							<xs:appinfo source="MergeInstructions">
+								<extensionRef mergeMethod="choice" xmlns="">/schema/complexType[@name='SettleBase']/sequence</extensionRef>
+								<extensionRef mergeMethod="choice" xmlns="">/schema/complexType[@name='POSLogTCTenderLoan']/sequence</extensionRef>
+								<extensionRef xmlns="">/schema/complexType[@name='TenderControlTransactionBase']/sequence/choice[any]</extensionRef>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Account" type="DeclaredAccountType"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="POSLogTCTenderAdjustment">
+		<xs:complexContent>
+			<xs:extension base="arts:POSLogTCTenderAdjustment">
+				<xs:sequence>
+					<xs:element name="TenderDescription" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>R10 Tender description</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="POSLogTCTenderLoan">
+		<xs:complexContent>
+			<xs:extension base="arts:POSLogTCTenderLoan">
+				<xs:sequence>
+					<xs:element name="OverShort" type="OverShortType">
+						<xs:annotation>
+							<xs:appinfo source="MergeInstructions">
+								<extensionRef mergeMethod="choice" xmlns="">/schema/complexType[@name='SettleBase']/sequence</extensionRef>
+								<extensionRef mergeMethod="choice" xmlns="">/schema/complexType[@name='POSLogTCTenderLoan']/sequence</extensionRef>
+								<extensionRef xmlns="">/schema/complexType[@name='TenderControlTransactionBase']/sequence/choice[any]</extensionRef>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Account" type="DeclaredAccountType"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="POSLogTCSafeSettle">
+		<xs:complexContent>
+			<xs:extension base="arts:POSLogTCSafeSettle">
+				<xs:sequence>
+					<xs:element name="OverShort" type="OverShortType">
+						<xs:annotation>
+							<xs:appinfo source="MergeInstructions">
+								<extensionRef mergeMethod="choice" xmlns="">/schema/complexType[@name='SettleBase']/sequence</extensionRef>
+								<extensionRef mergeMethod="choice" xmlns="">/schema/complexType[@name='POSLogTCTenderLoan']/sequence</extensionRef>
+								<extensionRef xmlns="">/schema/complexType[@name='TenderControlTransactionBase']/sequence/choice[any]</extensionRef>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Account" type="DeclaredAccountType"/>
+					<xs:element name="Reason" type="xs:string"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="RetailTransactionBase">
+		<xs:complexContent>
+			<xs:extension base="arts:RetailTransactionBase">
+				<xs:sequence>
+					<xs:element name="SuspendId" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ReturnBase">
+		<xs:complexContent>
+			<xs:extension base="arts:ReturnBase">
+				<xs:sequence>
+					<xs:element name="GoodwillType" type="xs:string" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Goodwill Type - could be Item or Value</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:attribute name="Culture" type="CultureTypeCode"/>
+	<xs:complexType name="GroceryOnlineOrderProblemsType">
+		<xs:annotation>
+			<xs:documentation>Home Shopping - OFC</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ProblematicItems" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Item" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="ItemBarcode" type="xs:token"/>
+									<xs:element name="Quantity" type="xs:token"/>
+									<xs:element name="ReasonCode" type="xs:token"/>
+									<xs:element name="ReasonDescription" type="xs:token"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="LoyaltyRejected" type="xs:string" fixed="" form="qualified" minOccurs="0"/>
+			<xs:element name="ColleagueRejected" type="xs:string" fixed="" form="qualified" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="Bakery" type="xs:string"/>
+	<xs:attribute name="LoyaltyRejected" type="BooleanEnumeration"/>
+	<xs:attribute name="ColleagueRejected" type="BooleanEnumeration"/>
+	<xs:element name="IssuerActionCodeOnline" type="xs:string"/>
+	<xs:element name="IssuerActionCodeDenial" type="xs:string"/>
+  
+  <xs:element name="ItemRestriction">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ApproverID">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:unsignedShort">
+								<xs:attribute name="OperatorName" type="xs:string" use="required"/>
+								<xs:attribute name="OperatorType" type="xs:string" use="required"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Items">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ItemID">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:unsignedShort">
+											<xs:attribute name="Description" type="xs:string" use="required"/>
+											<xs:attribute name="LockedForSale" type="xs:boolean" use="required"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="Action" type="xs:string" use="required"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="QueueLength" type="xs:nonNegativeInteger" >
+		<xs:annotation>
+			<xs:documentation>
+         Number of the customers that are waiting in the
+         Queue
+       </xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="BlindPickup" type="BlindPickupType" >
+		<xs:annotation>
+			<xs:documentation>Blind Pickup</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="OperatorLockedByServer" type="OperatorLockedByServerType" >
+		<xs:annotation>
+			<xs:appinfo source="MergeInstructions">
+				<extensionRef xmlns="">/schema/complexType[@name='ControlTransactionBase']/sequence/choice[any]</extensionRef>
+			</xs:appinfo>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="IdmAuthorization" type="IdmAuthorizationType" />
+	<xs:element name="NWML" type="NWMLType" />
+
+	<xs:attribute name="Sign" type="SignTypeCode"/>
+	<xs:attribute name="Type" type="xs:string"/>
+	<xs:attribute name="CalculationMethod" type="xs:string"/>
+	<xs:attribute name="CouponReducesTaxationAmount" type="xs:boolean"/>
+	<xs:attribute name="OrignalPercent" type="xs:decimal"/>
+	<xs:attribute name="TaxRoundingMethod" type="xs:string"/>
+	<xs:attribute name="Imposition" type="xs:string"/>
+	<xs:attribute name="Reversed" type="BooleanEnumeration"/>
+	<xs:attribute name="ReceiptKind" type="ReceiptKindTypeCode"/>
+	<xs:attribute name="ReceiptFormat" type="ReceiptFormatTypeCode"/>
+	<xs:attribute name="ReceiptNotPrinted" type="BooleanEnumeration"/>
+	<xs:attribute name="ReturnType" type="xs:string"/>
+	<xs:attribute name="TransactionType" type="TransactionTypeCode"/>
+	<xs:attribute name="ResumedFlag" type="xs:boolean"/>
+	<xs:attribute name="ReturnedFlag" type="xs:boolean"/>
+	<xs:attribute name="CanceledFlag" type="xs:boolean"/>
+	<xs:attribute name="VoidedFlag" type="xs:boolean"/>
+	<xs:attribute name="SuspendedFlag" type="xs:boolean"/>
+	<xs:attribute name="VoidReasonCodeFlag" type="xs:string"/>
+	<xs:attribute name="HierarchyPath" type="xs:string"/>
+	<xs:attribute name="IsAuthenticatedOffline" type="BooleanEnumeration"/>
+	<xs:attribute name="RetroactiveProcessActivate" type="xs:string"/>
+	<xs:attribute name="EntryMethod" type="arts:EntryMethodEnumeration"/>
+	<xs:element name="ConsumableGroup" type="ConsumableGroupType"/>
+</xs:schema>
