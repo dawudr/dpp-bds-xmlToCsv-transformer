@@ -1,4 +1,4 @@
-package com.sainsburys.dpp.transformation.config
+package com.sainsburys.dpp.transform.config
 
 object ConfigPropertiesFactory {
 
@@ -23,14 +23,14 @@ object ConfigPropertiesFactory {
     }
 
     def lookForConfigArgs = {
-      if (argsAsMap.contains("xsl.stylesheet.r10"))
-        configProperties.xslStylesheetR10 = argsAsMap("xsl.stylesheet.r10")
+      if (argsAsMap.contains("r10.xsl.template"))
+        configProperties.xslTemplate = argsAsMap("r10.xsl.template")
 
-      if (argsAsMap.contains("xml.source.path.r10"))
-        configProperties.xmlSourcePathR10 = argsAsMap("xml.source.path.r10")
+      if (argsAsMap.contains("r10.xml.source.path"))
+        configProperties.xmlPath = argsAsMap("r10.xml.source.path")
 
-      if (argsAsMap.contains("csv.output.path.r10"))
-        configProperties.csvOutputPathR10 = argsAsMap("csv.output.path.r10")
+      if (argsAsMap.contains("r10.transform.output.path"))
+        configProperties.transformOutputPath = argsAsMap("r10.transform.output.path")
     }
 
     lookForConfigArgs

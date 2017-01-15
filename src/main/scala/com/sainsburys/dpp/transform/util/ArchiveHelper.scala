@@ -1,7 +1,7 @@
-package com.sainsburys.dpp.transformation.directoryreader
+package com.sainsburys.dpp.transform.util
 import java.io.File
 
-import com.sainsburys.dpp.transformation.Loggable
+import com.sainsburys.dpp.transform.Loggable
 
 /**
   * Returns a list of source files within a directory or zip archive
@@ -10,9 +10,9 @@ import com.sainsburys.dpp.transformation.Loggable
   * @version 1.0
   * @since 06/01/2017
   */
-class DirectoryReader (private val path: String) extends Loggable {
+class ArchiveHelper(private val path: String) extends Loggable {
 
-  logger.info("DirectoryReader started...")
+  logger.info("SourceArchiveHelper started...")
 
   val sourcePath = new File(path)
   if(sourcePath.exists()) {
@@ -45,10 +45,10 @@ class DirectoryReader (private val path: String) extends Loggable {
   Create output director
    */
   def createOutputDirectory(path :String) = {
-    val outputPath = new File(path);
-    if(!outputPath.exists()) {
-      outputPath.mkdir
-      outputPath.setWritable(true)
+    val transformOutputPath = new File(path);
+    if(!transformOutputPath.exists()) {
+      transformOutputPath.mkdir
+      transformOutputPath.setWritable(true)
     }
   }
 
@@ -64,15 +64,15 @@ class DirectoryReader (private val path: String) extends Loggable {
 }
 
 
-object DirectoryReader {
+object ArchiveHelper {
 
-  def apply(path: String): DirectoryReader =
-      new DirectoryReader(path)
+  def apply(path: String): ArchiveHelper =
+      new ArchiveHelper(path)
 
   // TODO: Review - remove
   def main(args: Array[String]): Unit = {
     val path = "testSamples"
-    val source = new DirectoryReader(path).getListOfFiles()
+    val source = new ArchiveHelper(path).getListOfFiles()
     source.foreach(file => println(file.getPath))
 
   }
