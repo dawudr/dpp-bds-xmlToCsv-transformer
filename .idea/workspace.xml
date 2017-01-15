@@ -2,39 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3f866318-d6de-4df8-bf41-f578af5fdd44" name="Default" comment="">
-<<<<<<< HEAD
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.conf" afterPath="$PROJECT_DIR$/src/main/resources/application.conf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/r10_pipeline.xpr" afterPath="$PROJECT_DIR$/src/main/resources/r10_pipeline.xpr" />
-=======
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transform/TransformSession.scala" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/xml/r10/R10xml.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transformation/Xml2CsvTransformer.scala" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/r10_pipeline.xpr" afterPath="$PROJECT_DIR$/src/main/resources/domain/purchases/r10_pipeline.xpr" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/xsd/r10/POSLogExtensionsRetailTransaction.xsd" afterPath="$PROJECT_DIR$/src/main/resources/domain/purchases/xsd/POSLogExtensionsRetailTransaction.xsd" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/xsd/r10/POSLogV6.0.1C.xsd" afterPath="$PROJECT_DIR$/src/main/resources/domain/purchases/xsd/POSLogV6.0.1C.xsd" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/xsl/r10/r10_extract_retailtransaction_customer.xsl" afterPath="$PROJECT_DIR$/src/main/resources/domain/purchases/xsl/r10_extract_retailtransaction_customer.xsl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/xsl/r10/r10_extract_retailtransaction_lineitem.xsl" afterPath="$PROJECT_DIR$/src/main/resources/domain/purchases/xsl/r10_extract_retailtransaction_lineitem.xsl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/xsl/r10/r10_extract_retailtransaction_loyaltyaccount.xsl" afterPath="$PROJECT_DIR$/src/main/resources/domain/purchases/xsl/r10_extract_retailtransaction_loyaltyaccount.xsl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/xsl/r10/r10_extract_retailtransaction_promotionssummary.xsl" afterPath="$PROJECT_DIR$/src/main/resources/domain/purchases/xsl/r10_extract_retailtransaction_promotionssummary.xsl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/xsl/r10/r10_extract_retailtransaction_refundablepromotions.xsl" afterPath="$PROJECT_DIR$/src/main/resources/domain/purchases/xsl/r10_extract_retailtransaction_refundablepromotions.xsl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/xsl/r10/r10_extract_retailtransaction_taxdefinitions.xsl" afterPath="$PROJECT_DIR$/src/main/resources/domain/purchases/xsl/r10_extract_retailtransaction_taxdefinitions.xsl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/xsl/r10/r10_pipeline.xsl" afterPath="$PROJECT_DIR$/src/main/resources/domain/purchases/xsl/r10_pipeline.xsl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/xsl/r10/r10_pipeline_equalizing.xsl" afterPath="$PROJECT_DIR$/src/main/resources/domain/purchases/xsl/r10_pipeline_equalizing.xsl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/xsl/r10/r10_pipeline_flatten.xsl" afterPath="$PROJECT_DIR$/src/main/resources/domain/purchases/xsl/r10_pipeline_flatten.xsl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/xsl/r10/r10_pipeline_xml2csv.xsl" afterPath="$PROJECT_DIR$/src/main/resources/domain/purchases/xsl/r10_pipeline_xml2csv.xsl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transformation/Loggable.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transform/Loggable.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transformation/config/ConfigProperties.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transform/config/ConfigProperties.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transformation/config/ConfigPropertiesFactory.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transform/config/ConfigPropertiesFactory.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transformation/directoryreader/DirectoryReader.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transform/util/ArchiveHelper.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transformation/service/XmlTransformService.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transform/service/XmlTransformService.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transformation/xml/XmlTransformer.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transform/xml/XmlTransformer.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transformation/config/ConfigPropertiesFactory$Test.scala" afterPath="$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/config/ConfigPropertiesFactory$Test.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/dpp-bds-xmltocsv-transformer.iml" afterPath="$PROJECT_DIR$/.idea/modules/dpp-bds-xmltocsv-transformer.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.conf" afterPath="$PROJECT_DIR$/src/main/resources/application.conf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/application.conf" afterPath="$PROJECT_DIR$/src/test/resources/application.conf" />
->>>>>>> origin/master
     </list>
     <ignored path="bds-scala-xslt-xdif.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,189 +28,110 @@
       <ProjectState />
     </projectState>
   </component>
-  <component name="ExternalProjectsManager">
-    <system id="SBT">
-      <state>
-        <projects_view>
-          <tree_state />
-        </projects_view>
-      </state>
-    </system>
-  </component>
   <component name="FavoritesManager">
     <favorites_list name="bds-scala-xslt-xdif" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="XmlTransformer.scala" pinned="false" current-in-tab="false">
-<<<<<<< HEAD
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transformation/xml/XmlTransformer.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="32" column="43" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="43" />
-              <folding />
-=======
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transform/xml/XmlTransformer.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
+            <state relative-caret-position="1692">
               <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
               <folding>
                 <element signature="e#42#104#0" expanded="true" />
               </folding>
->>>>>>> origin/master
             </state>
           </provider>
         </entry>
       </file>
-<<<<<<< HEAD
-      <file leaf-file-name="Xml2CsvTransformer.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transformation/Xml2CsvTransformer.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="20" column="62" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="62" />
-              <folding>
-                <element signature="e#43#134#0" expanded="true" />
-=======
       <file leaf-file-name="TransformSession.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transform/TransformSession.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="17" column="52" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
+            <state relative-caret-position="198">
+              <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
               <folding>
                 <element signature="e#38#104#0" expanded="true" />
->>>>>>> origin/master
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-<<<<<<< HEAD
-      <file leaf-file-name="DirectoryReader.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transformation/directoryreader/DirectoryReader.scala">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="684">
-              <caret line="46" column="6" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="6" />
-=======
+            <state relative-caret-position="708">
+              <caret line="59" column="5" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1908">
+              <caret line="106" column="21" selection-start-line="106" selection-start-column="21" selection-end-line="106" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="R10xml.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/resources/xml/R10xml.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="4014">
               <caret line="223" column="9" selection-start-line="223" selection-start-column="9" selection-end-line="223" selection-end-column="9" />
->>>>>>> origin/master
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-<<<<<<< HEAD
-      <file leaf-file-name="XmlTransformService.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transformation/service/XmlTransformService.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="29" column="43" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="43" />
-=======
       <file leaf-file-name="Loggable.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transform/Loggable.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
               <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
->>>>>>> origin/master
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="application.conf" pinned="false" current-in-tab="false">
-<<<<<<< HEAD
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.conf">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-=======
         <entry file="file://$PROJECT_DIR$/src/test/resources/application.conf">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="36">
               <caret line="2" column="41" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
->>>>>>> origin/master
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-<<<<<<< HEAD
-      <file leaf-file-name="RetailTransactionLog_3146_19_575.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/testSamples/r10/RetailTransactionLog_3146_19_575.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-6858">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-=======
       <file leaf-file-name="ConfigPropertiesFactory$Test.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/config/ConfigPropertiesFactory$Test.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="108">
               <caret line="8" column="75" selection-start-line="8" selection-start-column="75" selection-end-line="8" selection-end-column="75" />
->>>>>>> origin/master
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-<<<<<<< HEAD
-      <file leaf-file-name="RetailTransactionLog_3148_167_66.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/testSamples/r10/RetailTransactionLog_3148_167_66.xml">
-=======
-      <file leaf-file-name="r10_extract_retailtransaction_lineitem.xsl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/domain/purchases/xsl/r10_extract_retailtransaction_lineitem.xsl">
->>>>>>> origin/master
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="212" column="32" selection-start-line="212" selection-start-column="29" selection-end-line="212" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-<<<<<<< HEAD
-      <file leaf-file-name="r10_pipeline.xsl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/xsl/r10/r10_pipeline.xsl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1260">
-              <caret line="70" column="25" selection-start-line="70" selection-start-column="25" selection-end-line="70" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="r10_extract_retailtransaction_customer.xsl" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/xsl/r10/r10_extract_retailtransaction_customer.xsl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
-=======
-      <file leaf-file-name="application.conf" pinned="false" current-in-tab="true">
+      <file leaf-file-name="application.conf" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/application.conf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
->>>>>>> origin/master
+            <state relative-caret-position="54">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-<<<<<<< HEAD
-      <file leaf-file-name="r10_extract_retailtransaction_lineitem.xsl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/xsl/r10/r10_extract_retailtransaction_lineitem.xsl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="123" column="73" selection-start-line="123" selection-start-column="60" selection-end-line="123" selection-end-column="73" />
-=======
       <file leaf-file-name="application-r10.conf" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/domain/purchases/application-r10.conf">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="36">
               <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
->>>>>>> origin/master
               <folding />
             </state>
           </provider>
@@ -249,22 +139,10 @@
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Package Object" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
-    <option name="modificationStamps">
-      <map>
-        <entry key="D:/Projects/babybeats/sample-data-generator" value="5900756835901" />
-      </map>
-    </option>
     <option name="externalProjectsViewState">
       <projects_view />
     </option>
@@ -272,54 +150,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/xsl/r10/r10_pipeline_test.xsl" />
-        <option value="$PROJECT_DIR$/src/main/scala/Main.scala" />
-        <option value="$PROJECT_DIR$/src/main/resources/xsl/r10/r10_pipeline.xsl" />
-        <option value="$PROJECT_DIR$/src/main/scala/Xml2CsvTransformer.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/xmltransformer/Xml2CsvTransformer.scala" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/xmltransformer/Loggable.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/service/XmlToCsvService.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/XmlToCsvTransformer.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/directoryreader/DirectoryReader.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/Loggable.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/config/ConfigPropertiesFactory.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/xmltransformer/XmlTransformer.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/service/XmlTransformService.scala" />
-        <option value="$PROJECT_DIR$/src/test/com/sainsburys/dpp/config/ConfigPropertiesFactory$Test.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/config/ConfigProperties.scala" />
-        <option value="$PROJECT_DIR$/build.sbt" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/Xml2CsvTransformer.scala" />
-        <option value="$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transformation/config/ConfigPropertiesFactory$Test.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transformation/config/ConfigProperties.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transformation/Xml2CsvTransformer.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transformation/service/XmlTransformService.scala" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transformation/directoryreader/DirectoryReader.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transformation/xml/XmlTransformer.scala" />
-        <option value="$PROJECT_DIR$/src/main/resources/xsl/r10/r10_extract_retailtransaction_taxdefinitions.xsl" />
-        <option value="$PROJECT_DIR$/src/main/resources/xsl/r10/r10_extract_retailtransaction_customer.xsl" />
-        <option value="$PROJECT_DIR$/src/main/resources/xsl/r10/r10_extract_retailtransaction_loyaltyaccount.xsl" />
-<<<<<<< HEAD
-=======
-        <option value="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transform/Xml2CsvTransformer.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transform/util/DirectoryReader.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transform/util/DirectoryHelper.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transform/TransformSession.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transform/util/SourceArchiveHelper.scala" />
-        <option value="$PROJECT_DIR$/src/main/resources/domain/purchases/application.conf" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transform/config/ConfigProperties.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transform/config/ConfigPropertiesFactory.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transform/service/XmlTransformService.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transform/util/ArchiveHelper.scala" />
-        <option value="$PROJECT_DIR$/src/test/resources/application.conf" />
-        <option value="$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/config/ConfigPropertiesFactory$Test.scala" />
-        <option value="$PROJECT_DIR$/src/test/resources/xml/R10xml.xml" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transform/xml/XmlTransformer.scala" />
-        <option value="$PROJECT_DIR$/src/main/resources/domain/purchases/application-r10.conf" />
-        <option value="$PROJECT_DIR$/output/r10/R10xml.csv" />
->>>>>>> origin/master
         <option value="$PROJECT_DIR$/src/main/resources/application.conf" />
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
       </list>
     </option>
   </component>
@@ -329,51 +161,10 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-<<<<<<< HEAD
-    <option name="x" value="-8" />
-    <option name="y" value="-1088" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
-=======
     <option name="x" value="-1688" />
     <option name="y" value="31" />
     <option name="width" value="1696" />
     <option name="height" value="1026" />
->>>>>>> origin/master
-  </component>
-  <component name="ProjectInspectionProfilesVisibleTreeState">
-    <entry key="Project Default">
-      <profile-state>
-        <expanded-state>
-          <State>
-            <id />
-          </State>
-          <State>
-            <id>General</id>
-          </State>
-          <State>
-            <id>GeneralScala</id>
-          </State>
-          <State>
-            <id>Kotlin</id>
-          </State>
-          <State>
-            <id>Scala</id>
-          </State>
-          <State>
-            <id>XPath</id>
-          </State>
-          <State>
-            <id>XSLT</id>
-          </State>
-        </expanded-state>
-        <selected-state>
-          <State>
-            <id>Android</id>
-          </State>
-        </selected-state>
-      </profile-state>
-    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -400,8 +191,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -430,11 +219,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-<<<<<<< HEAD
-              <option name="myItemId" value="testSamples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-=======
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -592,7 +376,6 @@
               <option name="myItemId" value="ArchiveHelper.scala" />
               <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
             </PATH_ELEMENT>
->>>>>>> origin/master
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -607,8 +390,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-<<<<<<< HEAD
-=======
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -625,7 +406,6 @@
               <option name="myItemId" value="service" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
->>>>>>> origin/master
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -652,8 +432,6 @@
               <option name="myItemId" value="transform" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-<<<<<<< HEAD
-=======
             <PATH_ELEMENT>
               <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -692,7 +470,6 @@
               <option name="myItemId" value="ConfigProperties.scala" />
               <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
             </PATH_ELEMENT>
->>>>>>> origin/master
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -772,8 +549,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-<<<<<<< HEAD
-=======
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="xmlToCsv-transformer" />
@@ -806,62 +581,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
->>>>>>> origin/master
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xmlToCsv-transformer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dpp-bds-xmlToCsv-transformer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value=".idea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
-    <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../dpp-bds-ftpTos3-adapter" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="C:\nodejs\node.exe" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\dev\Documents\workspace\dpp-bds-xmlToCsv-transformer\src\main\resources\domain\purchases" />
-      <recent name="C:\Users\dev\Documents\workspace\dpp-bds-xmlToCsv-transformer\src\test\scala" />
-      <recent name="C:\Users\dev\Documents\workspace\dpp-bds-xmlToCsv-transformer\src\test\com\sainsburys\dpp\transformation" />
-      <recent name="C:\Users\dev\Documents\workspace\bds-scala-xslt-xdif\src\main" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\dev\Documents\workspace\dpp-bds-xmlToCsv-transformer\src\main\resources\domain\purchases" />
-      <recent name="C:\Users\dev\Documents\workspace\dpp-bds-xmlToCsv-transformer\src\main\resources\xsl\r10" />
-      <recent name="C:\Users\dev\Documents\workspace\dpp-bds-xmlToCsv-transformer\src\test\com\sainsburys\dpp" />
-      <recent name="C:\Users\dev\Documents\workspace\dpp-bds-xmlToCsv-transformer\src\test" />
-      <recent name="C:\Users\dev\Documents\workspace\dpp-bds-xmlToCsv-transformer\src\main\scala\com\sainsburys\dpp" />
-    </key>
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RunManager" selected="Application.TransformSession">
-    <configuration default="false" name="DirectoryReader" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.sainsburys.dpp.transform.util.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.sainsburys.dpp.transform.util.ArchiveHelper" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="dpp-bds-xmltocsv-transformer" />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="false" name="TransformSession" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -879,36 +625,6 @@
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="dpp-bds-xmltocsv-transformer" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="ConfigPropertiesFactory$Test" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="dpp-bds-xmltocsv-transformer" />
-      <setting name="path" value="Xml2CsvTransformer.config.ConfigPropertiesFactory$Test" />
-      <setting name="package" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="" />
-      <setting name="testKind" value="Class" />
-      <setting name="showProgressMessages" value="true" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="ConfigPropertiesFactory$Test.testLoadConfigFromArguments" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="dpp-bds-xmltocsv-transformer" />
-      <setting name="path" value="Xml2CsvTransformer.config.ConfigPropertiesFactory$Test" />
-      <setting name="package" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="testLoadConfigFromArguments" />
-      <setting name="testKind" value="Test name" />
-      <setting name="showProgressMessages" value="true" />
       <envs />
       <method />
     </configuration>
@@ -1082,7 +798,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="bds-scala-xslt-xdif" />
+      <module name="dpp-bds-xmltocsv-transformer" />
       <envs />
       <method />
     </configuration>
@@ -1201,22 +917,6 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="XSLT" factoryName="XSLT">
-      <option name="myOutputFile" />
-      <option name="myOpenOutputFile" value="false" />
-      <option name="myOpenInBrowser" value="false" />
-      <option name="mySmartErrorHandling" value="true" />
-      <option name="myRunnerPort" value="34873" />
-      <option name="myVmArguments" />
-      <option name="myWorkingDirectory" />
-      <option name="myModule" />
-      <option name="myJdk" />
-      <parameters />
-      <OutputType value="CONSOLE" save-to-file="false" />
-      <FileType name="XML" />
-      <JdkChoice value="FROM_MODULE" />
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -1267,18 +967,12 @@
       <envs />
       <method />
     </configuration>
-    <list size="4">
-      <item index="0" class="java.lang.String" itemvalue="Application.DirectoryReader" />
-      <item index="1" class="java.lang.String" itemvalue="Application.TransformSession" />
-      <item index="2" class="java.lang.String" itemvalue="ScalaTest.ConfigPropertiesFactory$Test" />
-      <item index="3" class="java.lang.String" itemvalue="ScalaTest.ConfigPropertiesFactory$Test.testLoadConfigFromArguments" />
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Application.TransformSession" />
     </list>
     <recent_temporary>
-      <list size="4">
+      <list size="1">
         <item index="0" class="java.lang.String" itemvalue="Application.TransformSession" />
-        <item index="1" class="java.lang.String" itemvalue="ScalaTest.ConfigPropertiesFactory$Test.testLoadConfigFromArguments" />
-        <item index="2" class="java.lang.String" itemvalue="ScalaTest.ConfigPropertiesFactory$Test" />
-        <item index="3" class="java.lang.String" itemvalue="Application.DirectoryReader" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
@@ -1286,7 +980,7 @@
     </configuration>
   </component>
   <component name="SbtLocalSettings">
-    <option name="lastUpdateTimestamp" value="1484499398725" />
+    <option name="lastUpdateTimestamp" value="1484518427519" />
     <option name="availableProjects">
       <map>
         <entry>
@@ -1313,7 +1007,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$/../drt-passenger-splits-master" value="1468303408000" />
+        <entry key="$PROJECT_DIR$" value="1483702271449" />
       </map>
     </option>
     <option name="externalProjectsViewState">
@@ -1323,92 +1017,38 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="3f866318-d6de-4df8-bf41-f578af5fdd44" name="Default" comment="" />
-      <created>1483612155088</created>
+      <created>1484518414001</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1483612155088</updated>
-      <workItem from="1483612167189" duration="17275000" />
-      <workItem from="1483696282821" duration="1621000" />
-      <workItem from="1483699559354" duration="7828000" />
-      <workItem from="1483829367431" duration="10034000" />
-      <workItem from="1483878333805" duration="36776000" />
-      <workItem from="1483952858975" duration="1832000" />
-      <workItem from="1484039148135" duration="7395000" />
-      <workItem from="1484055543769" duration="1091000" />
-      <workItem from="1484057332776" duration="25000" />
-      <workItem from="1484060932423" duration="4106000" />
-      <workItem from="1484073976040" duration="4128000" />
-      <workItem from="1484126018423" duration="183000" />
-      <workItem from="1484239203224" duration="565000" />
-<<<<<<< HEAD
-      <workItem from="1484315799105" duration="6617000" />
-=======
-      <workItem from="1484315799105" duration="2431000" />
-      <workItem from="1484326034565" duration="632000" />
-      <workItem from="1484490087663" duration="5206000" />
-      <workItem from="1484498412870" duration="962000" />
-      <workItem from="1484499391135" duration="10689000" />
->>>>>>> origin/master
+      <updated>1484518414001</updated>
+      <workItem from="1484518415701" duration="147000" />
     </task>
     <servers />
   </component>
-  <component name="TestHistory">
-    <history-entry file="ConfigPropertiesFactory$Test - 2017.01.08 at 22h 53m 35s.xml">
-      <configuration name="ConfigPropertiesFactory$Test" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="ConfigPropertiesFactory$Test - 2017.01.08 at 22h 55m 15s.xml">
-      <configuration name="ConfigPropertiesFactory$Test" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="ConfigPropertiesFactory$Test_testLoadConfigFromArguments - 2017.01.15 at 21h 33m 43s.xml">
-      <configuration name="ConfigPropertiesFactory$Test.testLoadConfigFromArguments" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="ConfigPropertiesFactory$Test_testLoadConfigFromArguments - 2017.01.15 at 21h 37m 12s.xml">
-      <configuration name="ConfigPropertiesFactory$Test.testLoadConfigFromArguments" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
-  </component>
   <component name="TimeTrackingManager">
-<<<<<<< HEAD
-    <option name="totallyTimeSpent" value="99476000" />
+    <option name="totallyTimeSpent" value="1256000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-1088" width="1936" height="1056" extended-state="6" />
-=======
-    <option name="totallyTimeSpent" value="112779000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-1688" y="31" width="1696" height="1026" extended-state="6" />
->>>>>>> origin/master
-    <editor active="true" />
+    <frame x="-1688" y="31" width="1696" height="1026" extended-state="7" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922733" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-<<<<<<< HEAD
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30227518" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28837952" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-=======
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3012318" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37713936" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
->>>>>>> origin/master
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38202935" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32698768" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1419,20 +1059,9 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-<<<<<<< HEAD
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281075" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-=======
->>>>>>> origin/master
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32698768" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
-  </component>
-  <component name="Vcs.Log.UiProperties">
-    <option name="RECENTLY_FILTERED_USER_GROUPS">
-      <collection />
-    </option>
-    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-      <collection />
-    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -1448,31 +1077,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transformation/xml/XmlTransformer.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="31" column="54" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/xsl/r10/r10_pipeline.xsl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-=======
->>>>>>> origin/master
-    <entry file="file://$PROJECT_DIR$/build.sbt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project/build.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1528,11 +1132,7 @@
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/main/resources/xsl/r10/r10_pipeline_flatten.xsl">
-=======
     <entry file="file://$PROJECT_DIR$/src/main/resources/domain/purchases/xsl/r10_pipeline_flatten.xsl">
->>>>>>> origin/master
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
           <caret line="33" column="61" selection-start-line="33" selection-start-column="61" selection-end-line="33" selection-end-column="61" />
@@ -1564,13 +1164,6 @@
     <entry file="file://$PROJECT_DIR$/testSamples/RetailTransactionLog_3145_21_79.xml" />
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/test.scala" />
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/package.scala" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project/build.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1578,30 +1171,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/output/r10/RetailTransactionLog_3145_21_232.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output/r10/RetailTransactionLog_3145_21_324.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output/r10/RetailTransactionLog_3145_24_35.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/project/build.properties">
-=======
+    <entry file="file://$PROJECT_DIR$/output/r10/RetailTransactionLog_3145_21_232.csv" />
+    <entry file="file://$PROJECT_DIR$/output/r10/RetailTransactionLog_3145_21_324.csv" />
+    <entry file="file://$PROJECT_DIR$/output/r10/RetailTransactionLog_3145_24_35.csv" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/xsd/r10/flatten/POSLogV6.0.1C.xsd" />
     <entry file="file://$PROJECT_DIR$/build.sbt">
       <provider selected="true" editor-type-id="text-editor">
@@ -1611,7 +1183,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/domain/purchases/xsd/POSLogV6.0.1C.xsd">
->>>>>>> origin/master
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1636,7 +1207,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1644,7 +1214,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1652,7 +1221,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1660,31 +1228,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/main/resources/xsd/r10/flatten/POSLogV6.0.1C.xsd" />
-    <entry file="file://$PROJECT_DIR$/build.sbt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-=======
     <entry file="file://$PROJECT_DIR$/src/main/resources/domain/purchases/xsl/r10_extract_retailtransaction_taxdefinitions.xsl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
->>>>>>> origin/master
-          <folding />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/main/resources/xsl/r10/r10_pipeline_xml2csv.xsl">
-=======
     <entry file="file://$PROJECT_DIR$/src/main/resources/domain/purchases/xml/R10xml.xml">
->>>>>>> origin/master
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1692,83 +1246,27 @@
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/main/resources/xsl/r10/r10_extract_retailtransaction_loyaltyaccount.xsl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-=======
     <entry file="file://$PROJECT_DIR$/src/main/resources/domain/purchases/xsl/r10_pipeline_xml2csv.xsl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
->>>>>>> origin/master
           <folding />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/main/resources/xsl/r10/r10_extract_retailtransaction_promotionssummary.xsl">
-=======
-    <entry file="file://$PROJECT_DIR$/src/main/resources/domain/purchases/application.conf">
->>>>>>> origin/master
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/main/resources/xsl/r10/r10_extract_retailtransaction_refundablepromotions.xsl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-=======
+    <entry file="file://$PROJECT_DIR$/src/main/resources/domain/purchases/application.conf" />
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transform/config/ConfigProperties.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
           <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
->>>>>>> origin/master
           <folding />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/main/resources/xsl/r10/r10_extract_retailtransaction_taxdefinitions.xsl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transformation/config/ConfigProperties.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="13" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/xsd/r10/POSLogV6.0.1C.xsd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-216">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/xml/r10/R10xml.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-266764">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-=======
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transform/config/ConfigPropertiesFactory.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="321">
           <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
->>>>>>> origin/master
           <folding />
         </state>
       </provider>
@@ -1783,10 +1281,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transform/util/ArchiveHelper.scala">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="1260">
-          <caret line="70" column="25" selection-start-line="70" selection-start-column="25" selection-end-line="70" selection-end-column="25" />
-=======
         <state relative-caret-position="191">
           <caret line="50" column="6" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="6" />
           <folding>
@@ -1799,62 +1293,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
->>>>>>> origin/master
           <folding />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transformation/service/XmlTransformService.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="29" column="43" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="43" />
-=======
     <entry file="file://$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/config/ConfigPropertiesFactory$Test.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="8" column="75" selection-start-line="8" selection-start-column="75" selection-end-line="8" selection-end-column="75" />
->>>>>>> origin/master
           <folding />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transformation/xml/XmlTransformer.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="32" column="43" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="43" />
-=======
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transform/Loggable.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
->>>>>>> origin/master
           <folding />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transformation/directoryreader/DirectoryReader.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="46" column="6" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testSamples/r10/RetailTransactionLog_3146_19_575.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6858">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-=======
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transform/TransformSession.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="52" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
-          <folding>
-            <element signature="e#38#104#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1862,25 +1317,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4014">
           <caret line="223" column="9" selection-start-line="223" selection-start-column="9" selection-end-line="223" selection-end-column="9" />
->>>>>>> origin/master
           <folding />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/testSamples/r10/RetailTransactionLog_3148_167_66.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="212" column="32" selection-start-line="212" selection-start-column="29" selection-end-line="212" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.conf">
-=======
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transform/xml/XmlTransformer.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
+        <state relative-caret-position="1692">
           <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
           <folding>
             <element signature="e#42#104#0" expanded="true" />
@@ -1889,45 +1332,20 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/output/r10/R10xml.csv">
->>>>>>> origin/master
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transformation/Xml2CsvTransformer.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="20" column="62" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="62" />
-          <folding>
-            <element signature="e#43#134#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/xsl/r10/r10_extract_retailtransaction_lineitem.xsl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="123" column="73" selection-start-line="123" selection-start-column="60" selection-end-line="123" selection-end-column="73" />
-=======
     <entry file="file://$PROJECT_DIR$/src/test/resources/application.conf">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="2" column="41" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
->>>>>>> origin/master
           <folding />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/main/resources/xsl/r10/r10_extract_retailtransaction_customer.xsl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
-=======
     <entry file="file://$PROJECT_DIR$/src/main/resources/domain/purchases/application-r10.conf">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
@@ -1938,89 +1356,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.conf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
->>>>>>> origin/master
+        <state relative-caret-position="54">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>scala-sdk-2.11.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>dpp-bds-xmltocsv-transformer</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>SBT: com.jcraft:jsch:0.1.48:jar</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transform/TransformSession.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+          <folding>
+            <element signature="e#38#104#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="708">
+          <caret line="59" column="5" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1908">
+          <caret line="106" column="21" selection-start-line="106" selection-start-column="21" selection-end-line="106" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
