@@ -1,4 +1,4 @@
-package com.sainsburys.dpp.transformation.config
+package com.sainsburys.dpp.transform.config
 
 import com.typesafe.config.ConfigFactory
 
@@ -9,9 +9,9 @@ import com.typesafe.config.ConfigFactory
   * @version 1.0
   * @since 06/01/2017
   */
-sealed class ConfigProperties (var xslStylesheetR10:String,
-                                       var xmlSourcePathR10:String,
-                                       var csvOutputPathR10:String)
+sealed class ConfigProperties (var xslTemplate:String,
+                               var xmlPath:String,
+                               var transformOutputPath:String)
 
 
 object ConfigProperties {
@@ -20,9 +20,9 @@ object ConfigProperties {
     val configFile = ConfigFactory.load(configFilePath)
 
     new ConfigProperties(
-      configFile.getString("xsl.stylesheet.r10"),
-      configFile.getString("xml.source.path.r10"),
-      configFile.getString("csv.output.path.r10")
+      configFile.getString("r10.xsl.template"),
+      configFile.getString("r10.xml.source.path"),
+      configFile.getString("r10.transform.output.path")
     )
   }
 
