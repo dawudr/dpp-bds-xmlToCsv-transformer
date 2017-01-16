@@ -2,38 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3f866318-d6de-4df8-bf41-f578af5fdd44" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/domain/purchases/application-r10.conf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transform/TransformSession.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transform/service/XmlTransformService.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transform/xml/XmlTransformer.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/xml/R10xml.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/config/ConfigPropertiesFactory$Test.scala" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transformation/Xml2CsvTransformer.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transformation/service/XmlTransformService.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transformation/xml/XmlTransformer.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transformation/config/ConfigPropertiesFactory$Test.scala" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/r10_pipeline.xpr" afterPath="$PROJECT_DIR$/src/main/resources/domain/purchases/r10_pipeline.xpr" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/xml/r10/R10xml.xml" afterPath="$PROJECT_DIR$/src/main/resources/domain/purchases/xml/R10xml.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/xsd/r10/POSLogExtensionsRetailTransaction.xsd" afterPath="$PROJECT_DIR$/src/main/resources/domain/purchases/xsd/POSLogExtensionsRetailTransaction.xsd" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/xsd/r10/POSLogV6.0.1C.xsd" afterPath="$PROJECT_DIR$/src/main/resources/domain/purchases/xsd/POSLogV6.0.1C.xsd" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/xsl/r10/r10_extract_retailtransaction_customer.xsl" afterPath="$PROJECT_DIR$/src/main/resources/domain/purchases/xsl/r10_extract_retailtransaction_customer.xsl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/xsl/r10/r10_extract_retailtransaction_lineitem.xsl" afterPath="$PROJECT_DIR$/src/main/resources/domain/purchases/xsl/r10_extract_retailtransaction_lineitem.xsl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/xsl/r10/r10_extract_retailtransaction_loyaltyaccount.xsl" afterPath="$PROJECT_DIR$/src/main/resources/domain/purchases/xsl/r10_extract_retailtransaction_loyaltyaccount.xsl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/xsl/r10/r10_extract_retailtransaction_promotionssummary.xsl" afterPath="$PROJECT_DIR$/src/main/resources/domain/purchases/xsl/r10_extract_retailtransaction_promotionssummary.xsl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/xsl/r10/r10_extract_retailtransaction_refundablepromotions.xsl" afterPath="$PROJECT_DIR$/src/main/resources/domain/purchases/xsl/r10_extract_retailtransaction_refundablepromotions.xsl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/xsl/r10/r10_extract_retailtransaction_taxdefinitions.xsl" afterPath="$PROJECT_DIR$/src/main/resources/domain/purchases/xsl/r10_extract_retailtransaction_taxdefinitions.xsl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/xsl/r10/r10_pipeline.xsl" afterPath="$PROJECT_DIR$/src/main/resources/domain/purchases/xsl/r10_pipeline.xsl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/xsl/r10/r10_pipeline_equalizing.xsl" afterPath="$PROJECT_DIR$/src/main/resources/domain/purchases/xsl/r10_pipeline_equalizing.xsl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/xsl/r10/r10_pipeline_flatten.xsl" afterPath="$PROJECT_DIR$/src/main/resources/domain/purchases/xsl/r10_pipeline_flatten.xsl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/xsl/r10/r10_pipeline_xml2csv.xsl" afterPath="$PROJECT_DIR$/src/main/resources/domain/purchases/xsl/r10_pipeline_xml2csv.xsl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transformation/Loggable.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transform/Loggable.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transformation/config/ConfigProperties.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transform/config/ConfigProperties.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transformation/config/ConfigPropertiesFactory.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transform/config/ConfigPropertiesFactory.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transformation/directoryreader/DirectoryReader.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transform/util/ArchiveHelper.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/dpp-bds-xmltocsv-transformer.iml" afterPath="$PROJECT_DIR$/.idea/modules/dpp-bds-xmltocsv-transformer.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.conf" afterPath="$PROJECT_DIR$/src/main/resources/application.conf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/application.conf" afterPath="$PROJECT_DIR$/src/test/resources/application.conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/domain/purchases/xsl/r10_extract_retailtransaction_customer.xsl" />
     </list>
     <ignored path="bds-scala-xslt-xdif.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -91,21 +60,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="customer.csv" pinned="false" current-in-tab="false">
+      <file leaf-file-name="customer.csv" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/output/r10/customer.csv">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
               <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="r10_extract_retailtransaction_customer.xsl" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/domain/purchases/xsl/r10_extract_retailtransaction_customer.xsl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-612">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -421,17 +380,18 @@
     <property name="js.eslint.eslintPackage" value="" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\dev\Documents\workspace\dpp-bds-xmlToCsv-transformer\src\test\scala" />
-      <recent name="C:\Users\dev\Documents\workspace\dpp-bds-xmlToCsv-transformer\src\test\com\sainsburys\dpp\transformation" />
-      <recent name="C:\Users\dev\Documents\workspace\bds-scala-xslt-xdif\src\main" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\dev\Documents\workspace\dpp-bds-xmlToCsv-transformer\src\main\resources\xsl\r10" />
       <recent name="C:\Users\dev\Documents\workspace\dpp-bds-xmlToCsv-transformer\src\test\com\sainsburys\dpp" />
       <recent name="C:\Users\dev\Documents\workspace\dpp-bds-xmlToCsv-transformer\src\test" />
       <recent name="C:\Users\dev\Documents\workspace\dpp-bds-xmlToCsv-transformer\src\main\scala\com\sainsburys\dpp" />
       <recent name="C:\Users\dev\Documents\workspace\dpp-bds-xmlToCsv-transformer\src\main\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/domain/purchases/xsl" />
+      <recent name="C:\Users\dev\Documents\workspace\dpp-bds-xmlToCsv-transformer\src\test\scala" />
+      <recent name="C:\Users\dev\Documents\workspace\dpp-bds-xmlToCsv-transformer\src\test\com\sainsburys\dpp\transformation" />
+      <recent name="C:\Users\dev\Documents\workspace\bds-scala-xslt-xdif\src\main" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Xml2CsvTransformer">
@@ -1260,7 +1220,7 @@
       <workItem from="1484239203224" duration="565000" />
       <workItem from="1484315799105" duration="2431000" />
       <workItem from="1484325814797" duration="875000" />
-      <workItem from="1484565189697" duration="6178000" />
+      <workItem from="1484565189697" duration="6251000" />
     </task>
     <servers />
   </component>
@@ -1273,7 +1233,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102343000" />
+    <option name="totallyTimeSpent" value="102416000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -1622,14 +1582,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/output/r10/customer.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/xml/r10/R10xml.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="543">
@@ -1650,6 +1602,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-612">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output/r10/customer.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
