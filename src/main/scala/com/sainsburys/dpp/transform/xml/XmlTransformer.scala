@@ -75,7 +75,7 @@ class XmlTransformer(private val xmlPath: String,
    */
   def transformer(xmlFile: String, xslFile: String, result: Result) = {
     logger.info("Transforming xml source: {}", xmlFile + " with xsl: "  + xslFile )
-    val tStart = new Date().getTime;
+    val tStart = new Date().getTime
     val xmlSource: Source = new StreamSource(xmlFile)
     val xslSource: Source = new StreamSource(xslFile)
     val transformer = buildTransformer(xslSource)

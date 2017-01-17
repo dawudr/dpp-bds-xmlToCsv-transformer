@@ -52,6 +52,19 @@
                 </xsl:element>
                 <!--<xsl:apply-templates select="@*" />-->
             </xsl:when>
+            <xsl:when test="exists(@Culture)">
+                <!-- Added Step: Used for TaxAuthority.Description -->
+                <xsl:variable name="name"
+                              select="if(count(ancestor::*) > 2) then for $a in ancestor::*[count(ancestor::*) > 1] return for $b in $a return local-name($b) else ''"/>
+                <xsl:variable name="id">
+                    <xsl:value-of select="@Culture"></xsl:value-of>
+                </xsl:variable>
+                <xsl:element
+                        name="{concat(string-join($name, '_'), if(count(ancestor::*) > 2)then '_' else '', local-name(.), '.', $id)}">
+                    <xsl:value-of select="."/>
+                </xsl:element>
+                <!--<xsl:apply-templates select="@*" />-->
+            </xsl:when>
             <xsl:when test="exists(@TypeCode)">
                 <!-- Added Step: Customised flatten Attribute Name with @ID or @TypeCode and Value as an Element -->
                 <xsl:variable name="name"
