@@ -33,9 +33,11 @@
 				</xsl:choose>
 			</xsl:otherwise>
 		</xsl:choose>
+		<!-- If it's the last element, put a comma (or other delimeter -->
 		<xsl:if test="position() != last()">
 			<xsl:value-of select="$param_delimiter"/>
 		</xsl:if>
+		<!-- Otherwise, put a newline character -->
 		<xsl:if test="position() = last()">
 			<xsl:text>&#xA;</xsl:text>
 		</xsl:if>
