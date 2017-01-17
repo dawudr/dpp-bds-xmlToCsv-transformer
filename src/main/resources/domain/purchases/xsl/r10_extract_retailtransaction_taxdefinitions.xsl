@@ -14,14 +14,6 @@
     <xsl:variable name="var_Transaction_level">
         <xsl:apply-templates select="//r10Ex:Transaction/*[not(self::r10Ex:ReceiptImage |self::r10Ex:RetailTransaction)]" mode="s3_flatten"/>
     </xsl:variable>
-    <!-- RetailTransaction Level Elements -->
-    <xsl:variable name="var_RetailTransaction_level">
-        <xsl:apply-templates select="//r10Ex:Transaction/r10Ex:RetailTransaction/*[not(child::*)]" mode="s3_flatten"/>
-    </xsl:variable>
-    <!-- Customer Level Elements -->
-    <xsl:variable name="var_Customer_level">
-        <xsl:apply-templates select="//r10Ex:Transaction/r10Ex:RetailTransaction/r10Ex:Customer/*" mode="s3_flatten"/>
-    </xsl:variable>
 
     <!-- /r10Ex:POSLog/r10Ex:Transaction/r10Ex:RetailTransaction/r10Ex:TaxDefinitions -->
     <xsl:template match="/">
@@ -37,9 +29,9 @@
     <xsl:template match="r10Ex:RetailTransaction" mode="s1_user-defined">
         <!-- STEP-2: s2_joinxml-->
         <xsl:variable name="s2_joinxml">
-                <xsl:for-each select="*:TaxDefinitions">
-                        <xsl:apply-templates select="." mode="s1_user-defined"/>
-                </xsl:for-each>
+            <xsl:for-each select="*:TaxDefinitions">
+                <xsl:apply-templates select="." mode="s1_user-defined"/>
+            </xsl:for-each>
         </xsl:variable>
 
         <!-- STEP-3: r10_pipeline_equalizing.xsl -->
