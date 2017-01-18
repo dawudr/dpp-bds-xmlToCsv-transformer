@@ -1,13 +1,13 @@
 package com.sainsburys.dpp.transform
 
-import scala.xml.XML
+import scala.xml.{NodeSeq, XML}
 
 /**
   * Created by bradley.reed on 17/01/2017.
   */
 class PromotionsSummaryTest extends XmlTest {
 
-  override val xmlPath = "src/test/resources/xml/full"
+  override val xmlPath = "src/test/resources/fullxml"
   override val xslPath = "src/main/resources/domain/purchases/xsl/r10_extract_retailtransaction_promotionssummary.xsl"
   override val outPath = "output/test/promotionssummary"
 
@@ -24,29 +24,28 @@ class PromotionsSummaryTest extends XmlTest {
     // The amount of rows in the CSV should = the number of summaries
     (csvData length) should be (proSums length)
 
-    // Since the arrays are the same size we can zip them together to one array of tuples
-    val zipped = csvData zip proSums
-
-    zipped foreach(iteration => {
-      val (row, proSum) = iteration
-      assertFields(Map(
+    // This takes the CSV data 2D array, and the list of Nodes,
+    // and calls the function for each row to get the mapping
+    // Then it calls assertFields to test each row in the data
+    assertManyFields(csvData, proSums, (rootNode: NodeSeq) =>
+      Map(
         0 -> xmlData \\ "TransactionID",
-        1 -> proSum \ "PromotionID",
-        2 -> proSum \ "RedemptionQuantity",
-        3 -> proSum \ "TotalRewardAmount",
-        4 -> proSum \ "TotalRewardAmount" \ "@Currency",
-        5 -> proSum \ "TriggerType",
-        6 -> proSum \ "LoyaltyAccount" \ "LoyaltyProgram" \ "LoyaltyAccountID",
+        1 -> rootNode \ "PromotionID",
+        2 -> rootNode \ "RedemptionQuantity",
+        3 -> rootNode \ "TotalRewardAmount",
+        4 -> rootNode \ "TotalRewardAmount" \ "@Currency",
+        5 -> rootNode \ "TriggerType",
+        6 -> rootNode \ "LoyaltyAccount" \ "LoyaltyProgram" \ "LoyaltyAccountID",
         // Finds Points with Type="PointsEarned"
-        7 -> (proSum \ "LoyaltyAccount" \ "LoyaltyProgram" \ "Points").filter { node =>
+        7 -> (rootNode \ "LoyaltyAccount" \ "LoyaltyProgram" \ "Points").filter { node =>
           node.attributes.exists(attr => {attr.key == "Type" && attr.value.text == "PointsEarned"})
         },
-        8 -> proSum \ "RewardType",
-        9 -> proSum \ "PromotionDescription",
-        10 -> proSum \ "QualifyingSpent",
-        11 -> proSum \ "TriggerTiming"
-      ), row)
-    })
+        8 -> rootNode \ "RewardType",
+        9 -> rootNode \ "PromotionDescription",
+        10 -> rootNode \ "QualifyingSpent",
+        11 -> rootNode \ "TriggerTiming"
+      )
+    )
   }
 
 }

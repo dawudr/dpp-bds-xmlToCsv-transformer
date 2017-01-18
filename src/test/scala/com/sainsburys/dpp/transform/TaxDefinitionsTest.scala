@@ -25,27 +25,21 @@ class TaxDefinitionsTest extends XmlTest {
     // The amount of rows in the CSV should = the number of Tax Rates
     (csvData length) should be (taxRates length)
 
-    // Since the arrays are the same size we can zip them together to one array of tuples
-    val zipped = csvData zip taxRates
-
-    zipped foreach(iteration => {
-      val (row, taxRate) = iteration
-      assertFields(Map(
-        0 -> xmlData \\ "TransactionID",
-        1 -> taxAuthority \ "AuthorityId",
-        2 -> (taxAuthority \ "Descriptions" \ "Description").head,
-        3 -> taxRate \ "RateId",
-        4 -> taxRate \ "Type",
-        5 -> taxRate \ "AuthorityId",
-        6 -> (taxRate \ "Descriptions" \ "Description").head,
-        7 -> taxRate \ "IsIncluded",
-        8 -> taxRate \ "TaxCalculatedMethodPercent" \ "Value",
-        9 -> taxRate \ "TaxCalculatedMethodPercent" \ "ImpositionId",
-        10 -> taxRate \ "TaxIndicator",
-        11 -> taxRate \ "RoundingType",
-        12 -> taxRate \ "CouponReducesTaxationAmount"
-      ), row)
-    })
+    assertManyFields(csvData, taxRates, (taxRate) => Map(
+      0 -> xmlData \\ "TransactionID",
+      1 -> taxAuthority \ "AuthorityId",
+      2 -> (taxAuthority \ "Descriptions" \ "Description").head,
+      3 -> taxRate \ "RateId",
+      4 -> taxRate \ "Type",
+      5 -> taxRate \ "AuthorityId",
+      6 -> (taxRate \ "Descriptions" \ "Description").head,
+      7 -> taxRate \ "IsIncluded",
+      8 -> taxRate \ "TaxCalculatedMethodPercent" \ "Value",
+      9 -> taxRate \ "TaxCalculatedMethodPercent" \ "ImpositionId",
+      10 -> taxRate \ "TaxIndicator",
+      11 -> taxRate \ "RoundingType",
+      12 -> taxRate \ "CouponReducesTaxationAmount"
+    ))
   }
 
 }

@@ -65,11 +65,19 @@ class XmlTest extends FlatSpec with Matchers {
       // Eg, in PromotionSummary, <TotalRewardAmount> sometimes has Currency="GBP" but not always
       val value = if (node.length > 0) node text else "\"\""
 
-//      try {
-        column should be (value)
-//      } catch {
-//        case _: TestFailedException => println(field._1 + " not equal to " + (field._2 text))
-//      }
+      column should be (value)
+    })
+  }
+
+  def assertManyFields(csvData: List[Array[String]], nodes: NodeSeq, getFieldMap: (NodeSeq) => Map[Int, NodeSeq]): Unit = {
+    // Since the arrays are the same size we can zip them together to one array of tuples
+    val zipped = csvData zip nodes
+
+    // For each tuple of (csvRow, node), call the callback to get the mapping
+    // Then call assertFields, passing the mapping and the row to do the tests
+    zipped foreach(iteration => {
+      val (row, node) = iteration
+      assertFields(getFieldMap(node), row)
     })
   }
 
