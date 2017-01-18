@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5d2dd7c-40b9-41c0-ab2a-fc01c66103e5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/CustomerTest.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/LoyaltyAccountTest.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/TaxDefinitionsTest.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/XmlTest.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/xml/full/R10xml.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/PromotionsSummaryTest.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.conf" afterPath="$PROJECT_DIR$/src/main/resources/application.conf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/domain/purchases/xsl/r10_pipeline_flatten.xsl" afterPath="$PROJECT_DIR$/src/main/resources/domain/purchases/xsl/r10_pipeline_flatten.xsl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transform/xml/XmlTransformer.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transform/xml/XmlTransformer.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/domain/purchases/xsl/r10_extract_retailtransaction_promotionssummary.xsl" afterPath="$PROJECT_DIR$/src/main/resources/domain/purchases/xsl/r10_extract_retailtransaction_promotionssummary.xsl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/CustomerTest.scala" afterPath="$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/CustomerTest.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/TaxDefinitionsTest.scala" afterPath="$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/TaxDefinitionsTest.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/XmlTest.scala" afterPath="$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/XmlTest.scala" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -29,15 +28,20 @@
     <window id="1">
       <content type="file-editors">
         <state>
-          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <leaf>
             <file leaf-file-name="R10xml.xml" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/src/main/resources/domain/purchases/xml/R10xml.xml">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="329">
-                    <caret line="13978" column="56" lean-forward="false" selection-start-line="13978" selection-start-column="56" selection-end-line="13978" selection-end-column="56" />
+                  <state relative-caret-position="13701">
+                    <caret line="14029" column="110" lean-forward="true" selection-start-line="14029" selection-start-column="77" selection-end-line="14029" selection-end-column="110" />
                     <folding>
                       <element signature="n#ReceiptImage#0;n#Transaction#0;n#POSLog#0;n#!!top" expanded="false" />
                       <element signature="n#ReceiptImage#1;n#Transaction#0;n#POSLog#0;n#!!top" expanded="false" />
+                      <element signature="n#PromotionSummary#1;n#PromotionsSummary#0;n#RetailTransaction#0;n#Transaction#0;n#POSLog#0;n#!!top" expanded="false" />
+                      <element signature="n#PromotionSummary#2;n#PromotionsSummary#0;n#RetailTransaction#0;n#Transaction#0;n#POSLog#0;n#!!top" expanded="false" />
+                      <element signature="n#PromotionSummary#3;n#PromotionsSummary#0;n#RetailTransaction#0;n#Transaction#0;n#POSLog#0;n#!!top" expanded="false" />
+                      <element signature="n#PromotionSummary#4;n#PromotionsSummary#0;n#RetailTransaction#0;n#Transaction#0;n#POSLog#0;n#!!top" expanded="false" />
+                      <element signature="n#PromotionSummary#5;n#PromotionsSummary#0;n#RetailTransaction#0;n#Transaction#0;n#POSLog#0;n#!!top" expanded="false" />
                     </folding>
                   </state>
                 </provider>
@@ -46,8 +50,8 @@
             <file leaf-file-name="R10xml.xml" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/test/resources/xml/R10xml.xml">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="338">
-                    <caret line="173" column="25" lean-forward="false" selection-start-line="173" selection-start-column="25" selection-end-line="173" selection-end-column="25" />
+                  <state relative-caret-position="244">
+                    <caret line="136" column="36" lean-forward="false" selection-start-line="136" selection-start-column="24" selection-end-line="136" selection-end-column="36" />
                     <folding />
                   </state>
                 </provider>
@@ -66,11 +70,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TaxDefinitionsTest.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/TaxDefinitionsTest.scala">
+      <file leaf-file-name="r10_extract_retailtransaction_promotionssummary.xsl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/domain/purchases/xsl/r10_extract_retailtransaction_promotionssummary.xsl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="46" column="13" lean-forward="true" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
+            <state relative-caret-position="210">
+              <caret line="20" column="62" lean-forward="false" selection-start-line="20" selection-start-column="62" selection-end-line="20" selection-end-column="62" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PromotionsSummaryTest.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/PromotionsSummaryTest.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="363">
+              <caret line="37" column="36" lean-forward="true" selection-start-line="37" selection-start-column="36" selection-end-line="37" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -79,21 +93,11 @@
       <file leaf-file-name="XmlTest.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/XmlTest.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="50" column="43" lean-forward="false" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="43" />
+            <state relative-caret-position="309">
+              <caret line="71" column="9" lean-forward="true" selection-start-line="71" selection-start-column="9" selection-end-line="71" selection-end-column="9" />
               <folding>
                 <element signature="e#38#101#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CustomerTest.scala" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/CustomerTest.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="33" lean-forward="true" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -121,6 +125,9 @@
       <find>transactionid</find>
       <find>loya</find>
       <find>taxde</find>
+      <find>promotionss</find>
+      <find>PromotionsS</find>
+      <find>PointsEarned</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -144,9 +151,13 @@
         <option value="$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transform/xml/XmlTransformer.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/LoyaltyAccountTest.scala" />
         <option value="$PROJECT_DIR$/src/main/resources/domain/purchases/xsl/r10_pipeline_flatten.xsl" />
-        <option value="$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/XmlTest.scala" />
-        <option value="$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/TaxDefinitionsTest.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/CustomerTest.scala" />
+        <option value="$PROJECT_DIR$/src/main/resources/domain/purchases/xsl/r10_extract_retailtransaction_promotionssummary.xsl" />
+        <option value="$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/TaxDefinitionsTest.scala" />
+        <option value="$PROJECT_DIR$/output/r10/promotions_summary.csv" />
+        <option value="$PROJECT_DIR$/src/test/resources/xml/R10xml.xml" />
+        <option value="$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/XmlTest.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/PromotionsSummaryTest.scala" />
       </list>
     </option>
   </component>
@@ -161,8 +172,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
+    <option name="width" value="1280" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -329,6 +340,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="xml" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xmlToCsv-transformer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xmlcsv" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xml" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="full" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -520,6 +561,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="promotionssummary" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xmlToCsv-transformer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xmlcsv" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="output" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="loyaltyaccount" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -547,8 +610,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
-    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
@@ -556,6 +618,9 @@
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
     <property name="FullScreen" value="true" />
     <property name="prop_add_unversioned_files" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -565,30 +630,11 @@
       <recent name="com.sainsburys.dpp.transform" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources/xml/full" />
       <recent name="$PROJECT_DIR$/src/main/resources/domain/purchases/xsl" />
     </key>
   </component>
-  <component name="RunManager" selected="ScalaTest.LoyaltyAccountTest">
-    <configuration default="false" name="TransformSession" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.sainsburys.dpp.transform.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.sainsburys.dpp.transform.TransformSession" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="config=&quot;application.conf&quot;" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="xmlcsv" />
-      <envs />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="ScalaTest.PromotionsSummaryTest">
     <configuration default="false" name="XmlTest" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="xmlcsv" />
@@ -644,6 +690,23 @@
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="xmlcsv" />
       <setting name="path" value="com.sainsburys.dpp.transform.TaxDefinitionsTest" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <classRegexps />
+      <testRegexps />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="PromotionsSummaryTest" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="xmlcsv" />
+      <setting name="path" value="com.sainsburys.dpp.transform.PromotionsSummaryTest" />
       <setting name="package" value="" />
       <setting name="vmparams" value="" />
       <setting name="params" value="" />
@@ -1373,19 +1436,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.TransformSession" />
-      <item index="1" class="java.lang.String" itemvalue="ScalaTest.XmlTest" />
-      <item index="2" class="java.lang.String" itemvalue="ScalaTest.CustomerTest" />
-      <item index="3" class="java.lang.String" itemvalue="ScalaTest.LoyaltyAccountTest" />
-      <item index="4" class="java.lang.String" itemvalue="ScalaTest.TaxDefinitionsTest" />
+      <item index="0" class="java.lang.String" itemvalue="ScalaTest.XmlTest" />
+      <item index="1" class="java.lang.String" itemvalue="ScalaTest.CustomerTest" />
+      <item index="2" class="java.lang.String" itemvalue="ScalaTest.LoyaltyAccountTest" />
+      <item index="3" class="java.lang.String" itemvalue="ScalaTest.TaxDefinitionsTest" />
+      <item index="4" class="java.lang.String" itemvalue="ScalaTest.PromotionsSummaryTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="ScalaTest.LoyaltyAccountTest" />
-        <item index="1" class="java.lang.String" itemvalue="ScalaTest.CustomerTest" />
-        <item index="2" class="java.lang.String" itemvalue="ScalaTest.TaxDefinitionsTest" />
-        <item index="3" class="java.lang.String" itemvalue="ScalaTest.XmlTest" />
-        <item index="4" class="java.lang.String" itemvalue="Application.TransformSession" />
+        <item index="0" class="java.lang.String" itemvalue="ScalaTest.PromotionsSummaryTest" />
+        <item index="1" class="java.lang.String" itemvalue="ScalaTest.LoyaltyAccountTest" />
+        <item index="2" class="java.lang.String" itemvalue="ScalaTest.CustomerTest" />
+        <item index="3" class="java.lang.String" itemvalue="ScalaTest.TaxDefinitionsTest" />
+        <item index="4" class="java.lang.String" itemvalue="ScalaTest.XmlTest" />
       </list>
     </recent_temporary>
   </component>
@@ -1439,79 +1502,79 @@
       <updated>1484578221252</updated>
       <workItem from="1484578231553" duration="5661000" />
       <workItem from="1484651812314" duration="66000" />
-      <workItem from="1484653387673" duration="14466000" />
+      <workItem from="1484653387673" duration="19739000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CustomerTest - 2017.01.17 at 16h 55m 30s.xml">
-      <configuration name="CustomerTest" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="PromotionsSummaryTest - 2017.01.18 at 10h 33m 50s.xml">
+      <configuration name="PromotionsSummaryTest" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="CustomerTest - 2017.01.17 at 16h 58m 36s.xml">
-      <configuration name="CustomerTest" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="PromotionsSummaryTest - 2017.01.18 at 10h 35m 19s.xml">
+      <configuration name="PromotionsSummaryTest" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="CustomerTest - 2017.01.17 at 17h 13m 47s.xml">
-      <configuration name="CustomerTest" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="PromotionsSummaryTest - 2017.01.18 at 10h 36m 05s.xml">
+      <configuration name="PromotionsSummaryTest" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="LoyaltyAccountTest - 2017.01.17 at 17h 13m 57s.xml">
-      <configuration name="LoyaltyAccountTest" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="PromotionsSummaryTest - 2017.01.18 at 10h 39m 20s.xml">
+      <configuration name="PromotionsSummaryTest" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TaxDefinitionsTest - 2017.01.17 at 16h 49m 25s.xml">
-      <configuration name="TaxDefinitionsTest" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="PromotionsSummaryTest - 2017.01.18 at 10h 41m 34s.xml">
+      <configuration name="PromotionsSummaryTest" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TaxDefinitionsTest - 2017.01.17 at 16h 54m 45s.xml">
-      <configuration name="TaxDefinitionsTest" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="PromotionsSummaryTest - 2017.01.18 at 10h 41m 48s.xml">
+      <configuration name="PromotionsSummaryTest" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TaxDefinitionsTest - 2017.01.17 at 16h 58m 54s.xml">
-      <configuration name="TaxDefinitionsTest" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="PromotionsSummaryTest - 2017.01.18 at 10h 42m 24s.xml">
+      <configuration name="PromotionsSummaryTest" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TaxDefinitionsTest - 2017.01.17 at 16h 59m 27s.xml">
-      <configuration name="TaxDefinitionsTest" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="PromotionsSummaryTest - 2017.01.18 at 10h 42m 53s.xml">
+      <configuration name="PromotionsSummaryTest" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TaxDefinitionsTest - 2017.01.17 at 17h 04m 53s.xml">
-      <configuration name="TaxDefinitionsTest" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="PromotionsSummaryTest - 2017.01.18 at 10h 45m 43s.xml">
+      <configuration name="PromotionsSummaryTest" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TaxDefinitionsTest - 2017.01.17 at 17h 12m 46s.xml">
-      <configuration name="TaxDefinitionsTest" configurationId="ScalaTestRunConfiguration" />
+    <history-entry file="PromotionsSummaryTest - 2017.01.18 at 10h 46m 43s.xml">
+      <configuration name="PromotionsSummaryTest" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20193000" />
+    <option name="totallyTimeSpent" value="25466000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27945206" sideWeight="0.503231" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27945206" sideWeight="0.503231" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27945206" sideWeight="0.49676898" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2267525" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25605816" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1523,7 +1586,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1532,22 +1595,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/domain/purchases/xsl/r10_extract_retailtransaction_customer.xsl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="17" lean-forward="true" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/domain/purchases/xsl/r10_extract_retailtransaction_taxdefinitions.xsl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="19" lean-forward="false" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/domain/purchases/xsl/r10_extract_retailtransaction_lineitem.xsl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1980">
@@ -1621,22 +1668,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/output/r10/loyalty_account.csv" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/domain/purchases/xsl/r10_extract_retailtransaction_promotionssummary.xsl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/domain/purchases/xsl/r10_extract_retailtransaction_refundablepromotions.xsl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/domain/purchases/xsl/r10_pipeline_equalizing.xsl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1656,14 +1687,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/domain/purchases/xsl/r10_extract_retailtransaction_lineitem.xsl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="132" column="80" lean-forward="false" selection-start-line="132" selection-start-column="80" selection-end-line="132" selection-end-column="80" />
           <folding />
         </state>
       </provider>
@@ -1812,17 +1835,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/domain/purchases/xml/R10xml.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="13978" column="56" lean-forward="false" selection-start-line="13978" selection-start-column="56" selection-end-line="13978" selection-end-column="56" />
-          <folding>
-            <element signature="n#ReceiptImage#0;n#Transaction#0;n#POSLog#0;n#!!top" expanded="false" />
-            <element signature="n#ReceiptImage#1;n#Transaction#0;n#POSLog#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/output/test/loyaltyaccount/R10xml.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1863,39 +1875,215 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/config/ConfigPropertiesFactory$Test.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalatest/scalatest_2.10/srcs/scalatest_2.10-3.0.1-sources.jar!/org/scalatest/FlatSpec.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="882">
+          <caret line="1684" column="14" lean-forward="false" selection-start-line="1684" selection-start-column="14" selection-end-line="1684" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/domain/purchases/xsl/r10_extract_retailtransaction_refundablepromotions.xsl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/CustomerTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output/r10/promotions_summary.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/TaxDefinitionsTest.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="46" column="13" lean-forward="true" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
+        <state relative-caret-position="3">
+          <caret line="12" column="36" lean-forward="false" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/domain/purchases/xsl/r10_extract_retailtransaction_lineitem.xsl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="149" column="16" lean-forward="false" selection-start-line="149" selection-start-column="16" selection-end-line="149" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/domain/purchases/xml/R10xml.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13701">
+          <caret line="14029" column="110" lean-forward="true" selection-start-line="14029" selection-start-column="77" selection-end-line="14029" selection-end-column="110" />
+          <folding>
+            <element signature="n#ReceiptImage#0;n#Transaction#0;n#POSLog#0;n#!!top" expanded="false" />
+            <element signature="n#ReceiptImage#1;n#Transaction#0;n#POSLog#0;n#!!top" expanded="false" />
+            <element signature="n#PromotionSummary#1;n#PromotionsSummary#0;n#RetailTransaction#0;n#Transaction#0;n#POSLog#0;n#!!top" expanded="false" />
+            <element signature="n#PromotionSummary#2;n#PromotionsSummary#0;n#RetailTransaction#0;n#Transaction#0;n#POSLog#0;n#!!top" expanded="false" />
+            <element signature="n#PromotionSummary#3;n#PromotionsSummary#0;n#RetailTransaction#0;n#Transaction#0;n#POSLog#0;n#!!top" expanded="false" />
+            <element signature="n#PromotionSummary#4;n#PromotionsSummary#0;n#RetailTransaction#0;n#Transaction#0;n#POSLog#0;n#!!top" expanded="false" />
+            <element signature="n#PromotionSummary#5;n#PromotionsSummary#0;n#RetailTransaction#0;n#Transaction#0;n#POSLog#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/xml/full/R10xml.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" column="587" lean-forward="false" selection-start-line="10" selection-start-column="587" selection-end-line="10" selection-end-column="587" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output/test/promotionssummary/R10xml.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="2" lean-forward="true" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/domain/purchases/xsl/r10_extract_retailtransaction_promotionssummary.xsl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="20" column="62" lean-forward="false" selection-start-line="20" selection-start-column="62" selection-end-line="20" selection-end-column="62" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/XmlTest.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="50" column="43" lean-forward="false" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="43" />
+        <state relative-caret-position="309">
+          <caret line="71" column="9" lean-forward="true" selection-start-line="71" selection-start-column="9" selection-end-line="71" selection-end-column="9" />
           <folding>
             <element signature="e#38#101#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/CustomerTest.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="33" lean-forward="true" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/xml/R10xml.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="173" column="25" lean-forward="false" selection-start-line="173" selection-start-column="25" selection-end-line="173" selection-end-column="25" />
+        <state relative-caret-position="244">
+          <caret line="136" column="36" lean-forward="false" selection-start-line="136" selection-start-column="24" selection-end-line="136" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/PromotionsSummaryTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="37" column="36" lean-forward="true" selection-start-line="37" selection-start-column="36" selection-end-line="37" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Python 3.5.2 (/usr/local/bin/python3) interpreter library</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>xmlcsv</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>SBT: com.jcraft:jsch:0.1.48:jar</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

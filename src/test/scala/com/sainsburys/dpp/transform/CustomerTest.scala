@@ -10,7 +10,7 @@ class CustomerTest extends XmlTest {
   override val xslPath = "src/main/resources/domain/purchases/xsl/r10_extract_retailtransaction_customer.xsl"
   override val outPath = "output/test/customer"
 
-  "The XML transformer" should "transform customer XML" in {
+  "The XML transformer" should "transform Customer XML" in {
     // TRY
     transformFile()
 
@@ -21,6 +21,7 @@ class CustomerTest extends XmlTest {
 
     // Map of fields and their positions in the CSV output
     val fields = Map(
+      0 -> xmlData \\ "TransactionID",
       1 -> (custData \ "Name" \ "Name").head,
       2 -> custData \ "CustomerID",
       3 -> custData \ "CustomerExternalId",

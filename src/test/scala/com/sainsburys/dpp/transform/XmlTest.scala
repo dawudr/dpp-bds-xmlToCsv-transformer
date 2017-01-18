@@ -2,10 +2,11 @@ package com.sainsburys.dpp.transform
 
 import com.sainsburys.dpp.transform.service.XmlTransformService
 import com.sainsburys.dpp.transform.xml.XmlTransformer
+import org.scalatest.exceptions.TestFailedException
 import org.scalatest.{FlatSpec, Matchers}
 
 import scala.collection.mutable.ListBuffer
-import scala.xml.{Node, NodeSeq}
+import scala.xml.NodeSeq
 
 /**
   * Created by bradley.reed on 17/01/2017.
@@ -48,9 +49,27 @@ class XmlTest extends FlatSpec with Matchers {
     returnArray.toList.tail
   }
 
+  /**
+    * Loops over each tuple in `fields`,
+    * checking if the Node's text equals the
+    * text in the `csvRow` at that index
+    *
+    * @param fields Map of Nodes to their index in the CSV row
+    * @param csvRow Array of strings read from one row in the CSV
+    */
   def assertFields(fields: Map[Int, NodeSeq], csvRow: Array[String]): Unit = {
     fields.foreach(field => {
-      csvRow(field._1) should be (field._2 text)
+      val column = csvRow(field._1)
+      val node = field._2
+      // If the node does not exist, is is actually a blank string ("") in the CSV
+      // Eg, in PromotionSummary, <TotalRewardAmount> sometimes has Currency="GBP" but not always
+      val value = if (node.length > 0) node text else "\"\""
+
+//      try {
+        column should be (value)
+//      } catch {
+//        case _: TestFailedException => println(field._1 + " not equal to " + (field._2 text))
+//      }
     })
   }
 

@@ -1,6 +1,6 @@
 package com.sainsburys.dpp.transform
 
-import scala.xml.{Node, XML}
+import scala.xml.XML
 
 /**
   * Created by bradley.reed on 17/01/2017.
