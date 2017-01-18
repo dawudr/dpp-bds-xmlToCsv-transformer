@@ -7,11 +7,19 @@
     <xsl:include href="r10_pipeline_equalizing.xsl"/>
 
     <doc xmlns="http://www.oxygenxml.com/ns/doc/xsl">
-        <desc>Flatten and Convert all Xpath under PromotionsSummary</desc>
+        <desc>Flatten and Convert all Xpath under IssuedCoupons</desc>
     </doc>
     <!-- Transaction Level Elements -->
     <xsl:variable name="var_Transaction_level">
         <xsl:apply-templates select="//r10Ex:Transaction/*[not(self::r10Ex:ReceiptImage |self::r10Ex:RetailTransaction)]" mode="s3_flatten"/>
+    </xsl:variable>
+    <!-- RetailTransaction Level Elements -->
+    <xsl:variable name="var_RetailTransaction_level">
+        <xsl:apply-templates select="//r10Ex:Transaction/r10Ex:RetailTransaction/*[not(child::*)]" mode="s3_flatten"/>
+    </xsl:variable>
+
+    <xsl:variable name="var_PromotionSummary_level">
+        <xsl:apply-templates select="$var_RetailTransaction_level/*:PromotionsSummary/*:PromotionSummary" mode="s3_flatten" />
     </xsl:variable>
 
     <!-- /r10Ex:POSLog/r10Ex:Transaction/r10Ex:RetailTransaction/r10Ex:PromotionsSummary -->
@@ -25,12 +33,20 @@
         <!-- STEP-2: s2_joinxml-->
         <xsl:variable name="s2_joinxml">
             <xsl:element name="table">
-                <xsl:for-each select="*:PromotionSummary">
-                    <xsl:element name="tr">
-                        <xsl:copy-of select="$var_Transaction_level/TransactionID" />
-                        <!-- Print out all fields to CSV except the <IssuedCoupons> -->
-                        <xsl:apply-templates select="./*[not(self::*:IssuedCoupons)]" mode="s3_flatten"/>
-                    </xsl:element>
+                <!-- Loop each PromotionSummary -->
+                <xsl:for-each select="./*:PromotionSummary">
+                    <!-- Store the Promotion ID in $var_promotion_id -->
+                    <xsl:variable name="var_promotion_id">
+                        <xsl:copy-of select="*:PromotionID" />
+                    </xsl:variable>
+                    <!-- Loop each Issued Coupon -->
+                    <xsl:for-each select="*:IssuedCoupons">
+                        <xsl:element name="tr">
+                            <xsl:copy-of select="$var_Transaction_level/TransactionID" />
+                            <xsl:copy-of select="$var_promotion_id" />
+                            <xsl:apply-templates select="./*" mode="s3_flatten"/>
+                        </xsl:element>
+                    </xsl:for-each>
                 </xsl:for-each>
             </xsl:element>
         </xsl:variable>
@@ -48,7 +64,5 @@
 
         <xsl:value-of select="$s5_xml2csv"/>
     </xsl:template>
-
-
 
 </xsl:stylesheet>
