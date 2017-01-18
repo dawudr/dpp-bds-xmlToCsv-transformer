@@ -2,7 +2,7 @@
 dist/*
 target/
 testSamples/
-#output/ # Used for output XML
+output/
 lib_managed/
 src_managed/
 project/boot/

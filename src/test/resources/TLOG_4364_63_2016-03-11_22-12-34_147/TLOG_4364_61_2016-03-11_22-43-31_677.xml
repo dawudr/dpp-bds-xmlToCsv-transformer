@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<POSLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:r10Ex="http://www.Retalix.com/Extensions" FixVersion="1" MajorVersion="6" MinorVersion="0" xmlns="http://www.nrf-arts.org/IXRetail/namespace/">
+  <Transaction MajorVersion="6" MinorVersion="0" FixVersion="1">
+    <BusinessUnit>
+      <UnitID Name="4364 FULHAM DARLAN ROAD LOCAL">4364</UnitID>
+    </BusinessUnit>
+    <WorkstationID TypeCode="X:SelfCheckOut" WorkstationLocation="17">61</WorkstationID>
+    <SequenceNumber>1250</SequenceNumber>
+    <TransactionID>DGA14UGUK5</TransactionID>
+    <OperatorID OperatorName="Jahmal Alexander-Stewart" WorkerID="dce48ac2-22ae-4a0a-a142-0b4f5a6d7532" OperatorType="Cashier">4364-0399</OperatorID>
+    <ReceiptImage r10Ex:ReceiptKind="MainReceipt" r10Ex:ReceiptFormat="RDR" r10Ex:ReceiptNotPrinted="False">
+      <ReceiptLine>&lt;OPOSPrint xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;&lt;Documents NumOfDocuments="1" Device="IBM" CodePage="437"&gt;&lt;Document CodePage="437"&gt;&lt;PrintSection Layout="Portrait" SectionID="1"&gt;&lt;PrintCommand Command="PrintStoredBitmap" CmdData="1" /&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Center" CPL="42" /&gt;&lt;Text Text="        FULHAM DARLAN ROAD LOCAL        "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Center" CPL="42" /&gt;&lt;Text Text="             020 7200 8720              "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Left" CPL="42" /&gt;&lt;Text Text=""&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Center" CPL="42" /&gt;&lt;Text Text="      Sainsbury's Supermarkets Ltd      "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Center" CPL="42" /&gt;&lt;Text Text="       33 Holborn London EC1N 2HT       "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Center" CPL="42" /&gt;&lt;Text Text="          www.sainsburys.co.uk          "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Center" CPL="42" /&gt;&lt;Text Text="        Vat Number : 660 4548 36        "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Left" CPL="42" /&gt;&lt;Text Text=""&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;/PrintSection&gt;&lt;PrintSection Layout="Portrait" SectionID="Reprint" /&gt;&lt;PrintSection Layout="Portrait" SectionID="2"&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Left" CPL="42" /&gt;&lt;Text Text="    "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="*LUCOZADE ORIGINAL1L "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="      £1.00"&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Left" CPL="42" /&gt;&lt;Text Text="    "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="*JS STRAWB LANCES    "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="      £0.45"&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Left" CPL="42" /&gt;&lt;Text Text="    "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="*JS STRAWB LANCES    "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="      £0.45"&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Left" CPL="42" /&gt;&lt;Text Text="    "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="*JS STRAWB LANCES    "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="      £0.45"&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Left" CPL="42" /&gt;&lt;Text Text="    "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="*DIGEST CARAMEL      "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="      £1.00"&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Left" CPL="42" /&gt;&lt;Text Text=""&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Left" CPL="42" /&gt;&lt;Text Text=" "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="   5"&gt;&lt;PrintAttributes Bold="true" /&gt;&lt;/Text&gt;&lt;Text Text=" "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="BALANCE DUE         "&gt;&lt;PrintAttributes Bold="true" /&gt;&lt;/Text&gt;&lt;Text Text="     £3.35"&gt;&lt;PrintAttributes Bold="true" /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Center" CPL="42" /&gt;&lt;Text Text="********************"&gt;&lt;PrintAttributes DoubleHeight="true" DoubleWidth="true" /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Center" CPL="42" /&gt;&lt;Text Text="* "&gt;&lt;PrintAttributes DoubleHeight="true" DoubleWidth="true" /&gt;&lt;/Text&gt;&lt;Text Text="VOID TRANSACTION"&gt;&lt;PrintAttributes DoubleHeight="true" DoubleWidth="true" /&gt;&lt;/Text&gt;&lt;Text Text=" *"&gt;&lt;PrintAttributes DoubleHeight="true" DoubleWidth="true" /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Center" CPL="42" /&gt;&lt;Text Text="********************"&gt;&lt;PrintAttributes DoubleHeight="true" DoubleWidth="true" /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Left" CPL="42" /&gt;&lt;Text Text=""&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Left" CPL="42" /&gt;&lt;Text Text="   "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="C"&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="399   "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="  "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="#"&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="1250"&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="   "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text=" 22:46:14 "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text=" 11MAR2016"&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Left" CPL="42" /&gt;&lt;Text Text="            "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="S"&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="4364 "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="    "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="R"&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="61 "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Left" CPL="42" /&gt;&lt;Text Text=""&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Center" CPL="42" /&gt;&lt;Text Text="Thank you for your visit. Please let us"&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Center" CPL="42" /&gt;&lt;Text Text="know how we did at tellsainsburys.co.uk"&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Left" CPL="42" /&gt;&lt;Text Text=""&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Center" CPL="42" /&gt;&lt;Text Text="You can live well for less than you"&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Center" CPL="42" /&gt;&lt;Text Text="thought at Sainsbury's, based on price"&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Center" CPL="42" /&gt;&lt;Text Text="perception data. For more information"&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Center" CPL="42" /&gt;&lt;Text Text="go to sainsburys.co.uk/livewellforless"&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Left" CPL="42" /&gt;&lt;Text Text=""&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;/PrintSection&gt;&lt;PrintSection Layout="Portrait" SectionID="FeedAndCut"&gt;&lt;PrintCommand Command="FeedPaper" CmdData="6" /&gt;&lt;PrintCommand Command="CutPaper" CmdData="50" /&gt;&lt;PrintCommand Command="FeedPaper" CmdData="1" /&gt;&lt;/PrintSection&gt;&lt;/Document&gt;&lt;/Documents&gt;&lt;/OPOSPrint&gt;</ReceiptLine>
+    </ReceiptImage>
+    <CustomerOrderTransaction r10Ex:VoidedFlag="true" TransactionStatus="Voided">
+      <LineItem EntryMethod="Scanned">
+        <Sale>
+          <POSIdentity>
+            <POSItemID>2002071</POSItemID>
+          </POSIdentity>
+          <MerchandiseHierarchy ID="Merchandise" r10Ex:HierarchyPath="1_09_5418@2_09_154@3_09_139">3_09_139</MerchandiseHierarchy>
+          <MerchandiseHierarchy ID="Tax">20.00</MerchandiseHierarchy>
+          <ItemID Type="X:EAN">5054267000605</ItemID>
+          <Description r10Ex:Culture="en-GB">*LUCOZADE ORIGINAL1L</Description>
+          <Description TypeCode="Long" r10Ex:Culture="en-GB">Lucozade Energy original 1L</Description>
+          <RegularSalesUnitPrice Currency="GBP">1</RegularSalesUnitPrice>
+          <ActualSalesUnitPrice Currency="GBP">1</ActualSalesUnitPrice>
+          <ExtendedAmount Currency="GBP">1</ExtendedAmount>
+          <Quantity Units="1" UnitOfMeasureCode="EA" EntryMethod="Automatic">1</Quantity>
+          <ConsumableGroup xmlns="http://www.Retalix.com/Extensions">
+            <Type>Consumable</Type>
+            <ID>SalesGroup_SSL</ID>
+          </ConsumableGroup>
+        </Sale>
+        <ScanData>5054267000605</ScanData>
+        <SequenceNumber>1</SequenceNumber>
+        <BeginDateTime>2016-03-11T22:43:31.848779+00:00</BeginDateTime>
+        <EndDateTime>2016-03-11T22:43:31.848779+00:00</EndDateTime>
+      </LineItem>
+      <LineItem EntryMethod="Scanned">
+        <Sale>
+          <POSIdentity>
+            <POSItemID>6682304</POSItemID>
+          </POSIdentity>
+          <MerchandiseHierarchy ID="Merchandise" r10Ex:HierarchyPath="1_09_3400@2_09_160@3_09_5">3_09_5</MerchandiseHierarchy>
+          <MerchandiseHierarchy ID="Tax">20.00</MerchandiseHierarchy>
+          <ItemID Type="X:EAN">1542288</ItemID>
+          <Description r10Ex:Culture="en-GB">*JS STRAWB LANCES   </Description>
+          <Description TypeCode="Long" r10Ex:Culture="en-GB">JS FIZZY STRAWBERRY STRAWS 75G</Description>
+          <RegularSalesUnitPrice Currency="GBP">0.45</RegularSalesUnitPrice>
+          <ActualSalesUnitPrice Currency="GBP">0.45</ActualSalesUnitPrice>
+          <ExtendedAmount Currency="GBP">0.45</ExtendedAmount>
+          <Quantity Units="1" UnitOfMeasureCode="EA" EntryMethod="Automatic">1</Quantity>
+          <ConsumableGroup xmlns="http://www.Retalix.com/Extensions">
+            <Type>Consumable</Type>
+            <ID>SalesGroup_SSL</ID>
+          </ConsumableGroup>
+        </Sale>
+        <ScanData>01542288</ScanData>
+        <SequenceNumber>2</SequenceNumber>
+        <BeginDateTime>2016-03-11T22:43:45.3644905+00:00</BeginDateTime>
+        <EndDateTime>2016-03-11T22:43:45.3644905+00:00</EndDateTime>
+      </LineItem>
+      <LineItem EntryMethod="Scanned">
+        <Sale>
+          <POSIdentity>
+            <POSItemID>6682304</POSItemID>
+          </POSIdentity>
+          <MerchandiseHierarchy ID="Merchandise" r10Ex:HierarchyPath="1_09_3400@2_09_160@3_09_5">3_09_5</MerchandiseHierarchy>
+          <MerchandiseHierarchy ID="Tax">20.00</MerchandiseHierarchy>
+          <ItemID Type="X:EAN">1542288</ItemID>
+          <Description r10Ex:Culture="en-GB">*JS STRAWB LANCES   </Description>
+          <Description TypeCode="Long" r10Ex:Culture="en-GB">JS FIZZY STRAWBERRY STRAWS 75G</Description>
+          <RegularSalesUnitPrice Currency="GBP">0.45</RegularSalesUnitPrice>
+          <ActualSalesUnitPrice Currency="GBP">0.45</ActualSalesUnitPrice>
+          <ExtendedAmount Currency="GBP">0.45</ExtendedAmount>
+          <Quantity Units="1" UnitOfMeasureCode="EA" EntryMethod="Automatic">1</Quantity>
+          <ConsumableGroup xmlns="http://www.Retalix.com/Extensions">
+            <Type>Consumable</Type>
+            <ID>SalesGroup_SSL</ID>
+          </ConsumableGroup>
+        </Sale>
+        <ScanData>01542288</ScanData>
+        <SequenceNumber>3</SequenceNumber>
+        <BeginDateTime>2016-03-11T22:43:48.1613834+00:00</BeginDateTime>
+        <EndDateTime>2016-03-11T22:43:48.1613834+00:00</EndDateTime>
+      </LineItem>
+      <LineItem EntryMethod="Scanned">
+        <Sale>
+          <POSIdentity>
+            <POSItemID>6682304</POSItemID>
+          </POSIdentity>
+          <MerchandiseHierarchy ID="Merchandise" r10Ex:HierarchyPath="1_09_3400@2_09_160@3_09_5">3_09_5</MerchandiseHierarchy>
+          <MerchandiseHierarchy ID="Tax">20.00</MerchandiseHierarchy>
+          <ItemID Type="X:EAN">1542288</ItemID>
+          <Description r10Ex:Culture="en-GB">*JS STRAWB LANCES   </Description>
+          <Description TypeCode="Long" r10Ex:Culture="en-GB">JS FIZZY STRAWBERRY STRAWS 75G</Description>
+          <RegularSalesUnitPrice Currency="GBP">0.45</RegularSalesUnitPrice>
+          <ActualSalesUnitPrice Currency="GBP">0.45</ActualSalesUnitPrice>
+          <ExtendedAmount Currency="GBP">0.45</ExtendedAmount>
+          <Quantity Units="1" UnitOfMeasureCode="EA" EntryMethod="Automatic">1</Quantity>
+          <ConsumableGroup xmlns="http://www.Retalix.com/Extensions">
+            <Type>Consumable</Type>
+            <ID>SalesGroup_SSL</ID>
+          </ConsumableGroup>
+        </Sale>
+        <ScanData>01542288</ScanData>
+        <SequenceNumber>4</SequenceNumber>
+        <BeginDateTime>2016-03-11T22:43:52.3957855+00:00</BeginDateTime>
+        <EndDateTime>2016-03-11T22:43:52.3957855+00:00</EndDateTime>
+      </LineItem>
+      <LineItem EntryMethod="Scanned">
+        <Sale>
+          <POSIdentity>
+            <POSItemID>3250303</POSItemID>
+          </POSIdentity>
+          <MerchandiseHierarchy ID="Merchandise" r10Ex:HierarchyPath="1_09_3400@2_09_1520@3_09_460">3_09_460</MerchandiseHierarchy>
+          <MerchandiseHierarchy ID="Tax">20.00</MerchandiseHierarchy>
+          <ItemID Type="X:EAN">5000168079202</ItemID>
+          <Description r10Ex:Culture="en-GB">*DIGEST CARAMEL     </Description>
+          <Description TypeCode="Long" r10Ex:Culture="en-GB">MCVITIES MLK CHO DIGESTIVE CARAMELS 300g</Description>
+          <RegularSalesUnitPrice Currency="GBP">1</RegularSalesUnitPrice>
+          <ActualSalesUnitPrice Currency="GBP">1</ActualSalesUnitPrice>
+          <ExtendedAmount Currency="GBP">1</ExtendedAmount>
+          <Quantity Units="1" UnitOfMeasureCode="EA" EntryMethod="Automatic">1</Quantity>
+          <ConsumableGroup xmlns="http://www.Retalix.com/Extensions">
+            <Type>Consumable</Type>
+            <ID>SalesGroup_SSL</ID>
+          </ConsumableGroup>
+        </Sale>
+        <ScanData>5000168079202</ScanData>
+        <SequenceNumber>5</SequenceNumber>
+        <BeginDateTime>2016-03-11T22:43:55.2083035+00:00</BeginDateTime>
+        <EndDateTime>2016-03-11T22:43:55.2083035+00:00</EndDateTime>
+      </LineItem>
+      <LineItem>
+        <SequenceNumber>6</SequenceNumber>
+        <BeginDateTime>2016-03-11T22:43:59.7239574+00:00</BeginDateTime>
+        <EndDateTime>2016-03-11T22:43:59.7239574+00:00</EndDateTime>
+        <TotalKey Type="SubTotal" xmlns="http://www.Retalix.com/Extensions">
+          <Total TotalType="TransactionGrossAmount">3.35</Total>
+          <Total TotalType="TransactionNetAmount">3.35</Total>
+          <Total TotalType="TransactionPurchaseQuantity">5</Total>
+        </TotalKey>
+      </LineItem>
+      <LineItem EntryMethod="Keyed" RefusalTypeCode="X:NotAuthorizedByEPS">
+        <Tender TenderType="CreditDebit">
+          <Amount Currency="GBP">0</Amount>
+          <Cashback Currency="GBP">0</Cashback>
+          <Authorization SignatureRequiredFlag="false" VerifiedByPINFlag="false">
+            <RequestedAmount Currency="GBP">3.35</RequestedAmount>
+            <AuthorizationCode>**Replaced**</AuthorizationCode>
+            <ReferenceNumber>**Replaced**</ReferenceNumber>
+            <AuthorizationDateTime>2016-03-11T22:44:11.0834051+00:00</AuthorizationDateTime>
+            <ReceiptText />
+            <DiagnosticCode>DECLINE</DiagnosticCode>
+            <r10Ex:CardId>EFT_General</r10Ex:CardId>
+            <r10Ex:AuthorizationType>Offline</r10Ex:AuthorizationType>
+            <r10Ex:TotalWaitTime>9</r10Ex:TotalWaitTime>
+            <r10Ex:NetworkTime>0</r10Ex:NetworkTime>
+            <r10Ex:TenderReferenceId>1</r10Ex:TenderReferenceId>
+            <r10Ex:AuthorizationResponseCode>05</r10Ex:AuthorizationResponseCode>
+            <r10Ex:IsToken>false</r10Ex:IsToken>
+          </Authorization>
+          <CreditDebit>
+            <PrimaryAccountNumber />
+          </CreditDebit>
+          <TenderID>3</TenderID>
+          <r10Ex:TenderDescription>EFT</r10Ex:TenderDescription>
+          <r10Ex:IsAutoReconcile>True</r10Ex:IsAutoReconcile>
+        </Tender>
+        <SequenceNumber>8</SequenceNumber>
+        <EndDateTime>2016-03-11T22:44:35.6773125+00:00</EndDateTime>
+      </LineItem>
+      <Total>0</Total>
+      <Total TotalType="TransactionNetAmount">0</Total>
+      <Total TotalType="TransactionPurchaseQuantity">0</Total>
+      <Total TotalType="TransactionPurchaseQuantity" TypeCode="Return">0</Total>
+      <Total TotalType="X:TransactionTaxIncluded">0</Total>
+      <Total TotalType="X:TransactionTaxSurcharge">0</Total>
+      <Total TotalType="X:TransactionTaxFee">0</Total>
+      <Total TotalType="X:ItemTaxFee">0</Total>
+      <Total TotalType="TransactionTotalSavings">0</Total>
+      <Total TotalType="TransactionGrandAmount">0</Total>
+      <Total TotalType="X:TransactionTotalVoidAmount" CurrencyCode="GBP">3.35</Total>
+      <Total TotalType="X:TransactionTotalVoidCount">5</Total>
+      <Total TotalType="X:TransactionTotalReturnAmount">0</Total>
+      <Total TotalType="TransactionTaxExemptAmount">0</Total>
+      <Total TotalType="TransactionTenderApplied">0</Total>
+      <Total TotalType="X:CashbackTotalAmount">0</Total>
+      <Total TotalType="X:TransactionMerchandiseAmount">0</Total>
+      <Total TotalType="X:TransactionNonMerchandiseAmount">0</Total>
+      <Total TotalType="X:NonResettableGrandTotal">1719.08</Total>
+      <Total TotalType="X:PreviousNonResettableGrandTotal">1447.82</Total>
+      <Customer r10Ex:IsAuthenticatedOffline="False" r10Ex:EntryMethod="Scanned">
+        <CustomerID>**Replaced**</CustomerID>
+        <Name />
+        <r10Ex:CustomerExternalId>**Replaced**</r10Ex:CustomerExternalId>
+        <r10Ex:AccountNumber>**Replaced**</r10Ex:AccountNumber>
+        <r10Ex:IssueNumber>01</r10Ex:IssueNumber>
+        <r10Ex:Segment>Nectar</r10Ex:Segment>
+        <r10Ex:SequenceNumber>7</r10Ex:SequenceNumber>
+        <r10Ex:EndDateTime>2016-03-11T22:44:08.5677640+00:00</r10Ex:EndDateTime>
+        <r10Ex:ScanData>**Replaced**</r10Ex:ScanData>
+      </Customer>
+      <TransactionMeasures xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.Retalix.com/Extensions">
+        <ItemRingTime>
+          <Current>0</Current>
+          <BusinessDayDateTotal>0</BusinessDayDateTotal>
+        </ItemRingTime>
+        <SecureTime>
+          <Current>0</Current>
+          <BusinessDayDateTotal>0</BusinessDayDateTotal>
+        </SecureTime>
+        <IdleTime>
+          <Current>0</Current>
+          <BusinessDayDateTotal>0</BusinessDayDateTotal>
+        </IdleTime>
+        <TenderTime>
+          <Current>0</Current>
+          <BusinessDayDateTotal>0</BusinessDayDateTotal>
+        </TenderTime>
+        <OtherTime>
+          <Current>12</Current>
+          <BusinessDayDateTotal>12</BusinessDayDateTotal>
+        </OtherTime>
+        <SignOnTime>
+          <Current>12</Current>
+          <BusinessDayDateTotal>12</BusinessDayDateTotal>
+        </SignOnTime>
+      </TransactionMeasures>
+    </CustomerOrderTransaction>
+    <BusinessDayDate>2016-03-11</BusinessDayDate>
+    <BeginDateTime>2016-03-11T22:43:31.6769029+00:00</BeginDateTime>
+    <EndDateTime>2016-03-11T22:46:14.8498222+00:00</EndDateTime>
+    <OperatorBypassApproval>
+      <SequenceNumber>1</SequenceNumber>
+      <ApproverID />
+      <Description>Confirm Transaction Void</Description>
+      <BusinessRuleManager xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.Retalix.com/Extensions">
+        <BusinessRule RuleName="Confirm Transaction Void">
+          <BusinessAction MessageName="VoidTransaction" ActionType="ConfirmationRequired" IsApproved="Yes" />
+        </BusinessRule>
+      </BusinessRuleManager>
+    </OperatorBypassApproval>
+  </Transaction>
+</POSLog>

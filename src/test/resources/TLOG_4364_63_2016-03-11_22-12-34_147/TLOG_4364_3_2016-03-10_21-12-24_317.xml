@@ -1,0 +1,16 @@
+<POSLog xmlns="http://www.nrf-arts.org/IXRetail/namespace/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:r10Ex="http://www.Retalix.com/Extensions" MajorVersion="6">
+  <Transaction MajorVersion="6" MinorVersion="0" FixVersion="1">
+    <BusinessUnit>
+      <UnitID Name="4364 FULHAM DARLAN ROAD LOCAL">4364</UnitID>
+    </BusinessUnit>
+    <WorkstationID TypeCode="POS" WorkstationLocation="19">3</WorkstationID>
+    <SequenceNumber>6282</SequenceNumber>
+    <OperatorID OperatorName="Samuel Oppong" WorkerID="de58197a-6ced-4ca8-9283-31fccbda29dd" OperatorType="Cashier">4364-0207</OperatorID>
+    <BusinessDayDate>2016-03-10</BusinessDayDate>
+    <BeginDateTime>2016-03-10T21:12:24.3181319+00:00</BeginDateTime>
+    <EndDateTime>2016-03-10T21:12:24.3181319+00:00</EndDateTime>
+    <ControlTransaction>
+      <OperatorLock>2016-03-10T21:12:24.3200851+00:00</OperatorLock>
+    </ControlTransaction>
+  </Transaction>
+</POSLog>

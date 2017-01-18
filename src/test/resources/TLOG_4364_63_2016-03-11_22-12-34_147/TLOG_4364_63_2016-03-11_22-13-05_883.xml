@@ -1,0 +1,47 @@
+<POSLog xmlns="http://www.nrf-arts.org/IXRetail/namespace/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:r10Ex="http://www.Retalix.com/Extensions" MajorVersion="6">
+  <Transaction MajorVersion="6" MinorVersion="0" FixVersion="1" TrainingModeFlag="true">
+    <BusinessUnit>
+      <UnitID Name="4364 FULHAM DARLAN ROAD LOCAL">4364</UnitID>
+    </BusinessUnit>
+    <WorkstationID TypeCode="X:SelfCheckOut" WorkstationLocation="17">63</WorkstationID>
+    <SequenceNumber>7854</SequenceNumber>
+    <OperatorID OperatorName="Warmup User" WorkerID="7160fa20-d2b6-45ab-b22c-d1f0efe0f871" OperatorType="X:Warmup">WarmupUser-9999</OperatorID>
+    <BusinessDayDate>2016-03-11</BusinessDayDate>
+    <BeginDateTime>2016-03-11T22:13:05.8840982+00:00</BeginDateTime>
+    <EndDateTime>2016-03-11T22:13:05.8840982+00:00</EndDateTime>
+    <ControlTransaction>
+      <OperatorSignOff>
+        <EndDateTimestamp>2016-03-11T22:13:05.8840982+00:00</EndDateTimestamp>
+        <TillID>63</TillID>
+        <OpenBusinessDayDate>2016-03-11</OpenBusinessDayDate>
+      </OperatorSignOff>
+      <SetCashierMode>TrainingModeExit</SetCashierMode>
+    </ControlTransaction>
+    <TransactionMeasures xmlns="http://www.Retalix.com/Extensions">
+      <ItemRingTime>
+        <Current>0</Current>
+        <BusinessDayDateTotal>322</BusinessDayDateTotal>
+      </ItemRingTime>
+      <SecureTime>
+        <Current>0</Current>
+        <BusinessDayDateTotal>0</BusinessDayDateTotal>
+      </SecureTime>
+      <IdleTime>
+        <Current>3</Current>
+        <BusinessDayDateTotal>97</BusinessDayDateTotal>
+      </IdleTime>
+      <TenderTime>
+        <Current>0</Current>
+        <BusinessDayDateTotal>129</BusinessDayDateTotal>
+      </TenderTime>
+      <OtherTime>
+        <Current>0</Current>
+        <BusinessDayDateTotal>63166</BusinessDayDateTotal>
+      </OtherTime>
+      <SignOnTime>
+        <Current>3</Current>
+        <BusinessDayDateTotal>63714</BusinessDayDateTotal>
+      </SignOnTime>
+    </TransactionMeasures>
+  </Transaction>
+</POSLog>

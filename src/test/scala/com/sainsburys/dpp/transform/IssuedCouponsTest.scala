@@ -7,40 +7,40 @@ import scala.xml.{NodeSeq, XML}
   */
 class IssuedCouponsTest extends XmlTest {
 
-  override val xmlPath = "src/test/resources/fullxml"
+  override val xmlPath = "src/test/resources/TLOG_4364_63_2016-03-11_22-12-34_147"
   override val xslPath = "src/main/resources/domain/purchases/xsl/r10_extract_retailtransaction_issuedcoupons.xsl"
   override val outPath = "output/test/issuedcoupons"
 
   "The XML transformer" should "transform Issued Coupons XML for each PromotionSummary" in {
     // TRY
-    transformFile()
+    transformFiles((xmlFile, csvFile) => {
+      // VERIFY
+      val csvData = loadCsvTo2dArray(csvFile)
+      val xmlData = XML.loadFile(xmlPath + "/" + xmlFile)
 
-    // VERIFY
-    val csvData = loadCsvTo2dArray(outPath + "/R10xml.csv")
-    val xmlData = XML.loadFile(xmlPath + "/R10xml.xml")
+      val proSums = xmlData \\ "PromotionsSummary" \ "PromotionSummary"
 
-    val proSums = xmlData \\ "PromotionsSummary" \ "PromotionSummary"
+      // The amount of rows in the CSV should = the total number of IssuedCoupons in the XML file
+      (csvData length) should be (proSums \ "IssuedCoupons" \ "IssuesCoupon" length)
 
-    // The amount of rows in the CSV should = the number of IssuedCoupons anywhere
-    (csvData length) should be (proSums \ "IssuedCoupons" \ "IssuesCoupon" length)
-
-    proSums.foreach(proSum => {
-      val issuedCoupons = proSum \ "IssuedCoupons" \ "IssuesCoupon"
-      // Test each coupon
-      assertManyFields(csvData, issuedCoupons, (issuedCoupon: NodeSeq) =>
-        Map(
-          0 -> xmlData \\ "TransactionID",
-          1 -> proSum \ "PromotionID",
-          2 -> issuedCoupon \ "@Identifier",
-          3 -> issuedCoupon \ "@SeriesId",
-          4 -> issuedCoupon \ "@OfferId",
-          5 -> issuedCoupon \ "@RewardValue",
-          6 -> issuedCoupon \ "@StartDate",
-          7 -> issuedCoupon \ "@ExpiryDate",
-          8 -> issuedCoupon \ "Description",
-          9 -> issuedCoupon \ "ScanCode"
+      proSums.foreach(proSum => {
+        val issuedCoupons = proSum \ "IssuedCoupons" \ "IssuesCoupon"
+        // Test each coupon
+        assertManyFields(csvData, issuedCoupons, (issuedCoupon: NodeSeq) =>
+          Map(
+            0 -> xmlData \\ "TransactionID",
+            1 -> proSum \ "PromotionID",
+            2 -> issuedCoupon \ "@Identifier",
+            3 -> issuedCoupon \ "@SeriesId",
+            4 -> issuedCoupon \ "@OfferId",
+            5 -> issuedCoupon \ "@RewardValue",
+            6 -> issuedCoupon \ "@StartDate",
+            7 -> issuedCoupon \ "@ExpiryDate",
+            8 -> issuedCoupon \ "Description",
+            9 -> issuedCoupon \ "ScanCode"
+          )
         )
-      )
+      })
     })
   }
 }

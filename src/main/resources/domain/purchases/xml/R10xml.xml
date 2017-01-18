@@ -14084,7 +14084,7 @@
               <LoyaltyAccountID>4</LoyaltyAccountID>
               <Points Type="PointsEarned">725</Points>
             </LoyaltyProgram>
-          </LoyaltyAccount>
+          </LoyaltyAccount>B
           <RewardType>Points</RewardType>
           <PromotionDescription>GOODS BASE POINTS</PromotionDescription>
           <QualifyingSpent>725.07</QualifyingSpent>

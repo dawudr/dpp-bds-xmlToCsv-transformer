@@ -12,47 +12,47 @@ class LoyaltyAccountTest extends XmlTest {
 
   "The XML transformer" should "transform Loyalty Account XML" in {
     // TRY
-    transformFile()
+    transformFiles((xml, csv) => {
+      // VERIFY
+      val csvData = loadCsvTo2dArray(csv)
+      val xmlData = XML.loadFile(xmlPath + "/" + xml)
+      val loyaltyAccountData = xmlData \\ "RetailTransaction" \ "LoyaltyAccount"
+      val loyaltyProgramData = loyaltyAccountData \ "LoyaltyProgram"
 
-    // VERIFY
-    val csvData = loadCsvTo2dArray(outPath + "/R10xml.csv")
-    val xmlData = XML.loadFile(xmlPath + "/R10xml.xml")
-    val loyaltyAccountData = xmlData \\ "LoyaltyAccount"
-    val loyaltyProgramData = loyaltyAccountData \ "LoyaltyProgram"
+      // The amount of nodes in loyaltyProgramData should be equal
+      // to the number of rows in the CSV output
+      (csvData length) should be (loyaltyProgramData length)
 
-    // The amount of nodes in loyaltyProgramData should be equal
-    // to the number of rows in the CSV output
-    (csvData length) should be (loyaltyProgramData length)
+      var i = 0
+      csvData foreach(row => {
+        // If there is an out of bounds exception, the test should fail
+        val thisLoyaltyProgram = loyaltyProgramData(i)
 
-    var i = 0
-    csvData foreach(row => {
-      // If there is an out of bounds exception, the test should fail
-      val thisLoyaltyProgram = loyaltyProgramData(i)
+        // Get points for x:OpenBalance
+        val pointsNodes = thisLoyaltyProgram \ "Points"
+        val openBalance = pointsNodes filter { node =>
+          node.attributes.exists(_.value.text == "X:OpenBalance")
+        }
+        val balance = pointsNodes filter { node =>
+          node.attributes.exists(_.value.text == "Balance")
+        }
+        val pointsEarned = pointsNodes filter { node =>
+          node.attributes.exists(_.value.text == "PointsEarned")
+        }
 
-      // Get points for x:OpenBalance
-      val pointsNodes = thisLoyaltyProgram \ "Points"
-      val openBalance = pointsNodes filter { node =>
-        node.attributes.exists(_.value.text == "X:OpenBalance")
-      }
-      val balance = pointsNodes filter { node =>
-        node.attributes.exists(_.value.text == "Balance")
-      }
-      val pointsEarned = pointsNodes filter { node =>
-        node.attributes.exists(_.value.text == "PointsEarned")
-      }
+        // Transaction ID
+        row(0) should be (xmlData \\ "TransactionID" text)
 
-      // Transaction ID
-      row(0) should be (xmlData \\ "TransactionID" text)
+        // Loyalty account ID
+        row(1) should be (thisLoyaltyProgram \ "LoyaltyAccountID" text)
 
-      // Loyalty account ID
-      row(1) should be (thisLoyaltyProgram \ "LoyaltyAccountID" text)
+        row(2) should be (openBalance text)
+        row(3) should be (balance text)
+        row(4) should be (pointsEarned text)
 
-      row(2) should be (openBalance text)
-      row(3) should be (balance text)
-      row(4) should be (pointsEarned text)
-
-      // Increment the index counter
-      i += 1
+        // Increment the index counter
+        i += 1
+      })
     })
   }
 

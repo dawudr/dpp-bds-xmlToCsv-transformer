@@ -25,8 +25,9 @@ class XmlTransformer(private val xmlPath: String,
 
   /*
   Transform using Directory Path
+  Optional callback is called when transformation is complete, passing XML and CSV file names
    */
-  def transformPath() = {
+  def transformPath(onCompletion: (String, String) => Unit): Unit = {
     logger.info("Transforming source path: {}", xmlPath)
     val archiveHelper = new ArchiveHelper(xmlPath)
     val archiveFiles = archiveHelper.getListOfFiles()
@@ -38,8 +39,10 @@ class XmlTransformer(private val xmlPath: String,
     archiveFiles.foreach( {
       file => {
         if(csvPath != null) {
-          val csvFileName = csvPath + File.separator + file.getName.substring(0, file.getName.indexOf(".xml")) + ".csv"
+          val xmlFileName = file.getName
+          val csvFileName = csvPath + File.separator + xmlFileName.substring(0, xmlFileName.indexOf(".xml")) + ".csv"
           transformFile(file.getPath, csvFileName)
+          onCompletion(xmlFileName, csvFileName)
         } else {
           logger.debug("Writing to console: {}", transformFile(file.getPath, null));
         }
@@ -73,7 +76,7 @@ class XmlTransformer(private val xmlPath: String,
   /*
   Run transform XSLT
    */
-  def transformer(xmlFile: String, xslFile: String, result: Result) = {
+  def transformer(xmlFile: String, xslFile: String, result: Result): Unit = {
     logger.info("Transforming xml source: {}", xmlFile + " with xsl: "  + xslFile )
     val tStart = new Date().getTime
     val xmlSource: Source = new StreamSource(xmlFile)

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Transaction xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:r10Ex="http://www.Retalix.com/Extensions" MajorVersion="6" MinorVersion="0" FixVersion="1" xmlns="http://www.nrf-arts.org/IXRetail/namespace/">
+  <BusinessUnit>
+    <UnitID>4364</UnitID>
+  </BusinessUnit>
+  <WorkstationID TypeCode="X:SelfCheckOut" WorkstationLocation="TouchPoint">61</WorkstationID>
+  <SequenceNumber>227</SequenceNumber>
+  <TransactionID>6YVJJMQL1D</TransactionID>
+  <OperatorID OperatorName="TouchPoint" WorkerID="61" OperatorType="X:TouchPoint">61</OperatorID>
+  <BusinessDayDate>2016-03-11</BusinessDayDate>
+  <EndDateTime>2016-03-11T22:42:49.6135742+00:00</EndDateTime>
+  <TenderControlTransaction>
+    <TenderPickup TypeCode="x:AutoReconcileTender">
+      <Totals>
+        <Amount Currency="GBP">5.1</Amount>
+        <Count>0</Count>
+        <TenderID>16</TenderID>
+      </Totals>
+      <SafeID>EPS Auto Reconcile</SafeID>
+      <ReasonCode Name="Reference" />
+      <Account xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.Retalix.com/Extensions">
+        <Source ExternalId="61_4364">Till61</Source>
+        <Destination ExternalId="00caeb93-53bb-4cae-b22c-667b092e4e46">EPS Auto Reconcile</Destination>
+      </Account>
+    </TenderPickup>
+  </TenderControlTransaction>
+</Transaction>

@@ -28,8 +28,26 @@
                 <xsl:for-each select="*:PromotionSummary">
                     <xsl:element name="tr">
                         <xsl:copy-of select="$var_Transaction_level/TransactionID" />
-                        <!-- Print out all fields to CSV except the <IssuedCoupons> -->
-                        <xsl:apply-templates select="./*[not(self::*:IssuedCoupons)]" mode="s3_flatten"/>
+                        <!-- Print out all fields to CSV except the <IssuedCoupons> and <LoyaltyAccount> -->
+                        <xsl:apply-templates select="./*[not(self::*:IssuedCoupons|self::*:LoyaltyAccount)]" mode="s3_flatten"/>
+
+                        <!--
+                        Not all PromotionSummary elements have a <LoyaltyAccount> element,
+                        so if it doesn't exist, manually add the columns.
+                        If we don't do this, if all PromotionSummary items do not have a LoyaltyAccount,
+                        the output CSV will not contain those columns and thus the format will vary between files
+                         -->
+                        <xsl:choose>
+                            <xsl:when test="*:LoyaltyAccount">
+                                <xsl:apply-templates select="*:LoyaltyAccount" mode="s3_flatten" />
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:element name="RetailTransaction_PromotionsSummary_PromotionSummary_LoyaltyAccount_LoyaltyProgram_LoyaltyAccountID">
+                                </xsl:element>
+                                <xsl:element name="RetailTransaction_PromotionsSummary_PromotionSummary_LoyaltyAccount_LoyaltyProgram_Points.PointsEarned">
+                                </xsl:element>
+                            </xsl:otherwise>
+                        </xsl:choose>
                     </xsl:element>
                 </xsl:for-each>
             </xsl:element>

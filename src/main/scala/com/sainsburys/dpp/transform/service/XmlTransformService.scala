@@ -14,13 +14,18 @@ import com.typesafe.config.ConfigFactory
   */
 class XmlTransformService(private val xmlTransformer: XmlTransformer) extends Loggable {
 
-  def transformXmlFiles(xmlPath :String, xslSource :String, transformOutputPath :String): Unit = {
+  def transformXmlFiles(
+                         xmlPath :String,
+                         xslSource :String,
+                         transformOutputPath :String,
+                         onCompletion: (String, String) => Unit = (_, _) => {}
+                       ): Unit = {
     val xmltransformer = new XmlTransformer(xmlPath, xslSource, transformOutputPath)
-    xmltransformer.transformPath()
+    xmltransformer.transformPath(onCompletion)
   }
 
-  def transformR10XmlToCsv(): Unit = {
-    xmlTransformer.transformPath()
+  def transformR10XmlToCsv(onCompletion: (String, String) => Unit = (_, _) => {}): Unit = {
+    xmlTransformer.transformPath(onCompletion)
   }
 
 }

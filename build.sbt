@@ -12,4 +12,6 @@ libraryDependencies ++= Seq(
   "org.slf4j" % "slf4j-simple" % "1.7.21",
   "org.slf4j" % "slf4j-api" % "1.7.21" ,
   "org.mockito" % "mockito-all" % "1.9.5",
-  "org.scalatest" % "scalatest_2.10" % "3.0.1" % "test")
+  "org.scalatest" % "scalatest_2.10" % "3.0.1" % "test",
+  "com.opencsv" % "opencsv" % "3.8"
+)

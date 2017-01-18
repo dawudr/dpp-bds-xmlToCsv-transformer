@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<POSLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:r10Ex="http://www.Retalix.com/Extensions" FixVersion="1" MajorVersion="6" MinorVersion="0" xmlns="http://www.nrf-arts.org/IXRetail/namespace/">
+  <Transaction MajorVersion="6" MinorVersion="0" FixVersion="1">
+    <BusinessUnit>
+      <UnitID Name="4364 FULHAM DARLAN ROAD LOCAL">4364</UnitID>
+    </BusinessUnit>
+    <WorkstationID TypeCode="POS" WorkstationLocation="19">3</WorkstationID>
+    <SequenceNumber>6289</SequenceNumber>
+    <TransactionID>ZAIAKI542M</TransactionID>
+    <OperatorID OperatorName="Samuel Oppong" WorkerID="de58197a-6ced-4ca8-9283-31fccbda29dd" OperatorType="Cashier">4364-0207</OperatorID>
+    <ReceiptImage r10Ex:ReceiptKind="MainReceipt" r10Ex:ReceiptFormat="RDR" r10Ex:ReceiptNotPrinted="False">
+      <ReceiptLine>&lt;OPOSPrint xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;&lt;Documents NumOfDocuments="1" Device="IBM" CodePage="437"&gt;&lt;Document CodePage="437"&gt;&lt;PrintSection Layout="Portrait" SectionID="1"&gt;&lt;PrintCommand Command="PrintStoredBitmap" CmdData="1" /&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Center" CPL="42" /&gt;&lt;Text Text="        FULHAM DARLAN ROAD LOCAL        "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Center" CPL="42" /&gt;&lt;Text Text="             020 7200 8720              "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Left" CPL="42" /&gt;&lt;Text Text=""&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Center" CPL="42" /&gt;&lt;Text Text="      Sainsbury's Supermarkets Ltd      "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Center" CPL="42" /&gt;&lt;Text Text="       33 Holborn London EC1N 2HT       "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Center" CPL="42" /&gt;&lt;Text Text="          www.sainsburys.co.uk          "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Center" CPL="42" /&gt;&lt;Text Text="        Vat Number : 660 4548 36        "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Left" CPL="42" /&gt;&lt;Text Text=""&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;/PrintSection&gt;&lt;PrintSection Layout="Portrait" SectionID="Reprint" /&gt;&lt;PrintSection Layout="Portrait" SectionID="2"&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Left" CPL="42" /&gt;&lt;Text Text="    "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="HOVIS SOFT WHT MED   "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="      £1.05"&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Left" CPL="42" /&gt;&lt;Text Text="    "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="6 BRAM/APP PIES      "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="      £1.05"&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Left" CPL="42" /&gt;&lt;Text Text="    "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="JS S/SKIM MLK 1.136L "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="      £0.85"&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Left" CPL="42" /&gt;&lt;Text Text="    "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="JS GRANU SUGAR       "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="      £0.60"&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Left" CPL="42" /&gt;&lt;Text Text="  "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="PRICE REDUCTION        "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Left" CPL="42" /&gt;&lt;Text Text="  "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="ORIGINAL PRICE "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="£0.85      "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Left" CPL="42" /&gt;&lt;Text Text="    "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="GRANARY 400G         "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="      £0.19"&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Left" CPL="42" /&gt;&lt;Text Text=""&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Left" CPL="42" /&gt;&lt;Text Text=" "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="   5"&gt;&lt;PrintAttributes Bold="true" /&gt;&lt;/Text&gt;&lt;Text Text=" "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="BALANCE DUE         "&gt;&lt;PrintAttributes Bold="true" /&gt;&lt;/Text&gt;&lt;Text Text="     £3.74"&gt;&lt;PrintAttributes Bold="true" /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Left" CPL="42" /&gt;&lt;Text Text="      "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="CASH                "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="     £3.74"&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Left" CPL="42" /&gt;&lt;Text Text=""&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Left" CPL="42" /&gt;&lt;Text Text=""&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Left" CPL="42" /&gt;&lt;Text Text="      "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="CHANGE              "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="     £0.00"&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Center" CPL="42" /&gt;&lt;Text Text="****************************************"&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Center" CPL="42" /&gt;&lt;Text Text="           MY NECTAR SUMMARY            "&gt;&lt;PrintAttributes Bold="true" /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Center" CPL="42" /&gt;&lt;Text Text="[C] **** **** **** 2211019              "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Center" CPL="42" /&gt;&lt;Text Text="POINTS EARNED ON           "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="        £3.74"&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Center" CPL="42" /&gt;&lt;Text Text="PREVIOUS POINTS BALANCE    "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="          276"&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Center" CPL="42" /&gt;&lt;Text Text="POINTS EARNED              "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="            3"&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Center" CPL="42" /&gt;&lt;Text Text="NEW POINTS BALANCE         "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="          279"&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Center" CPL="42" /&gt;&lt;Text Text="YOUR POINTS ARE WORTH      "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="        £1.39"&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Center" CPL="42" /&gt;&lt;Text Text="****************************************"&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Left" CPL="42" /&gt;&lt;Text Text=""&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;BarcodeObject ID="6294364003628900100316" BarcodeType="Code128" Height="100" Width="1" Align="Center" OutputOptions="All" /&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Center" CPL="42" /&gt;&lt;Text Text="6294364003628900100316"&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Left" CPL="42" /&gt;&lt;Text Text=""&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Left" CPL="42" /&gt;&lt;Text Text="   "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="C"&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="207   "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="  "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="#"&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="6289"&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="   "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text=" 21:26:47 "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text=" 10MAR2016"&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Left" CPL="42" /&gt;&lt;Text Text="            "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="S"&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="4364 "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="    "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="R"&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;Text Text="3  "&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Left" CPL="42" /&gt;&lt;Text Text=""&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Center" CPL="42" /&gt;&lt;Text Text="Thank you for your visit. Please let us"&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Center" CPL="42" /&gt;&lt;Text Text="know how we did at tellsainsburys.co.uk"&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Left" CPL="42" /&gt;&lt;Text Text=""&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Center" CPL="42" /&gt;&lt;Text Text="You can live well for less than you"&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Center" CPL="42" /&gt;&lt;Text Text="thought at Sainsbury's, based on price"&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Center" CPL="42" /&gt;&lt;Text Text="perception data. For more information"&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Center" CPL="42" /&gt;&lt;Text Text="go to sainsburys.co.uk/livewellforless"&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;TextObject OutputOptions="All"&gt;&lt;TextLine&gt;&lt;LinePrintAttributes Align="Left" CPL="42" /&gt;&lt;Text Text=""&gt;&lt;PrintAttributes /&gt;&lt;/Text&gt;&lt;/TextLine&gt;&lt;/TextObject&gt;&lt;/PrintSection&gt;&lt;PrintSection Layout="Portrait" SectionID="FeedAndCut"&gt;&lt;PrintCommand Command="FeedPaper" CmdData="6" /&gt;&lt;PrintCommand Command="CutPaper" CmdData="50" /&gt;&lt;PrintCommand Command="FeedPaper" CmdData="1" /&gt;&lt;/PrintSection&gt;&lt;/Document&gt;&lt;/Documents&gt;&lt;/OPOSPrint&gt;</ReceiptLine>
+    </ReceiptImage>
+    <RetailTransaction>
+      <LineItem EntryMethod="Scanned">
+        <Sale>
+          <POSIdentity>
+            <POSItemID>3067161</POSItemID>
+          </POSIdentity>
+          <MerchandiseHierarchy ID="Merchandise" r10Ex:HierarchyPath="1_09_5083@2_09_1700@3_09_474">3_09_474</MerchandiseHierarchy>
+          <MerchandiseHierarchy ID="Tax">0.00</MerchandiseHierarchy>
+          <ItemID Type="X:EAN">5010003000131</ItemID>
+          <Description r10Ex:Culture="en-GB">HOVIS SOFT WHT MED  </Description>
+          <Description TypeCode="Long" r10Ex:Culture="en-GB">Hovis Soft White Medium 800g</Description>
+          <RegularSalesUnitPrice Currency="GBP">1.05</RegularSalesUnitPrice>
+          <ActualSalesUnitPrice Currency="GBP">1.05</ActualSalesUnitPrice>
+          <ExtendedAmount Currency="GBP">1.05</ExtendedAmount>
+          <Quantity Units="1" UnitOfMeasureCode="EA" EntryMethod="Automatic">1</Quantity>
+          <Tax r10Ex:Sign="A" r10Ex:Imposition="A">
+            <SequenceNumber>1</SequenceNumber>
+            <TaxAuthority>VAT</TaxAuthority>
+            <TaxableAmount Currency="GBP" TaxIncludedInTaxableAmountFlag="true">1.05</TaxableAmount>
+            <Amount Currency="GBP">0.00</Amount>
+            <Percent>0.0000</Percent>
+            <TaxRuleID>2</TaxRuleID>
+            <TaxGroupID>1</TaxGroupID>
+          </Tax>
+          <ConsumableGroup xmlns="http://www.Retalix.com/Extensions">
+            <Type>Consumable</Type>
+            <ID>SalesGroup_SSL</ID>
+          </ConsumableGroup>
+          <PromotionDeferredRewards xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.Retalix.com/Extensions">
+            <Type>Member Account</Type>
+            <Value>0.89</Value>
+            <PromotionID>100000001</PromotionID>
+            <Description>GOODS BASE POINTS</Description>
+            <SequenceNumber>0</SequenceNumber>
+            <DeferredID>4</DeferredID>
+          </PromotionDeferredRewards>
+          <PromotionDeferredRewards xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.Retalix.com/Extensions">
+            <Type>Member Account</Type>
+            <Value>0.28</Value>
+            <PromotionID>100000004</PromotionID>
+            <Description>QualifyingSpend</Description>
+            <LineItemRewardPromotion>
+              <TriggerQuantity Units="1" UnitOfMeasureCode="EA">1</TriggerQuantity>
+              <ApportionmentAmount Currency="GBP" Participator="Retailer">0.28</ApportionmentAmount>
+              <RewardSplitAmount Currency="GBP">0</RewardSplitAmount>
+              <RewardLevel>1</RewardLevel>
+            </LineItemRewardPromotion>
+            <SequenceNumber>0</SequenceNumber>
+            <DeferredID>8</DeferredID>
+          </PromotionDeferredRewards>
+        </Sale>
+        <ScanData>5010003000131</ScanData>
+        <SequenceNumber>1</SequenceNumber>
+        <BeginDateTime>2016-03-10T21:25:56.7370229+00:00</BeginDateTime>
+        <EndDateTime>2016-03-10T21:25:56.7370229+00:00</EndDateTime>
+      </LineItem>
+      <LineItem EntryMethod="Scanned">
+        <Sale>
+          <POSIdentity>
+            <POSItemID>33121</POSItemID>
+          </POSIdentity>
+          <MerchandiseHierarchy ID="Merchandise" r10Ex:HierarchyPath="1_09_5082@2_09_1545@3_09_470">3_09_470</MerchandiseHierarchy>
+          <MerchandiseHierarchy ID="Tax">0.00</MerchandiseHierarchy>
+          <ItemID Type="X:EAN">595537</ItemID>
+          <Description r10Ex:Culture="en-GB">6 BRAM/APP PIES     </Description>
+          <Description TypeCode="Long" r10Ex:Culture="en-GB">JS Bramley Apple Pies x6 355g</Description>
+          <RegularSalesUnitPrice Currency="GBP">1.05</RegularSalesUnitPrice>
+          <ActualSalesUnitPrice Currency="GBP">1.05</ActualSalesUnitPrice>
+          <ExtendedAmount Currency="GBP">1.05</ExtendedAmount>
+          <Quantity Units="1" UnitOfMeasureCode="EA" EntryMethod="Automatic">1</Quantity>
+          <Tax r10Ex:Sign="A" r10Ex:Imposition="A">
+            <SequenceNumber>1</SequenceNumber>
+            <TaxAuthority>VAT</TaxAuthority>
+            <TaxableAmount Currency="GBP" TaxIncludedInTaxableAmountFlag="true">1.05</TaxableAmount>
+            <Amount Currency="GBP">0.00</Amount>
+            <Percent>0.0000</Percent>
+            <TaxRuleID>2</TaxRuleID>
+            <TaxGroupID>1</TaxGroupID>
+          </Tax>
+          <ConsumableGroup xmlns="http://www.Retalix.com/Extensions">
+            <Type>Consumable</Type>
+            <ID>SalesGroup_SSL</ID>
+          </ConsumableGroup>
+          <PromotionDeferredRewards xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.Retalix.com/Extensions">
+            <Type>Member Account</Type>
+            <Value>0.89</Value>
+            <PromotionID>100000001</PromotionID>
+            <Description>GOODS BASE POINTS</Description>
+            <SequenceNumber>0</SequenceNumber>
+            <DeferredID>4</DeferredID>
+          </PromotionDeferredRewards>
+          <PromotionDeferredRewards xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.Retalix.com/Extensions">
+            <Type>Member Account</Type>
+            <Value>0.28</Value>
+            <PromotionID>100000004</PromotionID>
+            <Description>QualifyingSpend</Description>
+            <LineItemRewardPromotion>
+              <TriggerQuantity Units="1" UnitOfMeasureCode="EA">1</TriggerQuantity>
+              <ApportionmentAmount Currency="GBP" Participator="Retailer">0.28</ApportionmentAmount>
+              <RewardSplitAmount Currency="GBP">0</RewardSplitAmount>
+              <RewardLevel>1</RewardLevel>
+            </LineItemRewardPromotion>
+            <SequenceNumber>0</SequenceNumber>
+            <DeferredID>8</DeferredID>
+          </PromotionDeferredRewards>
+        </Sale>
+        <ScanData>00595537</ScanData>
+        <SequenceNumber>2</SequenceNumber>
+        <BeginDateTime>2016-03-10T21:25:58.0476201+00:00</BeginDateTime>
+        <EndDateTime>2016-03-10T21:25:58.0476201+00:00</EndDateTime>
+      </LineItem>
+      <LineItem EntryMethod="Scanned">
+        <Sale>
+          <POSIdentity>
+            <POSItemID>1137637</POSItemID>
+          </POSIdentity>
+          <MerchandiseHierarchy ID="Merchandise" r10Ex:HierarchyPath="1_09_5551@2_09_1053@3_09_687">3_09_687</MerchandiseHierarchy>
+          <MerchandiseHierarchy ID="Tax">0.00</MerchandiseHierarchy>
+          <ItemID Type="X:EAN">1137637</ItemID>
+          <Description r10Ex:Culture="en-GB">JS S/SKIM MLK 1.136L</Description>
+          <Description TypeCode="Long" r10Ex:Culture="en-GB">JS British Semi Skim Milk 2 Pint 1.136L</Description>
+          <RegularSalesUnitPrice Currency="GBP">0.85</RegularSalesUnitPrice>
+          <ActualSalesUnitPrice Currency="GBP">0.85</ActualSalesUnitPrice>
+          <ExtendedAmount Currency="GBP">0.85</ExtendedAmount>
+          <Quantity Units="1" UnitOfMeasureCode="EA" EntryMethod="Automatic">1</Quantity>
+          <Tax r10Ex:Sign="A" r10Ex:Imposition="A">
+            <SequenceNumber>1</SequenceNumber>
+            <TaxAuthority>VAT</TaxAuthority>
+            <TaxableAmount Currency="GBP" TaxIncludedInTaxableAmountFlag="true">0.85</TaxableAmount>
+            <Amount Currency="GBP">0.00</Amount>
+            <Percent>0.0000</Percent>
+            <TaxRuleID>2</TaxRuleID>
+            <TaxGroupID>1</TaxGroupID>
+          </Tax>
+          <ConsumableGroup xmlns="http://www.Retalix.com/Extensions">
+            <Type>Consumable</Type>
+            <ID>SalesGroup_SSL</ID>
+          </ConsumableGroup>
+          <PromotionDeferredRewards xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.Retalix.com/Extensions">
+            <Type>Member Account</Type>
+            <Value>0.72</Value>
+            <PromotionID>100000001</PromotionID>
+            <Description>GOODS BASE POINTS</Description>
+            <SequenceNumber>0</SequenceNumber>
+            <DeferredID>4</DeferredID>
+          </PromotionDeferredRewards>
+          <PromotionDeferredRewards xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.Retalix.com/Extensions">
+            <Type>Member Account</Type>
+            <Value>0.23</Value>
+            <PromotionID>100000004</PromotionID>
+            <Description>QualifyingSpend</Description>
+            <LineItemRewardPromotion>
+              <TriggerQuantity Units="1" UnitOfMeasureCode="EA">1</TriggerQuantity>
+              <ApportionmentAmount Currency="GBP" Participator="Retailer">0.23</ApportionmentAmount>
+              <RewardSplitAmount Currency="GBP">0</RewardSplitAmount>
+              <RewardLevel>1</RewardLevel>
+            </LineItemRewardPromotion>
+            <SequenceNumber>0</SequenceNumber>
+            <DeferredID>8</DeferredID>
+          </PromotionDeferredRewards>
+        </Sale>
+        <ScanData>01137637</ScanData>
+        <SequenceNumber>3</SequenceNumber>
+        <BeginDateTime>2016-03-10T21:26:00.9852329+00:00</BeginDateTime>
+        <EndDateTime>2016-03-10T21:26:00.9852329+00:00</EndDateTime>
+      </LineItem>
+      <LineItem EntryMethod="Scanned">
+        <Sale>
+          <POSIdentity>
+            <POSItemID>7713263</POSItemID>
+          </POSIdentity>
+          <MerchandiseHierarchy ID="Merchandise" r10Ex:HierarchyPath="1_09_8190@2_09_347@3_09_171">3_09_171</MerchandiseHierarchy>
+          <MerchandiseHierarchy ID="Tax">0.00</MerchandiseHierarchy>
+          <ItemID Type="X:EAN">180221</ItemID>
+          <Description r10Ex:Culture="en-GB">JS GRANU SUGAR      </Description>
+          <Description TypeCode="Long" r10Ex:Culture="en-GB">JS British Granulated Sugar 1kg</Description>
+          <RegularSalesUnitPrice Currency="GBP">0.60</RegularSalesUnitPrice>
+          <ActualSalesUnitPrice Currency="GBP">0.60</ActualSalesUnitPrice>
+          <ExtendedAmount Currency="GBP">0.60</ExtendedAmount>
+          <Quantity Units="1" UnitOfMeasureCode="EA" EntryMethod="Automatic">1</Quantity>
+          <Tax r10Ex:Sign="A" r10Ex:Imposition="A">
+            <SequenceNumber>1</SequenceNumber>
+            <TaxAuthority>VAT</TaxAuthority>
+            <TaxableAmount Currency="GBP" TaxIncludedInTaxableAmountFlag="true">0.60</TaxableAmount>
+            <Amount Currency="GBP">0.00</Amount>
+            <Percent>0.0000</Percent>
+            <TaxRuleID>2</TaxRuleID>
+            <TaxGroupID>1</TaxGroupID>
+          </Tax>
+          <ConsumableGroup xmlns="http://www.Retalix.com/Extensions">
+            <Type>Consumable</Type>
+            <ID>SalesGroup_SSL</ID>
+          </ConsumableGroup>
+          <PromotionDeferredRewards xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.Retalix.com/Extensions">
+            <Type>Member Account</Type>
+            <Value>0.50</Value>
+            <PromotionID>100000001</PromotionID>
+            <Description>GOODS BASE POINTS</Description>
+            <SequenceNumber>0</SequenceNumber>
+            <DeferredID>4</DeferredID>
+          </PromotionDeferredRewards>
+          <PromotionDeferredRewards xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.Retalix.com/Extensions">
+            <Type>Member Account</Type>
+            <Value>0.16</Value>
+            <PromotionID>100000004</PromotionID>
+            <Description>QualifyingSpend</Description>
+            <LineItemRewardPromotion>
+              <TriggerQuantity Units="1" UnitOfMeasureCode="EA">1</TriggerQuantity>
+              <ApportionmentAmount Currency="GBP" Participator="Retailer">0.16</ApportionmentAmount>
+              <RewardSplitAmount Currency="GBP">0</RewardSplitAmount>
+              <RewardLevel>1</RewardLevel>
+            </LineItemRewardPromotion>
+            <SequenceNumber>0</SequenceNumber>
+            <DeferredID>8</DeferredID>
+          </PromotionDeferredRewards>
+        </Sale>
+        <ScanData>00180221</ScanData>
+        <SequenceNumber>4</SequenceNumber>
+        <BeginDateTime>2016-03-10T21:26:02.4618521+00:00</BeginDateTime>
+        <EndDateTime>2016-03-10T21:26:02.4618521+00:00</EndDateTime>
+      </LineItem>
+      <LineItem EntryMethod="Scanned">
+        <Sale>
+          <POSIdentity>
+            <POSItemID>2753355</POSItemID>
+          </POSIdentity>
+          <MerchandiseHierarchy ID="Merchandise" r10Ex:HierarchyPath="1_09_5083@2_09_1700@3_09_474">3_09_474</MerchandiseHierarchy>
+          <MerchandiseHierarchy ID="Tax">0.00</MerchandiseHierarchy>
+          <ItemID Type="X:EAN">5010003000254</ItemID>
+          <Description r10Ex:Culture="en-GB">GRANARY 400G        </Description>
+          <Description TypeCode="Long" r10Ex:Culture="en-GB">Hovis Original Granary Medium 400g</Description>
+          <RegularSalesUnitPrice Currency="GBP">0.85</RegularSalesUnitPrice>
+          <ActualSalesUnitPrice Currency="GBP">0.19</ActualSalesUnitPrice>
+          <ExtendedAmount Currency="GBP">0.19</ExtendedAmount>
+          <Quantity Units="1" UnitOfMeasureCode="EA" EntryMethod="Automatic">1</Quantity>
+          <RetailPriceModifier MethodCode="PriceOverride">
+            <SequenceNumber>1</SequenceNumber>
+            <Amount Currency="GBP" Action="Replace">0.19</Amount>
+            <PreviousPrice Currency="GBP">0.85</PreviousPrice>
+            <ReasonCode>EmbeddedPrice</ReasonCode>
+          </RetailPriceModifier>
+          <Tax r10Ex:Sign="A" r10Ex:Imposition="A">
+            <SequenceNumber>1</SequenceNumber>
+            <TaxAuthority>VAT</TaxAuthority>
+            <TaxableAmount Currency="GBP" TaxIncludedInTaxableAmountFlag="true">0.19</TaxableAmount>
+            <Amount Currency="GBP">0.00</Amount>
+            <Percent>0.0000</Percent>
+            <TaxRuleID>2</TaxRuleID>
+            <TaxGroupID>1</TaxGroupID>
+          </Tax>
+          <ConsumableGroup xmlns="http://www.Retalix.com/Extensions">
+            <Type>Consumable</Type>
+            <ID>SalesGroup_SSL</ID>
+          </ConsumableGroup>
+          <PromotionDeferredRewards xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.Retalix.com/Extensions">
+            <Type>Member Account</Type>
+            <Value>0.05</Value>
+            <PromotionID>100000004</PromotionID>
+            <Description>QualifyingSpend</Description>
+            <LineItemRewardPromotion>
+              <TriggerQuantity Units="1" UnitOfMeasureCode="EA">1</TriggerQuantity>
+              <ApportionmentAmount Currency="GBP" Participator="Retailer">0.05</ApportionmentAmount>
+              <RewardSplitAmount Currency="GBP">0</RewardSplitAmount>
+              <RewardLevel>1</RewardLevel>
+            </LineItemRewardPromotion>
+            <SequenceNumber>0</SequenceNumber>
+            <DeferredID>8</DeferredID>
+          </PromotionDeferredRewards>
+        </Sale>
+        <ScanData TypeCode="Barcode" r10Ex:SubType="OverrideAmountEmbedded">9150100030002540000194</ScanData>
+        <SequenceNumber>5</SequenceNumber>
+        <BeginDateTime>2016-03-10T21:26:04.3759881+00:00</BeginDateTime>
+        <EndDateTime>2016-03-10T21:26:04.3759881+00:00</EndDateTime>
+      </LineItem>
+      <LineItem>
+        <SequenceNumber>6</SequenceNumber>
+        <BeginDateTime>2016-03-10T21:26:06.3213753+00:00</BeginDateTime>
+        <EndDateTime>2016-03-10T21:26:06.3213753+00:00</EndDateTime>
+        <TotalKey Type="SubTotal" xmlns="http://www.Retalix.com/Extensions">
+          <Total TotalType="TransactionGrossAmount">3.74</Total>
+          <Total TotalType="TransactionNetAmount">3.74</Total>
+          <Total TotalType="TransactionPurchaseQuantity">5</Total>
+        </TotalKey>
+      </LineItem>
+      <LineItem EntryMethod="Tapped">
+        <Tender TenderType="Cash">
+          <Amount Currency="GBP">3.74</Amount>
+          <Cashback Currency="GBP">0</Cashback>
+          <TenderID>1</TenderID>
+          <r10Ex:TenderDescription>CASH</r10Ex:TenderDescription>
+          <r10Ex:IsAutoReconcile>False</r10Ex:IsAutoReconcile>
+        </Tender>
+        <SequenceNumber>8</SequenceNumber>
+        <BeginDateTime>2016-03-10T21:26:46.0484867+00:00</BeginDateTime>
+        <EndDateTime>2016-03-10T21:26:46.0484867+00:00</EndDateTime>
+      </LineItem>
+      <LineItem>
+        <Tax r10Ex:Imposition="A">
+          <SequenceNumber>1</SequenceNumber>
+          <TaxAuthority>VAT</TaxAuthority>
+          <TaxableAmount Currency="GBP" TaxIncludedInTaxableAmountFlag="true">3.74</TaxableAmount>
+          <Amount Currency="GBP">0.00</Amount>
+          <Percent>0.0000</Percent>
+          <TaxRuleID>2</TaxRuleID>
+          <TaxGroupID>1</TaxGroupID>
+        </Tax>
+        <SequenceNumber>9</SequenceNumber>
+      </LineItem>
+      <Total CurrencyCode="GBP">3.74</Total>
+      <Total TotalType="TransactionNetAmount" CurrencyCode="GBP">3.74</Total>
+      <Total TotalType="TransactionPurchaseQuantity">5</Total>
+      <Total TotalType="TransactionPurchaseQuantity" TypeCode="Return">0</Total>
+      <Total TotalType="X:TransactionTaxIncluded" CurrencyCode="GBP">0.00</Total>
+      <Total TotalType="X:TransactionTaxSurcharge" CurrencyCode="GBP">0</Total>
+      <Total TotalType="X:TransactionTaxFee" CurrencyCode="GBP">0</Total>
+      <Total TotalType="X:ItemTaxFee" CurrencyCode="GBP">0</Total>
+      <Total TotalType="TransactionTotalSavings" CurrencyCode="GBP">0</Total>
+      <Total TotalType="TransactionGrandAmount" CurrencyCode="GBP">3.74</Total>
+      <Total TotalType="X:TransactionTotalVoidAmount" CurrencyCode="GBP">0</Total>
+      <Total TotalType="X:TransactionTotalVoidCount">0</Total>
+      <Total TotalType="X:TransactionTotalReturnAmount" CurrencyCode="GBP">0</Total>
+      <Total TotalType="TransactionTaxExemptAmount" CurrencyCode="GBP">0</Total>
+      <Total TotalType="TransactionTenderApplied" CurrencyCode="GBP">3.74</Total>
+      <Total TotalType="X:CashbackTotalAmount" CurrencyCode="GBP">0</Total>
+      <Total TotalType="X:TransactionMerchandiseAmount" CurrencyCode="GBP">3.74</Total>
+      <Total TotalType="X:TransactionNonMerchandiseAmount" CurrencyCode="GBP">0</Total>
+      <Total TotalType="X:NonResettableGrandTotal" CurrencyCode="GBP">582535.70</Total>
+      <Total TotalType="X:PreviousNonResettableGrandTotal" CurrencyCode="GBP">580191.64</Total>
+      <Customer r10Ex:IsAuthenticatedOffline="False" r10Ex:EntryMethod="Scanned">
+        <CustomerID>**Replaced**</CustomerID>
+        <Name />
+        <r10Ex:CustomerExternalId>**Replaced**</r10Ex:CustomerExternalId>
+        <r10Ex:AccountNumber>**Replaced**</r10Ex:AccountNumber>
+        <r10Ex:IssueNumber>01</r10Ex:IssueNumber>
+        <r10Ex:Segment>Nectar</r10Ex:Segment>
+        <r10Ex:SequenceNumber>7</r10Ex:SequenceNumber>
+        <r10Ex:EndDateTime>2016-03-10T21:26:30.6113705+00:00</r10Ex:EndDateTime>
+        <r10Ex:ScanData>**Replaced**</r10Ex:ScanData>
+      </Customer>
+      <LoyaltyAccount>
+        <LoyaltyProgram>
+          <LoyaltyAccountID>4</LoyaltyAccountID>
+          <Points Type="X:OpenBalance">154.000</Points>
+          <Points Type="Balance">157.000</Points>
+          <Points Type="PointsEarned">3</Points>
+        </LoyaltyProgram>
+        <LoyaltyProgram>
+          <LoyaltyAccountID>8</LoyaltyAccountID>
+          <Points Type="X:OpenBalance">27.000</Points>
+          <Points Type="Balance">28.000</Points>
+          <Points Type="PointsEarned">1</Points>
+        </LoyaltyProgram>
+        <LoyaltyProgram>
+          <LoyaltyAccountID>10</LoyaltyAccountID>
+          <Points Type="X:OpenBalance">154.000</Points>
+          <Points Type="Balance">157.000</Points>
+          <Points Type="PointsEarned">3</Points>
+        </LoyaltyProgram>
+        <LoyaltyProgram>
+          <LoyaltyAccountID>1</LoyaltyAccountID>
+          <Points Type="X:OpenBalance">276.000</Points>
+          <Points Type="Balance">279.000</Points>
+          <Points Type="PointsEarned">3</Points>
+        </LoyaltyProgram>
+      </LoyaltyAccount>
+      <TaxDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.Retalix.com/Extensions">
+        <TaxAuthority>
+          <AuthorityId>1</AuthorityId>
+          <Descriptions>
+            <Description Culture="en-GB">VAT</Description>
+          </Descriptions>
+        </TaxAuthority>
+        <TaxRate>
+          <RateId>2</RateId>
+          <Type>Tax</Type>
+          <AuthorityId>1</AuthorityId>
+          <Descriptions>
+            <Description Culture="en-GB">0.00%</Description>
+          </Descriptions>
+          <IsIncluded>true</IsIncluded>
+          <TaxCalculatedMethodPercent>
+            <Value>0.0000</Value>
+            <ImpositionId>A</ImpositionId>
+          </TaxCalculatedMethodPercent>
+          <TaxIndicator>A</TaxIndicator>
+          <RoundingType>Standard</RoundingType>
+          <CouponReducesTaxationAmount>false</CouponReducesTaxationAmount>
+        </TaxRate>
+      </TaxDefinitions>
+      <PromotionsSummary xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.Retalix.com/Extensions">
+        <PromotionSummary>
+          <PromotionID>100000001</PromotionID>
+          <RedemptionQuantity>3</RedemptionQuantity>
+          <TotalRewardAmount Currency="GBP">3</TotalRewardAmount>
+          <TriggerType>Spend</TriggerType>
+          <LoyaltyAccount>
+            <LoyaltyProgram>
+              <LoyaltyAccountID>4</LoyaltyAccountID>
+              <Points Type="PointsEarned">3</Points>
+            </LoyaltyProgram>
+          </LoyaltyAccount>
+          <RewardType>Points</RewardType>
+          <PromotionDescription>GOODS BASE POINTS</PromotionDescription>
+          <QualifyingSpent>3.55</QualifyingSpent>
+          <TriggerTiming>Line</TriggerTiming>
+        </PromotionSummary>
+        <PromotionSummary>
+          <PromotionID>100000004</PromotionID>
+          <RedemptionQuantity>1</RedemptionQuantity>
+          <TotalRewardAmount Currency="GBP">1</TotalRewardAmount>
+          <TriggerType>Spend</TriggerType>
+          <LoyaltyAccount>
+            <LoyaltyProgram>
+              <LoyaltyAccountID>8</LoyaltyAccountID>
+              <Points Type="PointsEarned">1</Points>
+            </LoyaltyProgram>
+          </LoyaltyAccount>
+          <RewardType>Points</RewardType>
+          <PromotionDescription>QualifyingSpend</PromotionDescription>
+          <QualifyingSpent>3.74</QualifyingSpent>
+          <TriggerTiming>UponTotal</TriggerTiming>
+        </PromotionSummary>
+        <PromotionSummary>
+          <PromotionID>100000104</PromotionID>
+          <RedemptionQuantity>3</RedemptionQuantity>
+          <TotalRewardAmount>3</TotalRewardAmount>
+          <LoyaltyAccount>
+            <LoyaltyProgram>
+              <LoyaltyAccountID>10</LoyaltyAccountID>
+              <Points Type="PointsEarned">3</Points>
+            </LoyaltyProgram>
+          </LoyaltyAccount>
+          <RewardType>Points</RewardType>
+          <PromotionDescription>BASE ACCUMULATOR</PromotionDescription>
+          <QualifyingSpent>0</QualifyingSpent>
+          <TriggerTiming>Line</TriggerTiming>
+        </PromotionSummary>
+        <PromotionSummary>
+          <PromotionID>100000104</PromotionID>
+          <RedemptionQuantity>3</RedemptionQuantity>
+          <TotalRewardAmount>3</TotalRewardAmount>
+          <LoyaltyAccount>
+            <LoyaltyProgram>
+              <LoyaltyAccountID>1</LoyaltyAccountID>
+              <Points Type="PointsEarned">3</Points>
+            </LoyaltyProgram>
+          </LoyaltyAccount>
+          <RewardType>Points</RewardType>
+          <PromotionDescription>BASE ACCUMULATOR</PromotionDescription>
+          <QualifyingSpent>0</QualifyingSpent>
+          <TriggerTiming>Line</TriggerTiming>
+        </PromotionSummary>
+      </PromotionsSummary>
+      <RefundablePromotions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.Retalix.com/Extensions">
+        <RefundPromotions>H4sIAAAAAAAEAOy9B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih6/rKtF1RbVsjl6fNbmC/rxMq+bomlf5efr5cx+T1/PjnZ35Nl9fJf+evx5Xa1X9MvDh4/vmt8fn1TLWaEQA1D2i6PHb65X+dHrVb6cPb7LvzNwAfoq/0Xros5nXy6n+dF5Vjb547vBZ49P6qLN6yLrwpePLXxCfbaetmd+H/d2Pn2w+6n29Hvl167Rtv0KHz++OwT6/bu8t7sX71C++Ia729299+DTew9iHdqvvuEuHzzYvbf36b1Yl/arb7jLvQf37927fz/Wpf1qc5d3HRd9USyLxXrxZl7nzbwqZ+nq00fLovzso7Ze5x+l7xblsnm0+vSzj+Ztu3p09+7V1dX46t64qi/u7pEs3P29v3j+ejrPF9l2sWzajHj0o/QuIW/gHa9WZZE3b6qj4+U1hIwG0v/u8UlWTtdl1uZfLsvrZyR3XbyOgA8hfmO7xz+Zleuc5G+WT4tFVh7tjiG1j++avx/fNS069HEiull026rOvenQv79R8e32cVLVq6qmYbtJ5yY05d5X//+bdKXhzQ111oHF4Kze9bXzq/wqq2ddNS2fGtmrimXbmFkQvB08erVp62J5Ad2tvz2+G2l1e358Wefnef1F1bSn78g+NMVlLmZJyTD4/ePnxaJonxbNtFov23zGn57g9yPqaPjLx8dT/pB4ap9wt390aGioctcSLfzes5O3sJ/7P7Kft+/yR/bz/2P204p3X0X9v1w9vr/Rs42+YeH7kfX7WZjeH1m/Ddbv4Idk/Xa/Iev3Ixf0/5tCuHFWlQN/Fr2afg/Kjpg2/XJ7/0ezeDuF1cGEpuLozbxo3hTTt3l7mtVLUoo9fNHqR0r6aynp3Z1baOkf0UpodQtS3cKg3VWE7nqp0v8nAAD///+cTmQ3FQAA</RefundPromotions>
+      </RefundablePromotions>
+      <TransactionMeasures xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.Retalix.com/Extensions">
+        <ItemRingTime>
+          <Current>24</Current>
+          <BusinessDayDateTotal>2692</BusinessDayDateTotal>
+        </ItemRingTime>
+        <SecureTime>
+          <Current>0</Current>
+          <BusinessDayDateTotal>1394</BusinessDayDateTotal>
+        </SecureTime>
+        <IdleTime>
+          <Current>218</Current>
+          <BusinessDayDateTotal>6087</BusinessDayDateTotal>
+        </IdleTime>
+        <TenderTime>
+          <Current>24</Current>
+          <BusinessDayDateTotal>1625</BusinessDayDateTotal>
+        </TenderTime>
+        <OtherTime>
+          <Current>0</Current>
+          <BusinessDayDateTotal>2</BusinessDayDateTotal>
+        </OtherTime>
+        <SignOnTime>
+          <Current>266</Current>
+          <BusinessDayDateTotal>11800</BusinessDayDateTotal>
+        </SignOnTime>
+      </TransactionMeasures>
+    </RetailTransaction>
+    <BusinessDayDate>2016-03-10</BusinessDayDate>
+    <BeginDateTime>2016-03-10T21:25:56.5924861+00:00</BeginDateTime>
+    <EndDateTime>2016-03-10T21:26:46.0719251+00:00</EndDateTime>
+  </Transaction>
+</POSLog>

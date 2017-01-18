@@ -8,18 +8,13 @@
 
 
     <doc xmlns="http://www.oxygenxml.com/ns/doc/xsl">
-        <desc>Flattern and Convert all Xpath under LoyaltyAccount</desc>
+        <desc>Flatten and Convert all Xpath under LoyaltyAccount</desc>
     </doc>
 
     <!-- Transaction Level Elements -->
     <xsl:variable name="var_Transaction_level">
         <xsl:apply-templates select="//r10Ex:Transaction/*[not(self::r10Ex:ReceiptImage |self::r10Ex:RetailTransaction)]" mode="s3_flatten"/>
     </xsl:variable>
-
-    <!-- /r10Ex:POSLog/r10Ex:Transaction/r10Ex:RetailTransaction/r10Ex:LoyaltyAccount -->
-    <!--<xsl:template match="/">-->
-        <!--<xsl:copy-of select="//r10Ex:LoyaltyAccount"></xsl:copy-of>-->
-    <!--</xsl:template>-->
 
     <xsl:template match="/">
         <xsl:apply-templates select="//r10Ex:Transaction/r10Ex:RetailTransaction/r10Ex:LoyaltyAccount" mode="s1_user-defined"/>
@@ -51,10 +46,6 @@
         </xsl:variable>
 
         <xsl:value-of select="$s5_xml2csv"/>
-    </xsl:template>
-
-    <xsl:template match="r10Ex:LoyaltyProgram" mode="s1_user-defined">
-        <td></td>
     </xsl:template>
 
 </xsl:stylesheet>

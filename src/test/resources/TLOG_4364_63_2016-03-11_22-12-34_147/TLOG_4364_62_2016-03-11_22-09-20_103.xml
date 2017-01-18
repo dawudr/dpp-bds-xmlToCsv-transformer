@@ -1,0 +1,21 @@
+<POSLog xmlns="http://www.nrf-arts.org/IXRetail/namespace/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:r10Ex="http://www.Retalix.com/Extensions" MajorVersion="6">
+  <Transaction MajorVersion="6" MinorVersion="0" FixVersion="1" TrainingModeFlag="true">
+    <BusinessUnit>
+      <UnitID Name="4364 FULHAM DARLAN ROAD LOCAL">4364</UnitID>
+    </BusinessUnit>
+    <WorkstationID TypeCode="X:SelfCheckOut" WorkstationLocation="17">62</WorkstationID>
+    <SequenceNumber>2923</SequenceNumber>
+    <OperatorID OperatorName="Warmup User" WorkerID="7160fa20-d2b6-45ab-b22c-d1f0efe0f871" OperatorType="X:Warmup">WarmupUser-9999</OperatorID>
+    <BusinessDayDate>2016-03-11</BusinessDayDate>
+    <BeginDateTime>2016-03-11T22:09:20.104725+00:00</BeginDateTime>
+    <EndDateTime>2016-03-11T22:09:20.104725+00:00</EndDateTime>
+    <ControlTransaction>
+      <OperatorSignOn>
+        <EndDateTimestamp>2016-03-11T22:09:20.120841+00:00</EndDateTimestamp>
+        <TillID>62</TillID>
+        <OpenBusinessDayDate>2016-03-11</OpenBusinessDayDate>
+      </OperatorSignOn>
+      <SetCashierMode>TrainingModeEntry</SetCashierMode>
+    </ControlTransaction>
+  </Transaction>
+</POSLog>

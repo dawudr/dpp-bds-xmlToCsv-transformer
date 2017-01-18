@@ -1,32 +1,37 @@
 package com.sainsburys.dpp.transform
 
-import com.sainsburys.dpp.transform.service.XmlTransformService
-import com.sainsburys.dpp.transform.xml.XmlTransformer
-import org.scalatest.{FlatSpec, Matchers}
+import java.io.File
+import java.io.FileReader
 
-import scala.collection.mutable.ListBuffer
+import com.opencsv.CSVReader
+import com.sainsburys.dpp.transform.service.XmlTransformService
+import com.sainsburys.dpp.transform.util.ArchiveHelper
+import com.sainsburys.dpp.transform.xml.XmlTransformer
+import org.scalatest.{BeforeAndAfter, FlatSpec, Matchers}
+
+import scala.collection.JavaConversions.asScalaBuffer
 import scala.xml.NodeSeq
 
 /**
   * Created by bradley.reed on 17/01/2017.
   */
-class XmlTest extends FlatSpec with Matchers {
+class XmlTest extends FlatSpec with Matchers with BeforeAndAfter {
 
-  val xmlPath = "src/test/resources/xml"
+//  val xmlPath = "src/test/resources/xml"
+  val xmlPath = "src/test/resources/TLOG_4364_63_2016-03-11_22-12-34_147"
   val xslPath = "src/main/resources/domain/purchases/xsl/r10_pipeline.xsl"
   val outPath = "output/test"
 
   /**
     * Takes an XML file and transforms it according to the stylesheet
     * Then saves it to `outPath`
-    * @param xmlFile The path to the XML file
-    * @param xslFile The path to the stylesheet
+    * @param onCompletion Called when the transformation is complete, passing the XML and CSV file names
     */
-  def transformFile(xmlFile: String = xmlPath, xslFile: String = xslPath): Unit = {
-    val xmlTransformer = new XmlTransformer(xmlFile, xslFile, outPath)
+  def transformFiles(onCompletion: (String, String) => Unit = (_, _) => {}): Unit = {
+    val xmlTransformer = new XmlTransformer(xmlPath, xslPath, outPath)
 
     val service = new XmlTransformService(xmlTransformer)
-    service.transformR10XmlToCsv()
+    service.transformR10XmlToCsv(onCompletion)
   }
 
   /**
@@ -36,16 +41,20 @@ class XmlTest extends FlatSpec with Matchers {
     * @return List of arrays of strings
     */
   def loadCsvTo2dArray(file: String): List[Array[String]] = {
-    val returnArray = ListBuffer[Array[String]]()
+    val reader = new CSVReader(new FileReader(file))
 
-    val bufferedSource = io.Source.fromFile(file)
+    val returnArray = reader.readAll()
+
+    /*val bufferedSource = io.Source.fromFile(file)
     for (line <- bufferedSource.getLines) {
       val cols = line.split(",").map(_.trim)
       returnArray.append(cols)
-    }
+    }*/
 
     // Only return the data, not the header row
-    returnArray.toList.tail
+    // If there is no data, return an empty row
+    if (returnArray.nonEmpty) returnArray.toList.tail else List[Array[String]]()
+
   }
 
   /**
@@ -62,7 +71,7 @@ class XmlTest extends FlatSpec with Matchers {
       val node = field._2
       // If the node does not exist, is is actually a blank string ("") in the CSV
       // Eg, in PromotionSummary, <TotalRewardAmount> sometimes has Currency="GBP" but not always
-      val value = if (node.length > 0) node text else "\"\""
+      val value = if (node.length > 0) node text else ""
 
       column should be (value)
     })
@@ -88,6 +97,18 @@ class XmlTest extends FlatSpec with Matchers {
       val (row, node) = iteration
       assertFields(getFieldMap(node), row)
     })
+  }
+
+  /**
+    * Delete output files after testing
+    */
+  after {
+    // Get a list of files in the output directory
+    val archiveHelper = new ArchiveHelper(outPath)
+    val archiveFiles = archiveHelper.getListOfFiles()
+
+    // Delete each file
+    archiveFiles.foreach(_.delete)
   }
 
 }

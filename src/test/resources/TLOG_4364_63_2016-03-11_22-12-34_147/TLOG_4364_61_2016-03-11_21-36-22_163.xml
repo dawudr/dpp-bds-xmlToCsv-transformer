@@ -1,0 +1,21 @@
+<POSLog xmlns="http://www.nrf-arts.org/IXRetail/namespace/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:r10Ex="http://www.Retalix.com/Extensions" MajorVersion="6">
+  <Transaction MajorVersion="6" MinorVersion="0" FixVersion="1">
+    <BusinessUnit>
+      <UnitID Name="4364 FULHAM DARLAN ROAD LOCAL">4364</UnitID>
+    </BusinessUnit>
+    <WorkstationID TypeCode="X:SelfCheckOut" WorkstationLocation="17">61</WorkstationID>
+    <SequenceNumber>1231</SequenceNumber>
+    <OperatorID OperatorName="Ashakeun Khan" WorkerID="d2c6b034-8e5e-4ac7-85b3-2c77c364acdc" OperatorType="Supervisor">4364-0049</OperatorID>
+    <OperatorID OperatorName="Ashakeun Khan" WorkerID="d2c6b034-8e5e-4ac7-85b3-2c77c364acdc" OperatorType="X:SCOAttendant">4364-0049</OperatorID>
+    <BusinessDayDate>2016-03-11</BusinessDayDate>
+    <BeginDateTime>2016-03-11T21:36:22.1622256+00:00</BeginDateTime>
+    <EndDateTime>2016-03-11T21:36:22.1622256+00:00</EndDateTime>
+    <ControlTransaction>
+      <OperatorSignOn>
+        <EndDateTimestamp>2016-03-11T21:36:22.1622256+00:00</EndDateTimestamp>
+        <TillID>61</TillID>
+        <OpenBusinessDayDate>2016-03-11</OpenBusinessDayDate>
+      </OperatorSignOn>
+    </ControlTransaction>
+  </Transaction>
+</POSLog>

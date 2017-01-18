@@ -7,7 +7,7 @@
     <xsl:include href="r10_pipeline_equalizing.xsl"/>
 
     <doc xmlns="http://www.oxygenxml.com/ns/doc/xsl">
-        <desc>Flattern and Convert all Xpath under RefundablePromotions</desc>
+        <desc>Flattrn and Convert all Xpath under RefundablePromotions</desc>
     </doc>
     
     <!-- /r10Ex:POSLog/r10Ex:Transaction/r10Ex:RetailTransaction/r10Ex:RefundablePromotions -->
