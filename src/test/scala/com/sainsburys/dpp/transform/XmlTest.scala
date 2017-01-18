@@ -2,7 +2,6 @@ package com.sainsburys.dpp.transform
 
 import com.sainsburys.dpp.transform.service.XmlTransformService
 import com.sainsburys.dpp.transform.xml.XmlTransformer
-import org.scalatest.exceptions.TestFailedException
 import org.scalatest.{FlatSpec, Matchers}
 
 import scala.collection.mutable.ListBuffer
@@ -69,6 +68,16 @@ class XmlTest extends FlatSpec with Matchers {
     })
   }
 
+  /**
+    * This function takes the CSV data, a NodeSeq of root nodes, and a callback function to return a Map
+    * It then loops each Node, passing it to the callback which returns a Map of column indices of the data in the CSV
+    * and a Node object where the data can be found in the CSV
+    * These are then passed to `assertFields`, which loops each field and tests that the correct data appears in the CSV
+    *
+    * @param csvData     2D array of data read from the CSV
+    * @param nodes       Array of root nodes for the data in the XML, for each row in the CSV
+    * @param getFieldMap Callback which should return a Map of column indices in the CSV to an XML node
+    */
   def assertManyFields(csvData: List[Array[String]], nodes: NodeSeq, getFieldMap: (NodeSeq) => Map[Int, NodeSeq]): Unit = {
     // Since the arrays are the same size we can zip them together to one array of tuples
     val zipped = csvData zip nodes

@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5d2dd7c-40b9-41c0-ab2a-fc01c66103e5" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/resources/xml/full/R10xml.xml" afterPath="$PROJECT_DIR$/src/test/resources/fullxml/R10xml.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/PromotionsSummaryTest.scala" afterPath="$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/PromotionsSummaryTest.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/TaxDefinitionsTest.scala" afterPath="$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/TaxDefinitionsTest.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/XmlTest.scala" afterPath="$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/XmlTest.scala" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -30,8 +26,8 @@
             <file leaf-file-name="R10xml.xml" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/main/resources/domain/purchases/xml/R10xml.xml">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="184">
-                    <caret line="91" column="25" lean-forward="true" selection-start-line="91" selection-start-column="25" selection-end-line="91" selection-end-column="25" />
+                  <state relative-caret-position="634">
+                    <caret line="120" column="35" lean-forward="true" selection-start-line="120" selection-start-column="35" selection-end-line="120" selection-end-column="35" />
                     <folding>
                       <element signature="n#ReceiptImage#0;n#Transaction#0;n#POSLog#0;n#!!top" expanded="false" />
                       <element signature="n#ReceiptImage#1;n#Transaction#0;n#POSLog#0;n#!!top" expanded="false" />
@@ -68,21 +64,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LoyaltyAccountTest.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/LoyaltyAccountTest.scala">
+      <file leaf-file-name="XmlTest.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/XmlTest.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
-              <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+            <state relative-caret-position="60">
+              <caret line="4" column="41" lean-forward="false" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomerTest.scala" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/CustomerTest.scala">
+      <file leaf-file-name="PromotionsSummaryTest.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/PromotionsSummaryTest.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+            <state relative-caret-position="-42">
+              <caret line="9" column="52" lean-forward="false" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -141,10 +137,10 @@
         <option value="$PROJECT_DIR$/src/main/resources/domain/purchases/xsl/r10_extract_retailtransaction_promotionssummary.xsl" />
         <option value="$PROJECT_DIR$/output/r10/promotions_summary.csv" />
         <option value="$PROJECT_DIR$/src/test/resources/xml/R10xml.xml" />
-        <option value="$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/XmlTest.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/TaxDefinitionsTest.scala" />
         <option value="$PROJECT_DIR$/src/main/resources/domain/purchases/xml/R10xml.xml" />
         <option value="$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/PromotionsSummaryTest.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/XmlTest.scala" />
       </list>
     </option>
   </component>
@@ -1462,7 +1458,7 @@
       <updated>1484578221252</updated>
       <workItem from="1484578231553" duration="5661000" />
       <workItem from="1484651812314" duration="66000" />
-      <workItem from="1484653387673" duration="21015000" />
+      <workItem from="1484653387673" duration="21530000" />
     </task>
     <servers />
   </component>
@@ -1499,7 +1495,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26742000" />
+    <option name="totallyTimeSpent" value="27257000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -1875,32 +1871,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/domain/purchases/xml/R10xml.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="91" column="25" lean-forward="true" selection-start-line="91" selection-start-column="25" selection-end-line="91" selection-end-column="25" />
-          <folding>
-            <element signature="n#ReceiptImage#0;n#Transaction#0;n#POSLog#0;n#!!top" expanded="false" />
-            <element signature="n#ReceiptImage#1;n#Transaction#0;n#POSLog#0;n#!!top" expanded="false" />
-            <element signature="n#PromotionSummary#1;n#PromotionsSummary#0;n#RetailTransaction#0;n#Transaction#0;n#POSLog#0;n#!!top" expanded="false" />
-            <element signature="n#PromotionSummary#2;n#PromotionsSummary#0;n#RetailTransaction#0;n#Transaction#0;n#POSLog#0;n#!!top" expanded="false" />
-            <element signature="n#PromotionSummary#3;n#PromotionsSummary#0;n#RetailTransaction#0;n#Transaction#0;n#POSLog#0;n#!!top" expanded="false" />
-            <element signature="n#PromotionSummary#4;n#PromotionsSummary#0;n#RetailTransaction#0;n#Transaction#0;n#POSLog#0;n#!!top" expanded="false" />
-            <element signature="n#PromotionSummary#5;n#PromotionsSummary#0;n#RetailTransaction#0;n#Transaction#0;n#POSLog#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/XmlTest.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <element signature="e#38#101#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/sainsburys/dpp/transform/service/XmlTransformService.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -1913,14 +1883,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="83">
           <caret line="9" column="93" lean-forward="true" selection-start-line="9" selection-start-column="93" selection-end-line="9" selection-end-column="93" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/PromotionsSummaryTest.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="52" lean-forward="false" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
           <folding />
         </state>
       </provider>
@@ -1941,18 +1903,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/LoyaltyAccountTest.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/domain/purchases/xml/R10xml.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="634">
+          <caret line="120" column="35" lean-forward="true" selection-start-line="120" selection-start-column="35" selection-end-line="120" selection-end-column="35" />
+          <folding>
+            <element signature="n#ReceiptImage#0;n#Transaction#0;n#POSLog#0;n#!!top" expanded="false" />
+            <element signature="n#ReceiptImage#1;n#Transaction#0;n#POSLog#0;n#!!top" expanded="false" />
+            <element signature="n#PromotionSummary#1;n#PromotionsSummary#0;n#RetailTransaction#0;n#Transaction#0;n#POSLog#0;n#!!top" expanded="false" />
+            <element signature="n#PromotionSummary#2;n#PromotionsSummary#0;n#RetailTransaction#0;n#Transaction#0;n#POSLog#0;n#!!top" expanded="false" />
+            <element signature="n#PromotionSummary#3;n#PromotionsSummary#0;n#RetailTransaction#0;n#Transaction#0;n#POSLog#0;n#!!top" expanded="false" />
+            <element signature="n#PromotionSummary#4;n#PromotionsSummary#0;n#RetailTransaction#0;n#Transaction#0;n#POSLog#0;n#!!top" expanded="false" />
+            <element signature="n#PromotionSummary#5;n#PromotionsSummary#0;n#RetailTransaction#0;n#Transaction#0;n#POSLog#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/CustomerTest.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+        <state relative-caret-position="105">
+          <caret line="7" column="31" lean-forward="true" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/LoyaltyAccountTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="573">
+          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/PromotionsSummaryTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-42">
+          <caret line="9" column="52" lean-forward="false" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/com/sainsburys/dpp/transform/XmlTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="41" lean-forward="false" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
           <folding />
         </state>
       </provider>
