@@ -1,6 +1,5 @@
 package com.sainsburys.dpp.transform
 
-import java.io.File
 import java.io.FileReader
 
 import com.opencsv.CSVReader
@@ -103,12 +102,8 @@ class XmlTest extends FlatSpec with Matchers with BeforeAndAfter {
     * Delete output files after testing
     */
   after {
-    // Get a list of files in the output directory
-    val archiveHelper = new ArchiveHelper(outPath)
-    val archiveFiles = archiveHelper.getListOfFiles()
-
-    // Delete each file
-    archiveFiles.foreach(_.delete)
+    // Get a list of files in the output directory and delete each one
+    new ArchiveHelper(outPath).getListOfFiles().foreach(_.delete)
   }
 
 }

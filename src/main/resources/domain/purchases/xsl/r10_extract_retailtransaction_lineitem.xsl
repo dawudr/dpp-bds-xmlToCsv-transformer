@@ -37,7 +37,6 @@
     </xsl:variable>
 
 
-
     <!-- Iteration matches -->
     <doc xmlns="http://www.oxygenxml.com/ns/doc/xsl">
         <desc>Iterate through list of level elements</desc>
@@ -61,9 +60,9 @@
             <xsl:element name="table">
                 <xsl:for-each select="r10Ex:LineItem">
                     <xsl:element name="tr">
-                        <xsl:copy-of select="$var_Transaction_level/TransactionID"></xsl:copy-of>
+                        <xsl:copy-of select="$var_Transaction_level/TransactionID"/>
                         <xsl:element name="CustomerID">
-                            <xsl:value-of select="$var_Customer_level/RetailTransaction_Customer_CustomerID"></xsl:value-of>
+                            <xsl:value-of select="$var_Customer_level/RetailTransaction_Customer_CustomerID"/>
                         </xsl:element>
                         <xsl:apply-templates select="." mode="s1_user-defined"/>
                     </xsl:element>
@@ -71,14 +70,10 @@
             </xsl:element>
         </xsl:variable>
 
-        <!--<xsl:copy-of select="$s2_joinxml"/>-->
-
         <!-- STEP-3: r10_pipeline_equalizing.xsl -->
         <xsl:variable name="s4_equalizing">
             <xsl:apply-templates mode="s4_equalizing" select="$s2_joinxml"/>
         </xsl:variable>
-
-        <!--<xsl:copy-of select="$s4_equalizing"/>-->
 
         <!-- STEP-4: r10_pipeline_xml2csv.xsl -->
         <!-- The final transformation of input or modified input xml file to CSV. -->
@@ -88,9 +83,6 @@
 
         <xsl:value-of select="$s5_xml2csv"/>
     </xsl:template>
-
-
-
 
 
     <!-- /r10Ex:POSLog/r10Ex:Transaction/r10Ex:RetailTransaction/r10Ex:LineItem -->
@@ -121,7 +113,7 @@
     <xsl:template match="r10Ex:LoyaltyAccount" mode="s1_user-defined">
         <xsl:for-each select="r10Ex:LoyaltyProgram">
             <tr>
-                <xsl:copy-of select="$var_Transaction_level/TransactionID"></xsl:copy-of>
+                <xsl:copy-of select="$var_Transaction_level/TransactionID"/>
                 <xsl:apply-templates select="./*" mode="s3_flatten"/>
             </tr>
         </xsl:for-each>
@@ -134,8 +126,8 @@
         </xsl:variable>
         <xsl:for-each select="*:TaxRate">
             <tr>
-                <xsl:copy-of select="$var_Transaction_level/TransactionID"></xsl:copy-of>
-                <xsl:copy-of select="$var_TaxAuthority"></xsl:copy-of>
+                <xsl:copy-of select="$var_Transaction_level/TransactionID"/>
+                <xsl:copy-of select="$var_TaxAuthority"/>
                 <xsl:apply-templates select="./*" mode="s3_flatten"/>
             </tr>
         </xsl:for-each>
@@ -146,7 +138,7 @@
     <xsl:template match="*:PromotionsSummary" mode="s1_user-defined">
         <xsl:for-each select="*:PromotionSummary">
             <tr>
-                <xsl:copy-of select="$var_Transaction_level/TransactionID"></xsl:copy-of>
+                <xsl:copy-of select="$var_Transaction_level/TransactionID"/>
                 <xsl:apply-templates select="./*" mode="s3_flatten"/>
             </tr>
         </xsl:for-each>
